@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+        <script> 
+          var socket = new WebSocket("ws://localhost:8080/ChatWebSocket/demows");
+          socket.onmessage=onMessage;
+          
+          function onMessage(event) {
+              var msg=JSON.parse(event.data);
+              // alert(msg);
+              //alert(event.data);
+              if (msg.type === "system")
+              {
+                 var newMsg=document.getElementById("msgSistema").innerHTML;
+                 var newMsg= newMsg + "<br/>"+msg.msg;
+                 document.getElementById("msgSistema").innerHTML=newMsg;
+              }
+              if (msg.type === "user")
+              {
+                 var newMsg=document.getElementById("msgUtente").innerHTML;
+                 var newMsg= newMsg + "<br/>"+msg.msg;
+                 document.getElementById("msgUtente").innerHTML=newMsg;
+              }
+          }
+          function inviaMsg()
+          {
+            var msg = document.getElementById("msg").value;
+            alert(msg);
+            var msgObj = {
+                type:'user',
+                msg:msg
+            }
+            socket.send(JSON.stringify(msgObj));  
+          }
+        </script>
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+        <div id="msgSistema"></div>
+        
+        <div id="msgUtente"></div>
+        
+        <input type="text" name="msg" id="msg"/>
+        <input type="button" value="invia" onclick="inviaMsg()"/>       
+        
+    </body>
+</html>

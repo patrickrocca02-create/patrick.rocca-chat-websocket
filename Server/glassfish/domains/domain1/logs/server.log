@@ -1,0 +1,510 @@
+[2020-11-01T18:21:13.128+0100] [glassfish 5.1] [INFO] [NCLS-LOGGING-00009] [javax.enterprise.logging] [tid: _ThreadID=22 _ThreadName=RunLevelControllerThread-1604251272849] [timeMillis: 1604251273128] [levelValue: 800] [[
+  Running GlassFish Version: GlassFish Server Open Source Edition  5.1.0  (build default-private)]]
+
+[2020-11-01T18:21:13.131+0100] [glassfish 5.1] [INFO] [NCLS-LOGGING-00010] [javax.enterprise.logging] [tid: _ThreadID=22 _ThreadName=RunLevelControllerThread-1604251272849] [timeMillis: 1604251273131] [levelValue: 800] [[
+  Server log file is using Formatter class: com.sun.enterprise.server.logging.ODLLogFormatter]]
+
+[2020-11-01T18:21:13.675+0100] [glassfish 5.1] [INFO] [] [org.hibernate.validator.internal.util.Version] [tid: _ThreadID=22 _ThreadName=RunLevelControllerThread-1604251272849] [timeMillis: 1604251273675] [levelValue: 800] [[
+  HV000001: Hibernate Validator 6.0.10.Final]]
+
+[2020-11-01T18:21:13.715+0100] [glassfish 5.1] [INFO] [NCLS-SECURITY-01115] [javax.enterprise.system.core.security] [tid: _ThreadID=24 _ThreadName=RunLevelControllerThread-1604251272892] [timeMillis: 1604251273715] [levelValue: 800] [[
+  Realm [admin-realm] of classtype [com.sun.enterprise.security.auth.realm.file.FileRealm] successfully created.]]
+
+[2020-11-01T18:21:13.765+0100] [glassfish 5.1] [INFO] [NCLS-SECURITY-01115] [javax.enterprise.system.core.security] [tid: _ThreadID=24 _ThreadName=RunLevelControllerThread-1604251272892] [timeMillis: 1604251273765] [levelValue: 800] [[
+  Realm [file] of classtype [com.sun.enterprise.security.auth.realm.file.FileRealm] successfully created.]]
+
+[2020-11-01T18:21:13.775+0100] [glassfish 5.1] [INFO] [NCLS-SECURITY-01115] [javax.enterprise.system.core.security] [tid: _ThreadID=24 _ThreadName=RunLevelControllerThread-1604251272892] [timeMillis: 1604251273775] [levelValue: 800] [[
+  Realm [certificate] of classtype [com.sun.enterprise.security.auth.realm.certificate.CertificateRealm] successfully created.]]
+
+[2020-11-01T18:21:13.924+0100] [glassfish 5.1] [INFO] [SEC-SVCS-00100] [javax.enterprise.security.services] [tid: _ThreadID=24 _ThreadName=RunLevelControllerThread-1604251272892] [timeMillis: 1604251273924] [levelValue: 800] [[
+  Authorization Service has successfully initialized.]]
+
+[2020-11-01T18:21:14.109+0100] [glassfish 5.1] [INFO] [] [org.glassfish.ha.store.spi.BackingStoreFactoryRegistry] [tid: _ThreadID=21 _ThreadName=RunLevelControllerThread-1604251272843] [timeMillis: 1604251274109] [levelValue: 800] [[
+  Registered org.glassfish.ha.store.adapter.cache.ShoalBackingStoreProxy for persistence-type = replicated in BackingStoreFactoryRegistry]]
+
+[2020-11-01T18:21:14.174+0100] [glassfish 5.1] [INFO] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=23 _ThreadName=RunLevelControllerThread-1604251272892] [timeMillis: 1604251274174] [levelValue: 800] [[
+  Grizzly Framework 2.4.4 started in: 52ms - bound to [/0.0.0.0:8080]]]
+
+[2020-11-01T18:21:14.205+0100] [glassfish 5.1] [INFO] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=23 _ThreadName=RunLevelControllerThread-1604251272892] [timeMillis: 1604251274205] [levelValue: 800] [[
+  Grizzly Framework 2.4.4 started in: 3ms - bound to [/0.0.0.0:8181]]]
+
+[2020-11-01T18:21:14.216+0100] [glassfish 5.1] [INFO] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=23 _ThreadName=RunLevelControllerThread-1604251272892] [timeMillis: 1604251274216] [levelValue: 800] [[
+  Grizzly Framework 2.4.4 started in: 5ms - bound to [/0.0.0.0:4848]]]
+
+[2020-11-01T18:21:14.276+0100] [glassfish 5.1] [INFO] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=21 _ThreadName=RunLevelControllerThread-1604251272843] [timeMillis: 1604251274276] [levelValue: 800] [[
+  Grizzly Framework 2.4.4 started in: 3ms - bound to [/0.0.0.0:3700]]]
+
+[2020-11-01T18:21:14.692+0100] [glassfish 5.1] [INFO] [NCLS-CORE-00017] [javax.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1604251274692] [levelValue: 800] [[
+  GlassFish Server Open Source Edition  5.1.0  (default-private) startup time : Felix (8.536ms), startup services(1.859ms), total(10.395ms)]]
+
+[2020-11-01T18:21:14.981+0100] [glassfish 5.1] [INFO] [jts.startup_msg] [javax.enterprise.system.core.transaction.com.sun.jts.CosTransactions] [tid: _ThreadID=24 _ThreadName=RunLevelControllerThread-1604251272892] [timeMillis: 1604251274981] [levelValue: 800] [[
+  JTS5014: Recoverable JTS instance, serverId = [100]]]
+
+[2020-11-01T18:21:15.120+0100] [glassfish 5.1] [INFO] [NCLS-JMX-00005] [javax.enterprise.system.jmx] [tid: _ThreadID=67 _ThreadName=Thread-14] [timeMillis: 1604251275120] [levelValue: 800] [[
+  JMXStartupService has started JMXConnector on JMXService URL service:jmx:rmi://DESKTOP-2059FLG:8686/jndi/rmi://DESKTOP-2059FLG:8686/jmxrmi]]
+
+[2020-11-01T18:21:15.993+0100] [glassfish 5.1] [INFO] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=62 _ThreadName=pool-13-thread-1] [timeMillis: 1604251275993] [levelValue: 800] [[
+  Grizzly Framework 2.4.4 started in: 13ms - bound to [/0.0.0.0:8080]]]
+
+[2020-11-01T18:21:16.016+0100] [glassfish 5.1] [INFO] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=62 _ThreadName=pool-13-thread-1] [timeMillis: 1604251276016] [levelValue: 800] [[
+  Grizzly Framework 2.4.4 started in: 9ms - bound to [/0.0.0.0:8181]]]
+
+[2020-11-01T18:21:16.036+0100] [glassfish 5.1] [INFO] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=24 _ThreadName=RunLevelControllerThread-1604251272892] [timeMillis: 1604251276036] [levelValue: 800] [[
+  Grizzly Framework 2.4.4 started in: 18ms - bound to [/0.0.0.0:7676]]]
+
+[2020-11-01T18:21:16.072+0100] [glassfish 5.1] [INFO] [NCLS-BOOTSTRAP-00027] [javax.enterprise.bootstrap] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1604251276072] [levelValue: 800] [[
+  Registered com.sun.enterprise.glassfish.bootstrap.osgi.EmbeddedOSGiGlassFishImpl@76fe6cdc as OSGi service registration: org.apache.felix.framework.ServiceRegistrationImpl@2ffb3aec.]]
+
+[2020-11-01T18:21:18.202+0100] [glassfish 5.1] [INFO] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=61 _ThreadName=pool-12-thread-1] [timeMillis: 1604251278202] [levelValue: 800] [[
+  Grizzly Framework 2.4.4 started in: 43ms - bound to [/0.0.0.0:8181]]]
+
+[2020-11-01T18:21:18.209+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=110 _ThreadName=Thread-25] [timeMillis: 1604251278209] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-01T18:21:18.680+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1604251278680] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-01T18:21:20.606+0100] [glassfish 5.1] [INFO] [NCLS-SECURITY-01002] [javax.enterprise.system.core.security] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1604251280606] [levelValue: 800] [[
+  Java security manager is disabled.]]
+
+[2020-11-01T18:21:20.607+0100] [glassfish 5.1] [INFO] [NCLS-SECURITY-01010] [javax.enterprise.system.core.security] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1604251280607] [levelValue: 800] [[
+  Entering Security Startup Service.]]
+
+[2020-11-01T18:21:20.614+0100] [glassfish 5.1] [INFO] [NCLS-SECURITY-01143] [javax.enterprise.system.core.security] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1604251280614] [levelValue: 800] [[
+  Loading policy provider com.sun.enterprise.security.provider.PolicyWrapper.]]
+
+[2020-11-01T18:21:20.786+0100] [glassfish 5.1] [INFO] [NCLS-SECURITY-01011] [javax.enterprise.system.core.security] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1604251280786] [levelValue: 800] [[
+  Security Service(s) started successfully.]]
+
+[2020-11-01T18:21:21.435+0100] [glassfish 5.1] [INFO] [AS-WEB-GLUE-00198] [javax.enterprise.web] [tid: _ThreadID=110 _ThreadName=Thread-25] [timeMillis: 1604251281435] [levelValue: 800] [[
+  Created HTTP listener http-listener-1 on host/port 0.0.0.0:8080]]
+
+[2020-11-01T18:21:21.443+0100] [glassfish 5.1] [INFO] [AS-WEB-GLUE-00198] [javax.enterprise.web] [tid: _ThreadID=110 _ThreadName=Thread-25] [timeMillis: 1604251281443] [levelValue: 800] [[
+  Created HTTP listener http-listener-2 on host/port 0.0.0.0:8181]]
+
+[2020-11-01T18:21:21.453+0100] [glassfish 5.1] [INFO] [AS-WEB-GLUE-00198] [javax.enterprise.web] [tid: _ThreadID=110 _ThreadName=Thread-25] [timeMillis: 1604251281453] [levelValue: 800] [[
+  Created HTTP listener admin-listener on host/port 0.0.0.0:4848]]
+
+[2020-11-01T18:21:21.521+0100] [glassfish 5.1] [INFO] [AS-WEB-GLUE-00200] [javax.enterprise.web] [tid: _ThreadID=110 _ThreadName=Thread-25] [timeMillis: 1604251281521] [levelValue: 800] [[
+  Created virtual server server]]
+
+[2020-11-01T18:21:21.644+0100] [glassfish 5.1] [INFO] [AS-WEB-GLUE-00200] [javax.enterprise.web] [tid: _ThreadID=110 _ThreadName=Thread-25] [timeMillis: 1604251281644] [levelValue: 800] [[
+  Created virtual server __asadmin]]
+
+[2020-11-01T18:21:21.993+0100] [glassfish 5.1] [INFO] [AS-WEB-CORE-00306] [javax.enterprise.web.core] [tid: _ThreadID=110 _ThreadName=Thread-25] [timeMillis: 1604251281993] [levelValue: 800] [[
+  Setting JAAS app name glassfish-web]]
+
+[2020-11-01T18:21:22.015+0100] [glassfish 5.1] [INFO] [AS-WEB-GLUE-00201] [javax.enterprise.web] [tid: _ThreadID=110 _ThreadName=Thread-25] [timeMillis: 1604251282015] [levelValue: 800] [[
+  Virtual server server loaded default web module ]]
+
+[2020-11-01T18:21:23.423+0100] [glassfish 5.1] [INFO] [NCLS-REST-00001] [javax.enterprise.admin.rest] [tid: _ThreadID=48 _ThreadName=admin-listener(2)] [timeMillis: 1604251283423] [levelValue: 800] [[
+  Listening to REST requests at context: /management/domain.]]
+
+[2020-11-01T18:21:23.491+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1604251283491] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-01T18:21:23.516+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=110 _ThreadName=Thread-25] [timeMillis: 1604251283516] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-01T18:21:23.577+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1604251283577] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-01T18:21:23.718+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=110 _ThreadName=Thread-25] [timeMillis: 1604251283718] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-01T18:21:23.724+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=110 _ThreadName=Thread-25] [timeMillis: 1604251283724] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-01T18:21:24.062+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Version] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1604251284062] [levelValue: 800] [[
+  WELD-000900: 3.0.0 (Final)]]
+
+[2020-11-01T18:21:25.441+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1604251285441] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] org.glassfish.sse.impl.ServerSentEventCdiExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-01T18:21:25.449+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1604251285449] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.hibernate.validator.cdi.ValidationExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-01T18:21:25.475+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1604251285475] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jms.injection.JMSCDIExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-01T18:21:25.504+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1604251285504] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] private org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider.processAnnotatedType(@Observes ProcessAnnotatedType) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-01T18:21:25.553+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1604251285553] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.WebAppExceptionHolder is deprecated from CDI 1.1!]]
+
+[2020-11-01T18:21:25.586+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1604251285586] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.WebAppExceptionInterceptor is deprecated from CDI 1.1!]]
+
+[2020-11-01T18:21:25.614+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1604251285614] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.TransactionalExceptionMapper is deprecated from CDI 1.1!]]
+
+[2020-11-01T18:21:25.702+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1604251285702] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.servlet.internal.CdiExternalRequestScope is deprecated from CDI 1.1!]]
+
+[2020-11-01T18:21:25.706+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1604251285706] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider$JaxRsParamProducer is deprecated from CDI 1.1!]]
+
+[2020-11-01T18:21:25.761+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1604251285761] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class com.sun.faces.flow.FlowDiscoveryCDIHelper is deprecated from CDI 1.1!]]
+
+[2020-11-01T18:21:25.785+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1604251285785] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class com.ibm.jbatch.container.cdi.BatchProducerBean is deprecated from CDI 1.1!]]
+
+[2020-11-01T18:21:25.793+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1604251285793] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorMandatory is deprecated from CDI 1.1!]]
+
+[2020-11-01T18:21:25.805+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1604251285805] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorNever is deprecated from CDI 1.1!]]
+
+[2020-11-01T18:21:25.818+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1604251285818] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorNotSupported is deprecated from CDI 1.1!]]
+
+[2020-11-01T18:21:25.833+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1604251285833] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorRequired is deprecated from CDI 1.1!]]
+
+[2020-11-01T18:21:25.848+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1604251285848] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorRequiresNew is deprecated from CDI 1.1!]]
+
+[2020-11-01T18:21:25.854+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1604251285854] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorSupports is deprecated from CDI 1.1!]]
+
+[2020-11-01T18:21:27.563+0100] [glassfish 5.1] [INFO] [jsf.config.listener.version] [javax.enterprise.resource.webcontainer.jsf.config] [tid: _ThreadID=110 _ThreadName=Thread-25] [timeMillis: 1604251287563] [levelValue: 800] [[
+  Initializing Mojarra 2.3.9 for context '']]
+
+[2020-11-01T18:21:27.725+0100] [glassfish 5.1] [INFO] [] [org.glassfish.soteria.servlet.SamRegistrationInstaller] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1604251287725] [levelValue: 800] [[
+  Initializing Soteria 1.0.1 for context '/ChatWebSocket']]
+
+[2020-11-01T18:21:28.237+0100] [glassfish 5.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1604251288237] [levelValue: 800] [[
+  Loading application [ChatWebSocket-1.0-SNAPSHOT] at [/ChatWebSocket]]]
+
+[2020-11-01T18:21:28.361+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1604251288361] [levelValue: 800] [[
+  ChatWebSocket-1.0-SNAPSHOT was successfully deployed in 9.936 milliseconds.]]
+
+[2020-11-01T18:21:29.888+0100] [glassfish 5.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=110 _ThreadName=Thread-25] [timeMillis: 1604251289888] [levelValue: 800] [[
+  Loading application [__admingui] at [/]]]
+
+[2020-11-01T18:21:29.889+0100] [glassfish 5.1] [INFO] [NCLS-CORE-00022] [javax.enterprise.system.core] [tid: _ThreadID=110 _ThreadName=Thread-25] [timeMillis: 1604251289889] [levelValue: 800] [[
+  Loading application __admingui done in 13.323 ms]]
+
+[2020-11-01T18:21:31.165+0100] [glassfish 5.1] [WARNING] [] [javax.enterprise.system.container.web.com.sun.web.security] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1604251291165] [levelValue: 900] [[
+  Context path from ServletContext:  differs from path from bundle: /]]
+
+[2020-11-01T19:01:27.065+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=50 _ThreadName=admin-listener(4)] [timeMillis: 1604253687065] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-01T19:01:27.325+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=50 _ThreadName=admin-listener(4)] [timeMillis: 1604253687325] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-01T19:01:27.404+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=50 _ThreadName=admin-listener(4)] [timeMillis: 1604253687404] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-01T19:01:28.151+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=50 _ThreadName=admin-listener(4)] [timeMillis: 1604253688151] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jms.injection.JMSCDIExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-01T19:01:28.200+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=50 _ThreadName=admin-listener(4)] [timeMillis: 1604253688200] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] org.glassfish.sse.impl.ServerSentEventCdiExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-01T19:01:28.208+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=50 _ThreadName=admin-listener(4)] [timeMillis: 1604253688208] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] private org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider.processAnnotatedType(@Observes ProcessAnnotatedType) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-01T19:01:28.503+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=50 _ThreadName=admin-listener(4)] [timeMillis: 1604253688503] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.hibernate.validator.cdi.ValidationExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-01T19:01:28.505+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=50 _ThreadName=admin-listener(4)] [timeMillis: 1604253688505] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.WebAppExceptionHolder is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:01:28.510+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=50 _ThreadName=admin-listener(4)] [timeMillis: 1604253688510] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.WebAppExceptionInterceptor is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:01:28.513+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=50 _ThreadName=admin-listener(4)] [timeMillis: 1604253688513] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.TransactionalExceptionMapper is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:01:28.527+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=50 _ThreadName=admin-listener(4)] [timeMillis: 1604253688527] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.servlet.internal.CdiExternalRequestScope is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:01:28.529+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=50 _ThreadName=admin-listener(4)] [timeMillis: 1604253688529] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class com.sun.faces.flow.FlowDiscoveryCDIHelper is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:01:28.533+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=50 _ThreadName=admin-listener(4)] [timeMillis: 1604253688533] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider$JaxRsParamProducer is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:01:28.546+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=50 _ThreadName=admin-listener(4)] [timeMillis: 1604253688546] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorMandatory is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:01:28.550+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=50 _ThreadName=admin-listener(4)] [timeMillis: 1604253688550] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorNever is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:01:28.551+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=50 _ThreadName=admin-listener(4)] [timeMillis: 1604253688551] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorNotSupported is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:01:28.553+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=50 _ThreadName=admin-listener(4)] [timeMillis: 1604253688553] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorRequired is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:01:28.600+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=50 _ThreadName=admin-listener(4)] [timeMillis: 1604253688600] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorRequiresNew is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:01:28.601+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=50 _ThreadName=admin-listener(4)] [timeMillis: 1604253688601] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorSupports is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:01:28.603+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=50 _ThreadName=admin-listener(4)] [timeMillis: 1604253688603] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class com.ibm.jbatch.container.cdi.BatchProducerBean is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:01:29.632+0100] [glassfish 5.1] [INFO] [] [org.glassfish.tyrus.servlet.TyrusServletContainerInitializer] [tid: _ThreadID=50 _ThreadName=admin-listener(4)] [timeMillis: 1604253689632] [levelValue: 800] [[
+  Registering WebSocket filter for url pattern /*]]
+
+[2020-11-01T19:01:29.671+0100] [glassfish 5.1] [INFO] [] [org.glassfish.soteria.servlet.SamRegistrationInstaller] [tid: _ThreadID=50 _ThreadName=admin-listener(4)] [timeMillis: 1604253689671] [levelValue: 800] [[
+  Initializing Soteria 1.0.1 for context '/ChatWebSocket']]
+
+[2020-11-01T19:01:29.691+0100] [glassfish 5.1] [INFO] [jsf.config.listener.version] [javax.enterprise.resource.webcontainer.jsf.config] [tid: _ThreadID=50 _ThreadName=admin-listener(4)] [timeMillis: 1604253689691] [levelValue: 800] [[
+  Initializing Mojarra 2.3.9 for context '/ChatWebSocket']]
+
+[2020-11-01T19:01:31.634+0100] [glassfish 5.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=50 _ThreadName=admin-listener(4)] [timeMillis: 1604253691634] [levelValue: 800] [[
+  Loading application [ChatWebSocket-1.0-SNAPSHOT] at [/ChatWebSocket]]]
+
+[2020-11-01T19:01:31.892+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=50 _ThreadName=admin-listener(4)] [timeMillis: 1604253691892] [levelValue: 800] [[
+  ChatWebSocket-1.0-SNAPSHOT was successfully deployed in 4.851 milliseconds.]]
+
+[2020-11-01T19:01:55.894+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1604253715894] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-01T19:01:55.940+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1604253715940] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-01T19:01:55.946+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1604253715946] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-01T19:01:56.122+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1604253716122] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] private org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider.processAnnotatedType(@Observes ProcessAnnotatedType) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-01T19:01:56.127+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1604253716127] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jms.injection.JMSCDIExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-01T19:01:56.136+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1604253716136] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.hibernate.validator.cdi.ValidationExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-01T19:01:56.146+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1604253716146] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] org.glassfish.sse.impl.ServerSentEventCdiExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-01T19:01:56.154+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1604253716154] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.WebAppExceptionHolder is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:01:56.159+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1604253716159] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.WebAppExceptionInterceptor is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:01:56.161+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1604253716161] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.TransactionalExceptionMapper is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:01:56.176+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1604253716176] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class com.sun.faces.flow.FlowDiscoveryCDIHelper is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:01:56.178+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1604253716178] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider$JaxRsParamProducer is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:01:56.194+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1604253716194] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.servlet.internal.CdiExternalRequestScope is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:01:56.205+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1604253716205] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorMandatory is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:01:56.208+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1604253716208] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorNever is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:01:56.209+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1604253716209] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorNotSupported is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:01:56.210+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1604253716210] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorRequired is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:01:56.212+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1604253716212] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorRequiresNew is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:01:56.213+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1604253716213] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorSupports is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:01:56.216+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1604253716216] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class com.ibm.jbatch.container.cdi.BatchProducerBean is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:01:56.568+0100] [glassfish 5.1] [INFO] [] [org.glassfish.tyrus.servlet.TyrusServletContainerInitializer] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1604253716568] [levelValue: 800] [[
+  Registering WebSocket filter for url pattern /*]]
+
+[2020-11-01T19:01:56.576+0100] [glassfish 5.1] [INFO] [] [org.glassfish.soteria.servlet.SamRegistrationInstaller] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1604253716576] [levelValue: 800] [[
+  Initializing Soteria 1.0.1 for context '/ChatWebSocket']]
+
+[2020-11-01T19:01:56.609+0100] [glassfish 5.1] [INFO] [jsf.config.listener.version] [javax.enterprise.resource.webcontainer.jsf.config] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1604253716609] [levelValue: 800] [[
+  Initializing Mojarra 2.3.9 for context '/ChatWebSocket']]
+
+[2020-11-01T19:01:57.617+0100] [glassfish 5.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1604253717617] [levelValue: 800] [[
+  Loading application [ChatWebSocket-1.0-SNAPSHOT] at [/ChatWebSocket]]]
+
+[2020-11-01T19:01:57.727+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1604253717727] [levelValue: 800] [[
+  ChatWebSocket-1.0-SNAPSHOT was successfully deployed in 1.855 milliseconds.]]
+
+[2020-11-01T19:02:27.208+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=51 _ThreadName=admin-listener(5)] [timeMillis: 1604253747208] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-01T19:02:27.257+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=51 _ThreadName=admin-listener(5)] [timeMillis: 1604253747257] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-01T19:02:27.268+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=51 _ThreadName=admin-listener(5)] [timeMillis: 1604253747268] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-01T19:02:27.481+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=51 _ThreadName=admin-listener(5)] [timeMillis: 1604253747481] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] org.glassfish.sse.impl.ServerSentEventCdiExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-01T19:02:27.491+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=51 _ThreadName=admin-listener(5)] [timeMillis: 1604253747491] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jms.injection.JMSCDIExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-01T19:02:27.503+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=51 _ThreadName=admin-listener(5)] [timeMillis: 1604253747503] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.hibernate.validator.cdi.ValidationExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-01T19:02:27.520+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=51 _ThreadName=admin-listener(5)] [timeMillis: 1604253747520] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] private org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider.processAnnotatedType(@Observes ProcessAnnotatedType) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-01T19:02:27.523+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=51 _ThreadName=admin-listener(5)] [timeMillis: 1604253747523] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.WebAppExceptionHolder is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:02:27.530+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=51 _ThreadName=admin-listener(5)] [timeMillis: 1604253747530] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.WebAppExceptionInterceptor is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:02:27.533+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=51 _ThreadName=admin-listener(5)] [timeMillis: 1604253747533] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.TransactionalExceptionMapper is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:02:27.562+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=51 _ThreadName=admin-listener(5)] [timeMillis: 1604253747562] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.servlet.internal.CdiExternalRequestScope is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:02:27.568+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=51 _ThreadName=admin-listener(5)] [timeMillis: 1604253747568] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider$JaxRsParamProducer is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:02:27.574+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=51 _ThreadName=admin-listener(5)] [timeMillis: 1604253747574] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class com.sun.faces.flow.FlowDiscoveryCDIHelper is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:02:27.577+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=51 _ThreadName=admin-listener(5)] [timeMillis: 1604253747577] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class com.ibm.jbatch.container.cdi.BatchProducerBean is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:02:27.600+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=51 _ThreadName=admin-listener(5)] [timeMillis: 1604253747600] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorMandatory is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:02:27.604+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=51 _ThreadName=admin-listener(5)] [timeMillis: 1604253747604] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorNever is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:02:27.610+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=51 _ThreadName=admin-listener(5)] [timeMillis: 1604253747610] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorNotSupported is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:02:27.649+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=51 _ThreadName=admin-listener(5)] [timeMillis: 1604253747649] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorRequired is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:02:27.650+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=51 _ThreadName=admin-listener(5)] [timeMillis: 1604253747650] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorRequiresNew is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:02:27.653+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=51 _ThreadName=admin-listener(5)] [timeMillis: 1604253747653] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorSupports is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:02:28.255+0100] [glassfish 5.1] [INFO] [] [org.glassfish.tyrus.servlet.TyrusServletContainerInitializer] [tid: _ThreadID=51 _ThreadName=admin-listener(5)] [timeMillis: 1604253748255] [levelValue: 800] [[
+  Registering WebSocket filter for url pattern /*]]
+
+[2020-11-01T19:02:28.271+0100] [glassfish 5.1] [INFO] [] [org.glassfish.soteria.servlet.SamRegistrationInstaller] [tid: _ThreadID=51 _ThreadName=admin-listener(5)] [timeMillis: 1604253748271] [levelValue: 800] [[
+  Initializing Soteria 1.0.1 for context '/ChatWebSocket']]
+
+[2020-11-01T19:02:28.474+0100] [glassfish 5.1] [INFO] [jsf.config.listener.version] [javax.enterprise.resource.webcontainer.jsf.config] [tid: _ThreadID=51 _ThreadName=admin-listener(5)] [timeMillis: 1604253748474] [levelValue: 800] [[
+  Initializing Mojarra 2.3.9 for context '/ChatWebSocket']]
+
+[2020-11-01T19:02:29.251+0100] [glassfish 5.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=51 _ThreadName=admin-listener(5)] [timeMillis: 1604253749251] [levelValue: 800] [[
+  Loading application [ChatWebSocket-1.0-SNAPSHOT] at [/ChatWebSocket]]]
+
+[2020-11-01T19:02:29.273+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=51 _ThreadName=admin-listener(5)] [timeMillis: 1604253749273] [levelValue: 800] [[
+  ChatWebSocket-1.0-SNAPSHOT was successfully deployed in 2.091 milliseconds.]]
+
+[2020-11-01T19:03:05.463+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=48 _ThreadName=admin-listener(2)] [timeMillis: 1604253785463] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-01T19:03:05.551+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=48 _ThreadName=admin-listener(2)] [timeMillis: 1604253785551] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-01T19:03:05.564+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=48 _ThreadName=admin-listener(2)] [timeMillis: 1604253785564] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-01T19:03:05.751+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=48 _ThreadName=admin-listener(2)] [timeMillis: 1604253785751] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] org.glassfish.sse.impl.ServerSentEventCdiExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-01T19:03:05.753+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=48 _ThreadName=admin-listener(2)] [timeMillis: 1604253785753] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.hibernate.validator.cdi.ValidationExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-01T19:03:05.772+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=48 _ThreadName=admin-listener(2)] [timeMillis: 1604253785772] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jms.injection.JMSCDIExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-01T19:03:05.782+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=48 _ThreadName=admin-listener(2)] [timeMillis: 1604253785782] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] private org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider.processAnnotatedType(@Observes ProcessAnnotatedType) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-01T19:03:05.793+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=48 _ThreadName=admin-listener(2)] [timeMillis: 1604253785793] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.WebAppExceptionHolder is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:03:05.799+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=48 _ThreadName=admin-listener(2)] [timeMillis: 1604253785799] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.WebAppExceptionInterceptor is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:03:05.808+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=48 _ThreadName=admin-listener(2)] [timeMillis: 1604253785808] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.TransactionalExceptionMapper is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:03:05.824+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=48 _ThreadName=admin-listener(2)] [timeMillis: 1604253785824] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider$JaxRsParamProducer is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:03:05.827+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=48 _ThreadName=admin-listener(2)] [timeMillis: 1604253785827] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.servlet.internal.CdiExternalRequestScope is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:03:05.848+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=48 _ThreadName=admin-listener(2)] [timeMillis: 1604253785848] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class com.sun.faces.flow.FlowDiscoveryCDIHelper is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:03:05.866+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=48 _ThreadName=admin-listener(2)] [timeMillis: 1604253785866] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorMandatory is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:03:05.870+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=48 _ThreadName=admin-listener(2)] [timeMillis: 1604253785870] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorNever is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:03:05.876+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=48 _ThreadName=admin-listener(2)] [timeMillis: 1604253785876] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorNotSupported is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:03:05.879+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=48 _ThreadName=admin-listener(2)] [timeMillis: 1604253785879] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorRequired is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:03:05.880+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=48 _ThreadName=admin-listener(2)] [timeMillis: 1604253785880] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorRequiresNew is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:03:05.893+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=48 _ThreadName=admin-listener(2)] [timeMillis: 1604253785893] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorSupports is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:03:05.899+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=48 _ThreadName=admin-listener(2)] [timeMillis: 1604253785899] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class com.ibm.jbatch.container.cdi.BatchProducerBean is deprecated from CDI 1.1!]]
+
+[2020-11-01T19:03:06.320+0100] [glassfish 5.1] [INFO] [] [org.glassfish.tyrus.servlet.TyrusServletContainerInitializer] [tid: _ThreadID=48 _ThreadName=admin-listener(2)] [timeMillis: 1604253786320] [levelValue: 800] [[
+  Registering WebSocket filter for url pattern /*]]
+
+[2020-11-01T19:03:06.330+0100] [glassfish 5.1] [INFO] [] [org.glassfish.soteria.servlet.SamRegistrationInstaller] [tid: _ThreadID=48 _ThreadName=admin-listener(2)] [timeMillis: 1604253786330] [levelValue: 800] [[
+  Initializing Soteria 1.0.1 for context '/ChatWebSocket']]
+
+[2020-11-01T19:03:06.347+0100] [glassfish 5.1] [INFO] [jsf.config.listener.version] [javax.enterprise.resource.webcontainer.jsf.config] [tid: _ThreadID=48 _ThreadName=admin-listener(2)] [timeMillis: 1604253786347] [levelValue: 800] [[
+  Initializing Mojarra 2.3.9 for context '/ChatWebSocket']]
+
+[2020-11-01T19:03:06.851+0100] [glassfish 5.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=48 _ThreadName=admin-listener(2)] [timeMillis: 1604253786851] [levelValue: 800] [[
+  Loading application [ChatWebSocket-1.0-SNAPSHOT] at [/ChatWebSocket]]]
+
+[2020-11-01T19:03:06.870+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=48 _ThreadName=admin-listener(2)] [timeMillis: 1604253786870] [levelValue: 800] [[
+  ChatWebSocket-1.0-SNAPSHOT was successfully deployed in 1.437 milliseconds.]]
+
+[2020-11-01T23:04:26.661+0100] [glassfish 5.1] [INFO] [NCLS-CORE-00092] [javax.enterprise.system.core] [tid: _ThreadID=1494 _ThreadName=Thread-46] [timeMillis: 1604268266661] [levelValue: 800] [[
+  Server shutdown initiated]]
+
+[2020-11-01T23:04:26.667+0100] [glassfish 5.1] [INFO] [NCLS-BOOTSTRAP-00028] [javax.enterprise.bootstrap] [tid: _ThreadID=1494 _ThreadName=Thread-46] [timeMillis: 1604268266667] [levelValue: 800] [[
+  Unregistered com.sun.enterprise.glassfish.bootstrap.osgi.EmbeddedOSGiGlassFishImpl@76fe6cdc from service registry.]]
+
+[2020-11-01T23:04:26.668+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=1494 _ThreadName=Thread-8] [timeMillis: 1604268266668] [levelValue: 800] [[
+  FileMonitoring shutdown]]
+
+[2020-11-01T23:04:26.720+0100] [glassfish 5.1] [INFO] [NCLS-JMX-00002] [javax.enterprise.system.jmx] [tid: _ThreadID=1494 _ThreadName=Thread-46] [timeMillis: 1604268266720] [levelValue: 800] [[
+  JMXStartupService: Stopped JMXConnectorServer: null]]
+
+[2020-11-01T23:04:26.720+0100] [glassfish 5.1] [INFO] [NCLS-JMX-00001] [javax.enterprise.system.jmx] [tid: _ThreadID=1494 _ThreadName=Thread-46] [timeMillis: 1604268266720] [levelValue: 800] [[
+  JMXStartupService and JMXConnectors have been shut down.]]
+
+[2020-11-01T23:04:27.147+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=1505 _ThreadName=Thread-8] [timeMillis: 1604268267147] [levelValue: 800] [[
+  JdbcRuntimeExtension,  getAllSystemRAResourcesAndPools = [GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool]]]
+
