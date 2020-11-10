@@ -1,16 +1,14 @@
 package com.marconi.chatwebsocket;
 
-import java.util.Objects;
 import java.io.IOException;
 import java.io.StringReader;
+import java.math.BigDecimal;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
-import javax.json.Json;
-import javax.json.JsonObject;
-import javax.json.JsonReader;
-import javax.json.spi.JsonProvider;
+import javax.json.*;
+import javax.json.spi.*;
 import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
 import javax.websocket.Session;
@@ -27,10 +25,47 @@ public class WebSocketServer {
        sessions.add(session);
        JsonProvider json = JsonProvider.provider();
        JsonObject obj = json.createObjectBuilder()
-               .add("type","system")
-               .add("msg","Nuovo Utente connesso")
+               .add("type","user")
+               .add("text","Ciao Patrick")
+               .add("sender","Rupert")
+               .add("date","10/11/2020")
+               .add("hour","17:50")
+               .add("group","null")
                .build();
        //sendMessage(obj,session);
+       System.out.println("Invio mess1");
+       sendToAll(obj);
+       
+       JsonArray arrayMembers1 = json.createArrayBuilder()
+               .add("Rupert")
+               .add("Patrick")
+               .add("Lucia")
+               .build();
+       JsonArray arrayMembers2 = json.createArrayBuilder()
+               .add("Linda")
+               .add("Patrick")
+               .add("Anna")
+               .build();
+       JsonObject g1 = json.createObjectBuilder().add("name", "Amici").add("members",arrayMembers1).build();
+       JsonObject g2 = json.createObjectBuilder().add("name", "LPA").add("members",arrayMembers2).build();
+       JsonArray groups = json.createArrayBuilder().add(g1).add(g2).build();
+       obj = json.createObjectBuilder()
+               .add("type","system")
+               .add("task","groupCreation")
+               .add("groups",groups)
+               .build();
+       System.out.println("Invio gruppo");
+        sendToAll(obj);
+        
+        obj = json.createObjectBuilder()
+               .add("type","group")
+               .add("text","Ciao Amici")
+               .add("sender","Lucia")
+               .add("date","10/11/2020")
+               .add("hour","17:50")
+               .add("group","Amici")
+               .build();
+       System.out.println("Invio mes gruppo");
        sendToAll(obj);
     }
     private void sendMessage(JsonObject obj, Session s) {
