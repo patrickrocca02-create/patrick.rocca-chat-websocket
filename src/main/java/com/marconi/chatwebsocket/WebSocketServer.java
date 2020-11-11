@@ -2,7 +2,6 @@ package com.marconi.chatwebsocket;
 
 import java.io.IOException;
 import java.io.StringReader;
-import java.math.BigDecimal;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.enterprise.context.ApplicationScoped;
@@ -16,57 +15,16 @@ import javax.websocket.server.ServerEndpoint;
 
 
 @ApplicationScoped
-@ServerEndpoint("/demows")
+@ServerEndpoint("/demowss")
 public class WebSocketServer {
-    @Inject
-    SessionHandler sessions;
+    
+    ConversationsHandler conversationHandler = new ConversationsHandler();
+    
+    JsonProvider jsonProvider = JsonProvider.provider();
+            
     @OnOpen
     public void onOpen(Session session) {
-       sessions.add(session);
-       JsonProvider json = JsonProvider.provider();
-       JsonObject obj = json.createObjectBuilder()
-               .add("type","user")
-               .add("text","Ciao Patrick")
-               .add("sender","Rupert")
-               .add("date","10/11/2020")
-               .add("hour","17:50")
-               .add("group","null")
-               .build();
-       //sendMessage(obj,session);
-       System.out.println("Invio mess1");
-       sendToAll(obj);
-       
-       JsonArray arrayMembers1 = json.createArrayBuilder()
-               .add("Rupert")
-               .add("Patrick")
-               .add("Lucia")
-               .build();
-       JsonArray arrayMembers2 = json.createArrayBuilder()
-               .add("Linda")
-               .add("Patrick")
-               .add("Anna")
-               .build();
-       JsonObject g1 = json.createObjectBuilder().add("name", "Amici").add("members",arrayMembers1).build();
-       JsonObject g2 = json.createObjectBuilder().add("name", "LPA").add("members",arrayMembers2).build();
-       JsonArray groups = json.createArrayBuilder().add(g1).add(g2).build();
-       obj = json.createObjectBuilder()
-               .add("type","system")
-               .add("task","groupCreation")
-               .add("groups",groups)
-               .build();
-       System.out.println("Invio gruppo");
-        sendToAll(obj);
         
-        obj = json.createObjectBuilder()
-               .add("type","group")
-               .add("text","Ciao Amici")
-               .add("sender","Lucia")
-               .add("date","10/11/2020")
-               .add("hour","17:50")
-               .add("group","Amici")
-               .build();
-       System.out.println("Invio mes gruppo");
-       sendToAll(obj);
     }
     private void sendMessage(JsonObject obj, Session s) {
         try {
@@ -75,20 +33,81 @@ public class WebSocketServer {
             Logger.getLogger(WebSocketServer.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    private void sendToAll(JsonObject obj){
-        for (Session s: sessions.getSessions()){
-            if (s.isOpen()){
-                sendMessage(obj,s);
+
+    @OnMessage
+    public void onMessage(String message, Session session) {
+        JsonReader reader = Json.createReader(new StringReader(message));
+        JsonObject jsonMessage = reader.readObject();
+        System.out.println(jsonMessage);
+        switch(jsonMessage.getString("type")){
+            case "system":
+                switch(jsonMessage.getString("task")){
+                    case "userConnection":     
+                        onUserConnection(jsonMessage.getString("userName"), session);
+                        break;
+                    case "userDisconnection":
+                        onUserDisconnection(jsonMessage.getString("userName"));
+                        break;
+                    case "groupCreation":
+                        onGroupCreation(jsonMessage.getJsonObject("group"));
+                        break;
+                }
+                break;
+            case "message":
+                switch(jsonMessage.getString("destType")){
+                    case "user":
+                        onUserMessage(jsonMessage.getJsonObject("message"));
+                        break;
+                    case "group":
+                        onGroupMessage(jsonMessage.getJsonObject("message"));
+                        break;
+                }
+        }
+    }
+    
+    private void onUserConnection(String userName, Session session){
+        if(userName != null){
+            if(!conversationHandler.userExists(userName)){
+                conversationHandler.addUser(userName);
+            }
+            if(conversationHandler.getUserOnline(userName)){
+                JsonObject jsonMessage = jsonProvider.createObjectBuilder()
+                    .add("type","error")
+                    .add("task","userAlreadyOnline")
+                    .build();
+                conversationHandler.sendMessageFrom(userName, jsonMessage);
+            }else{
+                conversationHandler.setUserSession(userName, session);
+                conversationHandler.setUserOnline(userName, true);
+                JsonObject jsonMessage = jsonProvider.createObjectBuilder()
+                        .add("type","system")
+                        .add("task","userStateChange")
+                        .add("userName", userName)
+                        .add("userState",true)
+                        .build();
+                System.out.println(conversationHandler);
+                conversationHandler.sendMessageFrom(userName, jsonMessage);
             }
         }
     }
-
-    @OnMessage
-    public void onMessage(String msg, Session s) {
-        JsonReader reader = Json.createReader(new StringReader(msg));
-        JsonObject jsonMsg = reader.readObject();
-        if ("user".equals(jsonMsg.getString("type"))){
-            sendToAll(jsonMsg);
-        }
+    private void onUserDisconnection(String userName){
+        conversationHandler.setUserSession(userName, null);
+        conversationHandler.setUserOnline(userName, false);
+        JsonObject jsonMessage = jsonProvider.createObjectBuilder()
+                .add("type","system")
+                .add("task","userStateChange")
+                .add("userName", userName)
+                .add("userState",false)
+                .build();
+        conversationHandler.sendMessageFrom(userName, jsonMessage);
+    }
+    private void onGroupCreation(JsonObject group){
+        
+    }
+    private void onUserMessage(JsonObject message){
+        
+    }
+    private void onGroupMessage(JsonObject message){
+        
     }
 }

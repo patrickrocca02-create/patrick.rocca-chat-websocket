@@ -63,6 +63,7 @@
   <servers>
     <server config-ref="server-config" name="server">
       <application-ref ref="__admingui" virtual-servers="__asadmin"></application-ref>
+      <application-ref ref="WebSocketChat-1.0-SNAPSHOT" virtual-servers="server"></application-ref>
       <application-ref ref="ChatWebSocket-1.0-SNAPSHOT" virtual-servers="server"></application-ref>
       <resource-ref ref="jdbc/__TimerPool"></resource-ref>
       <resource-ref ref="jdbc/__default"></resource-ref>
@@ -465,6 +466,17 @@
   </secure-admin>
   <clusters></clusters>
   <applications>
+    <application context-root="/WebSocketChat" object-type="user" directory-deployed="true" name="WebSocketChat-1.0-SNAPSHOT" location="file:/C:/Users/rocca/Desktop/temp/WebSocketChat/target/WebSocketChat-1.0-SNAPSHOT/">
+      <property name="appLocation" value="file:/C:/Users/rocca/Desktop/temp/WebSocketChat/target/WebSocketChat-1.0-SNAPSHOT/"></property>
+      <property name="archiveType" value="war"></property>
+      <property name="defaultAppName" value="WebSocketChat-1.0-SNAPSHOT"></property>
+      <module name="WebSocketChat-1.0-SNAPSHOT">
+        <engine sniffer="weld"></engine>
+        <engine sniffer="jpa"></engine>
+        <engine sniffer="security"></engine>
+        <engine sniffer="web"></engine>
+      </module>
+    </application>
     <application context-root="/ChatWebSocket" object-type="user" name="ChatWebSocket-1.0-SNAPSHOT" directory-deployed="true" location="file:/C:/Users/rocca/Desktop/temp/ChatWebSocket/target/ChatWebSocket-1.0-SNAPSHOT/">
       <property name="appLocation" value="file:/C:/Users/rocca/Desktop/temp/ChatWebSocket/target/ChatWebSocket-1.0-SNAPSHOT/"></property>
       <property name="archiveType" value="war"></property>

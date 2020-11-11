@@ -1,4 +1,7 @@
-com\marconi\chatwebsocket\SessionHandler.class
-com\marconi\chatwebsocket\JAXRSConfiguration.class
+com\marconi\chatwebsocket\User.class
 com\marconi\chatwebsocket\resources\JavaEE8Resource.class
 com\marconi\chatwebsocket\WebSocketServer.class
+com\marconi\chatwebsocket\Group.class
+com\marconi\chatwebsocket\ConversationsHandler.class
+com\marconi\chatwebsocket\SessionHandler.class
+com\marconi\chatwebsocket\JAXRSConfiguration.class

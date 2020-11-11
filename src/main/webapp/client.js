@@ -1,16 +1,18 @@
-var socket = new WebSocket("ws://localhost:8080/ChatWebSocket/demows");
-socket.onmessage=onMessage;
+var socket = new WebSocket("ws://localhost:8080/ChatWebSocket/demowss");
+
+socket.onopen = onConnection;
+socket.onmessage = onMessage;
+socket.onclose = onClose;
 
 function onMessage(event) {
     var msg=JSON.parse(event.data);
+    console.log(msg);
     if(msg.type == "system"){
         switch(msg.task){
             case "groupCreation" :
-                msg.groups.forEach(g => {
-                    Client.addGroup(new Group(g.name, g.members));
-                });
+                onGroupCreation(msg);
+            case "userStateChange":
                 break;
-            case "userConnection":
         }
     }else{
         Client.addMessage(msg);
@@ -18,28 +20,54 @@ function onMessage(event) {
     console.log(Client.users);
     console.log(Client.groups);
 }
-function inviaMsg()
-{
-    var msg = document.getElementById("msg").value;
-    alert(msg);
-    var msgObj = {
-        type:'user',
-        msg:msg
+
+//send messages of type user with destType user
+function sendUserMessage(message){
+    serverMessage = {
+        type : "message",
+        destType : "user",
+        message : message
     }
-    socket.send(JSON.stringify(msgObj));  
+    socket.send(JSON.stringify(serverMessage));  
 }
+//send messages of type user with destType user
+function sendGroupMessage(message){
+    serverMessage = {
+        type : "message",
+        destType : "group",
+        message : message
+    }
+    socket.send(JSON.stringify(serverMessage));  
+}
+//send messages of type system with task grupCreation
 function sendNewGroup(group){
-    var msg;
-    msg.type = "system";
-    msg.task = "groupCreation";
-    msg.groupName = group.name;
-    msg.groupMemebers = group.members;
+    groupMessage = {
+        type : "system",
+        task : "groupCreation",
+        group : group
+    }
+    socket.send(JSON.stringify(groupMessage));
+}
+//send messages of type system with task userConnection
+function onConnection(event){
+    Client.userName = window.prompt("Inserire il proprio nome utente", "nome utente...")
+    var msg = {
+        type : "system",
+        task : "userConnection",
+        userName : Client.userName
+    }
     socket.send(JSON.stringify(msg));
 }
-function onConnection(){
-    var msg;
-    msg.type = "system";
-    msg.task = "userConnection";
-    msg.userName = Client.userName;
+//send messages of type system with task userDisconnection
+function onDisconnection(event){
+    var msg = {
+        type : "system",
+        task : "userDisconnection",
+        userName : Client.userName
+    }
     socket.send(JSON.stringify(msg));
+}
+
+function onClose(){
+
 }

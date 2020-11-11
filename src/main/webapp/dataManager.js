@@ -7,8 +7,8 @@ class Client{
     }
 
     static getUserIndex(userName){
-        var index = -1;
-        for(var i=0; i < Client.users.length; i++){
+        let index = -1;
+        for(let i=0; i < Client.users.length; i++){
             if(Client.users[i].name == userName){
                 index = i;
             }
@@ -16,8 +16,8 @@ class Client{
         return index;
     }
     static getGruopIndex(groupName){
-        var index = -1;
-        for(var i=0; i < Client.groups.length; i++){
+        let index = -1;
+        for(let i=0; i < Client.groups.length; i++){
             if(Client.groups[i].name == groupName){
                 index = i;
             }
@@ -25,26 +25,29 @@ class Client{
         return index;
     }
 
-    static addMessage(mex){
-        if(mex.type == "user"){
-            var userIndex = Client.getUserIndex(mex.sender);
-            if(userIndex == -1){
-                Client.addUser(new User(mex.sender));
-                userIndex = Client.getUserIndex(mex.sender);
-            }
-            Client.users[userIndex].addMessage(mex);
-        }else if(mex.type == "group"){
-            var groupIndex = Client.getGruopIndex(mex.group);
-            if(groupIndex != -1){
-                Client.groups[groupIndex].addMessage(mex);
-            }
+    static addGroupMessage(mex){
+        let groupIndex = Client.getGruopIndex(mex.group);
+        if(groupIndex != -1){
+            Client.groups[groupIndex].addMessage(mex);
+        }
+    }
+    static addUserMessage(mex){
+        let userIndex = Client.getUserIndex(mex.sender);
+        if(userIndex == -1){
+            Client.addUser(new User(mex.sender));
+        }
+    }
+
+    static setOnline(userName, online){
+        let userIndex = Client.getUserIndex(userName);
+        if(userIndex != -1){
+            Client.users[userIndex].online = online;
         }
     }
 
     static addUser(user){
         Client.users.push(user);
     }
-
     static addGroup(group){
         Client.groups.push(group)
     }
@@ -67,13 +70,13 @@ class User{
 }
 
 class Message{
-    constructor(text, type, group){
-        this.type = type;
-        this.group = group;
+    constructor(text, destType, groupName){
+        this.destType = destType;
+        this.groupName = groupName;
         this.text = text;
         let date = new Date();
         this.date = date.getDate() + "/" + (date.getMonth()+1) + "/" + date.getFullYear();
-        this.hour = date.getHours() + ":" + date.getMinutes();
+        this.time = date.getHours() + ":" + date.getMinutes();
         this.sender = Client.userName;
     }
 }
@@ -86,7 +89,7 @@ class Group{
         this.messages = []
         let date = new Date();
         this.creationDate = date.getDate() + "/" + (date.getMonth()+1) + "/" + date.getFullYear();
-        this.creationHour = date.getHours() + ":" + date.getMinutes();
+        this.creationTime = date.getHours() + ":" + date.getMinutes();
         this.creator = Client.userName;
     }
 
