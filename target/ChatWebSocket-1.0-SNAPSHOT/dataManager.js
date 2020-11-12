@@ -70,9 +70,7 @@ class User{
 }
 
 class Message{
-    constructor(text, destType, groupName){
-        this.destType = destType;
-        this.groupName = groupName;
+    constructor(text){
         this.text = text;
         let date = new Date();
         this.date = date.getDate() + "/" + (date.getMonth()+1) + "/" + date.getFullYear();

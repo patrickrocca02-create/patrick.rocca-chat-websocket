@@ -1,12 +1,9 @@
-var socket = new WebSocket("ws://localhost:8080/ChatWebSocket/demowss");
-
-socket.onopen = onConnection;
-socket.onmessage = onMessage;
-socket.onclose = onClose;
+var socket; 
 
 function onMessage(event) {
     var msg=JSON.parse(event.data);
     console.log(msg);
+    /*
     if(msg.type == "system"){
         switch(msg.task){
             case "groupCreation" :
@@ -16,37 +13,48 @@ function onMessage(event) {
         }
     }else{
         Client.addMessage(msg);
-    }
+    }*/
+    console.log("Resoconto:")
     console.log(Client.users);
     console.log(Client.groups);
+    console.log(" ");
 }
 
 //send messages of type user with destType user
-function sendUserMessage(message){
+function sendUserMessage(message, destName){
     serverMessage = {
         type : "message",
         destType : "user",
+        destName : destName,
         message : message
     }
+    console.log(serverMessage);
     socket.send(JSON.stringify(serverMessage));  
 }
 //send messages of type user with destType user
-function sendGroupMessage(message){
+function sendGroupMessage(message, destName){
     serverMessage = {
         type : "message",
         destType : "group",
+        destName : destName,
         message : message
     }
+    console.log(serverMessage);
     socket.send(JSON.stringify(serverMessage));  
 }
 //send messages of type system with task grupCreation
 function sendNewGroup(group){
-    groupMessage = {
-        type : "system",
-        task : "groupCreation",
-        group : group
+    if(group.members.length > 0){
+        delete group["messages"];
+        groupMessage = {
+            type : "system",
+            task : "groupCreation",
+            group : group
+        }
+        socket.send(JSON.stringify(groupMessage));
+    }else{
+        //members error
     }
-    socket.send(JSON.stringify(groupMessage));
 }
 //send messages of type system with task userConnection
 function onConnection(event){
@@ -71,3 +79,13 @@ function onDisconnection(event){
 function onClose(){
 
 }
+
+
+function start(){
+    Client.userName = window.prompt("Inserire il proprio nome utente", "nome utente...");
+    socket = new WebSocket("ws://localhost:8080/ChatWebSocket/demows/" + Client.userName + "");
+    socket.onmessage = onMessage;
+    console.log(socket);
+}
+
+start();

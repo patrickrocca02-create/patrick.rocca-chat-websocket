@@ -4,68 +4,68 @@ import java.io.IOException;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.enterprise.context.ApplicationScoped;
 import javax.json.*;
 import javax.websocket.*;
 
+@ApplicationScoped
 public class ConversationsHandler {
-    private static ConversationsHandler current;
-    
     private ArrayList<User> users;
     private ArrayList<Group> groups;
     
     public ConversationsHandler(){
-        ConversationsHandler.current = this;
         this.users = new ArrayList<>();
         this.groups = new ArrayList<>();
     }
     
-    public static ConversationsHandler getCurrent(){
-        return ConversationsHandler.current;
+    public void addGroup(String name, String[] members, String creationDate, String creationTime, String creator){
+        this.groups.add(new Group(name, members, creationDate, creationTime, creator));
     }
-    
     public void addUser(String userName){
         this.users.add(new User(userName));
     }
-    public void setUserSession(String userName, Session session){
-        this.getUser(userName).setSession(session);
+    
+    public void sendOrBufMessage(String userName, JsonObject message){
+        User u = this.getUser(userName);
+        this.sendOrBufMessage(u, message);
     }
-    public void setUserOnline(String userName, boolean online){
-        this.getUser(userName).setOnline(online);
-    }
-    public boolean getUserOnline(String userName){
-        return this.getUser(userName).getOnline();
-    }
-    public void addMessageToUserBuffer(String userName, JsonObject jsonMessage){
-        this.getUser(userName).addMessageToBuffer(jsonMessage);
-    }
-    private User getUser(String userName){
-        return this.users.get(this.users.indexOf(new User(userName)));
+    public void sendOrBufMessage(User user, JsonObject message){
+        if(user.getOnline() == true){
+            System.out.println("--> inviato a " + user.getName());
+            user.sendMessage(message);
+        }
+        else{
+            System.out.println("--> aggiunta a buffer di" + user.getName());
+            user.addMessageToBuffer(message);
+        }
     }
     
     public void sendMessageFrom(String userName, JsonObject jsonMessage){
-         System.out.println("invio " + jsonMessage.toString() + " dal " + userName);
-        for(User u : this.getOnlineUsers()){
+        System.out.println("invio " + jsonMessage.toString() + " dal " + userName);
+        for(User u : this.users){
             if(!u.getName().equals(userName)){
-                System.out.println("invio " + jsonMessage.toString() + " a " + u.getName());
-                u.sendMessage(jsonMessage);
+                this.sendOrBufMessage(u,jsonMessage);
             }
         }
-        for(User u : this.getOfflineUsers()){
-            if(!u.getName().equals(userName))
-                u.addMessageToBuffer(jsonMessage);
+    }
+    public void sendMessageToGroupFrom(String groupName, String userName, JsonObject jsonMessage){
+        for(User u : this.getUsersOfGroup(groupName)){
+            if(!u.getName().equals(userName)){
+                this.sendOrBufMessage(u, jsonMessage);
+            }
         }
     }
-    
     public void sendMessageToUser(String userName, JsonObject jsonMessage){
         try {
-            this.getSessionOf(userName).getBasicRemote().sendText(jsonMessage.toString());
+            this.getUserSession(userName).getBasicRemote().sendText(jsonMessage.toString());
         } catch (IOException ex) {
             Logger.getLogger(ConversationsHandler.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
-    public boolean userExists(String userName){
-        return this.users.indexOf(new User(userName)) != -1;
+    
+    public void addMessageToUserBuffer(String userName, JsonObject jsonMessage){
+        this.getUser(userName).addMessageToBuffer(jsonMessage);
     }
     
     private ArrayList<User> getOnlineUsers(){
@@ -83,16 +83,53 @@ public class ConversationsHandler {
         }
         return users;
     }
+    private ArrayList<User> getUsersOfGroup(String groupName){
+        ArrayList<User> users = new ArrayList<>();
+        for(String userName : this.getGroup(groupName).getMembers()){
+            users.add(this.getUser(userName));
+        }
+        return users;
+    }
     
-    private Session getSessionOf(String userName){
+    public void setUserSession(String userName, Session session){
+        this.getUser(userName).setSession(session);
+    }
+    private Session getUserSession(String userName){
         return this.users.get(this.users.indexOf(new User(userName))).getSession();
     }
+    public void setUserOnline(String userName, boolean online){
+        this.getUser(userName).setOnline(online);
+    }
+    public boolean getUserOnline(String userName){
+        return this.getUser(userName).getOnline();
+    }
+    
+    private User getUser(String userName){
+        return this.users.get(this.users.indexOf(new User(userName)));
+    }
+    private Group getGroup(String groupName){
+        int i = this.groups.indexOf(new Group(groupName));
+        System.out.println("QUI: " + i);
+        return this.groups.get(i);
+    }
+    
+    public boolean groupExists(String groupName){
+        return this.groups.indexOf(new Group(groupName)) != -1;
+    }
+    public boolean userExists(String userName){
+        return this.users.indexOf(new User(userName)) != -1;
+    }
+  
     
     @Override
     public String toString(){
         String s = "Users:" + System.lineSeparator();
         for(User u : users){
             s += "nome: " + u.getName() + ", online: " + u.getOnline() + System.lineSeparator();
+        }
+        s += "Groups:" + System.lineSeparator();
+        for(Group u : groups){
+            s += u.toString() + System.lineSeparator();
         }
         return s;
     }
