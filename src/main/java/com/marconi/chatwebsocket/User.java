@@ -42,21 +42,25 @@ class User implements Serializable{
             Logger.getLogger(WebSocketServer.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    public void sendBuffedMessages(){
+        for(JsonObject message : this.buffer){
+            this.sendMessage(message);
+        }
+        this.buffer.clear();
+    }
     
     public void addMessageToBuffer(JsonObject jsonMessage){
-        if("system".equals(jsonMessage.getString("type")) 
-            && ("userConnection".equals(jsonMessage.getString("task"))
-            || "userDisconnection".equals(jsonMessage.getString("task"))))
-        {
-            removeMessageFromBuffer("task", jsonMessage.getString("task"));
+        if("system".equals(jsonMessage.getString("type")) && "userStateChange".equals(jsonMessage.getString("task"))){
+            removeSystemMessageFromBuffer("userStateChange");
         }
         buffer.add(jsonMessage);
     }
     
-    private void removeMessageFromBuffer(String field, String value){
+    private void removeSystemMessageFromBuffer(String task){
         for(JsonObject jo : this.buffer){
-            if(value.equals(jo.getString(field))){
+            if("system".equals(jo.getString("type")) && jo.getString("task").equals(task)){
                 this.buffer.remove(jo);
+                break;
             }
         }
     }
@@ -70,5 +74,15 @@ class User implements Serializable{
             return false;
         }
         return this.name.equals(((User)o).name);
+    }
+    
+    @Override
+    public String toString(){
+        String s = "Name: " + this.name + ", Online: " + this.online + ", Buffer: ";
+        int i = 0;
+        for(JsonObject b : this.buffer){
+            s += i++ + ":" + b.toString() + ", ";
+        }
+        return s;
     }
 }

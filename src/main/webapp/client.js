@@ -51,6 +51,7 @@ function sendNewGroup(group){
             task : "groupCreation",
             group : group
         }
+        console.log(groupMessage);
         socket.send(JSON.stringify(groupMessage));
     }else{
         //members error
@@ -59,7 +60,7 @@ function sendNewGroup(group){
 //send messages of type system with task userConnection
 function onConnection(event){
     Client.userName = window.prompt("Inserire il proprio nome utente", "nome utente...")
-    var msg = {
+    let msg = {
         type : "system",
         task : "userConnection",
         userName : Client.userName
@@ -68,11 +69,27 @@ function onConnection(event){
 }
 //send messages of type system with task userDisconnection
 function onDisconnection(event){
-    var msg = {
+    let msg = {
         type : "system",
         task : "userDisconnection",
         userName : Client.userName
     }
+    socket.send(JSON.stringify(msg));
+}
+
+function sendGroupModification(groupName, addMembers, removeMembers,addAdmins,removeAdmins){
+    let msg = {
+        type : "system",
+        task : "groupModification",
+        groupName : groupName
+    }
+    let newGroupSettings = {
+        addMembers : addMembers, 
+        removeMembers : removeMembers,
+        addAdmins : addAdmins,
+        removeAdmins : removeAdmins
+    }
+    msg.newGroupSettings = newGroupSettings;
     socket.send(JSON.stringify(msg));
 }
 

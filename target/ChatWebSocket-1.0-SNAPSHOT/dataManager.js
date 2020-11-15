@@ -80,10 +80,12 @@ class Message{
 }
 
 class Group{
-    constructor(name, members){
+    constructor(name, members, admins){
         this.name = name;
         members.push(Client.userName);
         this.members = members;
+        admins.push(Client.userName);
+        this.admins = admins
         this.messages = []
         let date = new Date();
         this.creationDate = date.getDate() + "/" + (date.getMonth()+1) + "/" + date.getFullYear();

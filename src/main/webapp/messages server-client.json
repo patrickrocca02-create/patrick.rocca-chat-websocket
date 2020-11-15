@@ -1,0 +1,77 @@
+[
+{
+    "type":"system",
+    "task":"groupCreation",
+    "group":{
+        "name":"name",
+        "members":[
+            "member 1",
+            "member 2",
+            "member n"
+        ],
+        "admins":[
+            "admin 1",
+            "admin 2",
+            "admin n"
+        ],
+        "creationDate": "date",
+        "creationTima": "time",
+        "creator": "name"
+    }
+},
+{
+    "type":"system",
+    "task":"userStateChange",
+    "userName":"name",
+    "userState":"state"
+},
+{
+    "type":"error",
+    "problem":"nameNotAvailable",
+    "context":"gruopCreation/userConnetion"
+},
+{
+    "type":"error",
+    "problem":"notExisingNames",
+    "context":"groupCreation/groupModification/userMessage/groupMessage/groupMembersRemoval/groupAdminsRemoval/groupAdminsAddition",
+    "notExistingUsers":[
+        "user 1",
+        "user 2",
+        "user n"
+    ]
+},
+{
+    "type":"system",
+    "task":"groupModification",
+    "groupName":"name",
+    "admin":"name",
+    "newGroupSettings":{
+        "addMembers":[
+            "member 1",
+            "member 2",
+            "member n"
+        ],
+        "removeMembers":[
+            "member 1",
+            "member 2",
+            "member n"
+        ],
+        "addAdmins":[
+            "admin 1",
+            "admin 2",
+            "admin n"
+        ],
+        "removeAdmins":[
+            "admin 1",
+            "admin 2",
+            "admin n"
+        ]
+    }
+},
+{
+    "type":"system",
+    "task":"groupRemoval",
+    "groupName":"name",
+    "admin":"name"
+}
+]

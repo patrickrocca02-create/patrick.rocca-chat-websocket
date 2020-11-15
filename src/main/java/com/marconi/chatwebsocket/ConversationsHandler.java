@@ -18,18 +18,18 @@ public class ConversationsHandler {
         this.groups = new ArrayList<>();
     }
     
-    public void addGroup(String name, String[] members, String creationDate, String creationTime, String creator){
-        this.groups.add(new Group(name, members, creationDate, creationTime, creator));
+    public void addGroup(String name, ArrayList<String> members, ArrayList<String> admins, String creationDate, String creationTime, String creator){
+        this.groups.add(new Group(name, members, admins, creationDate, creationTime, creator));
     }
     public void addUser(String userName){
         this.users.add(new User(userName));
     }
     
-    public void sendOrBufMessage(String userName, JsonObject message){
+    public void sendOrBufMessageToUser(String userName, JsonObject message){
         User u = this.getUser(userName);
-        this.sendOrBufMessage(u, message);
+        this.sendOrBufMessageToUser(u, message);
     }
-    public void sendOrBufMessage(User user, JsonObject message){
+    public void sendOrBufMessageToUser(User user, JsonObject message){
         if(user.getOnline() == true){
             System.out.println("--> inviato a " + user.getName());
             user.sendMessage(message);
@@ -40,29 +40,32 @@ public class ConversationsHandler {
         }
     }
     
+    public void sendBuffedMessagesTo(String userName){
+        this.getUser(userName).sendBuffedMessages();
+    }
+    
     public void sendMessageFrom(String userName, JsonObject jsonMessage){
-        System.out.println("invio " + jsonMessage.toString() + " dal " + userName);
+        System.out.println("invio " + jsonMessage.toString() + " da " + userName);
         for(User u : this.users){
             if(!u.getName().equals(userName)){
-                this.sendOrBufMessage(u,jsonMessage);
+                this.sendOrBufMessageToUser(u,jsonMessage);
             }
         }
     }
     public void sendMessageToGroupFrom(String groupName, String userName, JsonObject jsonMessage){
         for(User u : this.getUsersOfGroup(groupName)){
             if(!u.getName().equals(userName)){
-                this.sendOrBufMessage(u, jsonMessage);
+                this.sendOrBufMessageToUser(u, jsonMessage);
             }
         }
     }
-    public void sendMessageToUser(String userName, JsonObject jsonMessage){
-        try {
-            this.getUserSession(userName).getBasicRemote().sendText(jsonMessage.toString());
+    public void sendMessageToSession(Session session, JsonObject jsonMessage){
+        try{
+            session.getBasicRemote().sendText(jsonMessage.toString());
         } catch (IOException ex) {
-            Logger.getLogger(ConversationsHandler.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(WebSocketServer.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
     
     public void addMessageToUserBuffer(String userName, JsonObject jsonMessage){
         this.getUser(userName).addMessageToBuffer(jsonMessage);
@@ -91,6 +94,15 @@ public class ConversationsHandler {
         return users;
     }
     
+    public String getUserFromSession(Session session){
+        String user = null;
+        for(User u : this.users){
+            if(session == u.getSession()){
+                user = u.getName();
+            }
+        }
+        return user;
+    }
     public void setUserSession(String userName, Session session){
         this.getUser(userName).setSession(session);
     }
@@ -109,7 +121,6 @@ public class ConversationsHandler {
     }
     private Group getGroup(String groupName){
         int i = this.groups.indexOf(new Group(groupName));
-        System.out.println("QUI: " + i);
         return this.groups.get(i);
     }
     
@@ -119,17 +130,53 @@ public class ConversationsHandler {
     public boolean userExists(String userName){
         return this.users.indexOf(new User(userName)) != -1;
     }
-  
+    
+    public boolean membersInGroup(String groupName, ArrayList<String> members){
+        return this.getGroup(groupName).areMembers(members);
+    }
+    public boolean adminsOfGroup(String groupName, ArrayList<String> admins){
+        return this.getGroup(groupName).areAdmins(admins);
+    }
+    
+    public boolean userIsAdminOfGroup(String groupName, String userName){
+        return this.getGroup(groupName).isAdmin(userName);
+    }
+    public void addMembersToGroup(String groupName, ArrayList<String> members){
+        this.getGroup(groupName).addMembers(members);
+    }
+    public void removeMembersFromGroup(String groupName, ArrayList<String> members){
+        this.getGroup(groupName).removeMembers(members);
+    }
+    public void addAdminsToGroup(String groupName, ArrayList<String> admins){
+        this.getGroup(groupName).addAdmins(admins);
+    }
+    public void removeAdminsFromGroup(String groupName, ArrayList<String> admins){
+        this.getGroup(groupName).removeAdmins(admins);
+    }
+    public JsonObject getJsonGroup(String groupName){
+        return this.getGroup(groupName).getJsonObject();
+    }
+    
+    public boolean userActiveOnAnotherSession(Session session, String userName){
+        for(User u : this.getOnlineUsers()){
+            if(u.getSession() != session && userName.equals(u.getName())){
+                return true;
+            }
+        }
+        return false;
+    }
     
     @Override
     public String toString(){
         String s = "Users:" + System.lineSeparator();
         for(User u : users){
-            s += "nome: " + u.getName() + ", online: " + u.getOnline() + System.lineSeparator();
-        }
-        s += "Groups:" + System.lineSeparator();
-        for(Group u : groups){
             s += u.toString() + System.lineSeparator();
+        }
+        if(groups.size() != 0){
+            s += "Groups:" + System.lineSeparator();
+            for(Group u : groups){
+                s += u.toString() + System.lineSeparator();
+            }
         }
         return s;
     }

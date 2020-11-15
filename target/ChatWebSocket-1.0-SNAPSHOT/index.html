@@ -11,10 +11,14 @@
     Crea gruppo:
     <input type="text" name="groupName" id="groupNameInput"/>
     <input type="text" name="groupMembers" id="groupMembersInput"/>
+    <input type="text" name="groupAdmins" id="groupAdminsInput"/>
     <input type="button" value="invia" onclick="{
         name = document.getElementById('groupNameInput').value;
         members = document.getElementById('groupMembersInput').value.split(',');
-        sendNewGroup(new Group(name, members));
+        admins = document.getElementById('groupAdminsInput').value.split(',');
+        if(admins == '')
+            admins = [];
+        sendNewGroup(new Group(name, members, admins));
     }"/>
     <br>
     Invia a utente:
@@ -34,5 +38,33 @@
         dest = document.getElementById('groupNameInput2').value;
         sendGroupMessage(new Message(text), dest);
     }"/>
+    <br>
+    Modifica gruppo:
+    <input type="text" name="groupNameMod" id="groupNameMod"/>
+    <input type="text" name="membersToAdd" id="membersToAdd"/>
+    <input type="text" name="membersToRemove" id="membersToRemove"/>
+    <input type="text" name="adminsToAdd" id="adminsToAdd"/>
+    <input type="text" name="adminsToRemove" id="adminsToRemove"/>
+    <input type="button" value="invia" onclick="{
+        name = document.getElementById('groupNameMod').value;
+        membersToAdd = document.getElementById('membersToAdd').value.split(',');
+        membersToRemove = document.getElementById('membersToRemove').value.split(',');
+        adminsToAdd = document.getElementById('adminsToAdd').value.split(',');
+        adminsToRemove = document.getElementById('adminsToRemove').value.split(',');
+        if(membersToAdd == ''){
+            membersToAdd = [];
+        }
+        if(membersToRemove == ''){
+            membersToRemove = [];
+        }
+        if(adminsToAdd == ''){
+            adminsToAdd = [];
+        }
+        if(adminsToRemove == ''){
+            adminsToRemove = [];
+        }
+        sendGroupModification(name, membersToAdd, membersToRemove, adminsToAdd, adminsToRemove);
+    }"/>
+    <br>
 </body>
 </html>
