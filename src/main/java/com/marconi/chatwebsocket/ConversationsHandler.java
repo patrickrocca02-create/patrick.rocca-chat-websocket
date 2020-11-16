@@ -154,7 +154,7 @@ public class ConversationsHandler {
         this.getGroup(groupName).removeAdmins(admins);
     }
     public JsonObject getJsonGroup(String groupName){
-        return this.getGroup(groupName).getJsonObject();
+        return this.getGroup(groupName).getJsonObjectOnModification();
     }
     
     public boolean userActiveOnAnotherSession(Session session, String userName){

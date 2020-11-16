@@ -42,6 +42,7 @@ public class Group implements Serializable{
     public void removeMembers(ArrayList<String> membersToRemove){
         for(String memberToRemove : membersToRemove){
             this.members.remove(memberToRemove);
+            this.admins.remove(memberToRemove);
         }
     }
     public void addAdmins(ArrayList<String> newAdmins){
@@ -80,15 +81,12 @@ public class Group implements Serializable{
         return this.admins;
     }
     
-    public JsonObject getJsonObject(){
+    public JsonObject getJsonObjectOnModification(){
         JsonProvider jsonProvider = JsonProvider.provider();
         JsonObject jsonGroup = jsonProvider.createObjectBuilder()
                 .add("name",this.name)
                 .add("members", jsonProvider.createArrayBuilder(this.members))
                 .add("admins", jsonProvider.createArrayBuilder(this.admins))
-                .add("creationDate", this.creationDate)
-                .add("creationTime", this.creationTime)
-                .add("creator", this.creatorName)
                 .build();
         return jsonGroup;
     }

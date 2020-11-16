@@ -3,17 +3,37 @@ var socket;
 function onMessage(event) {
     var msg=JSON.parse(event.data);
     console.log(msg);
-    /*
-    if(msg.type == "system"){
-        switch(msg.task){
-            case "groupCreation" :
-                onGroupCreation(msg);
-            case "userStateChange":
-                break;
-        }
-    }else{
-        Client.addMessage(msg);
-    }*/
+    switch(msg.type){
+        case "system":
+            switch(msg.task){
+                case "groupCreation":
+                    onGroupCreation(msg.group);
+                    break;
+                case "groupModification":
+                    onGroupModification(msg.admin,msg.group);
+                    break;
+                case "groupRemoval":
+                    onGroupRemoval(msg.admin, msg.groupName);
+                    break;
+                case "userStateChange":
+                    onUserStateChange(msg.userName, msg.userState);
+                    break;
+            }
+            break;
+        case "message":
+            switch(msg.destType){
+                case "user":
+                    onUserMessage(msg.destName, msg.message);
+                    break;
+                case "group":
+                    onGroupMessage(msg.destName, msg.message);
+                    break;
+            }
+            break;
+        case "error":
+            onError(msg);
+            break;
+    }
     console.log("Resoconto:")
     console.log(Client.users);
     console.log(Client.groups);
@@ -93,8 +113,26 @@ function sendGroupModification(groupName, addMembers, removeMembers,addAdmins,re
     socket.send(JSON.stringify(msg));
 }
 
-function onClose(){
-
+function sendImage(){
+    let msg = {
+        type : "message"
+    };
+    //scelta file
+    let img = null;
+    let input = document.createElement("input");
+    input.type = "file";
+    input.style.display = "none";
+    input.multiple = true;
+    input.click();
+    let reader = FileReader();
+    reader.onload = function(res){
+        let imgStr = res.target.result;
+    };
+    input.onchange = function(event){
+        let file = event.target.files[0];
+        reader.readAsDataURL(file);
+    }
+    //poi metto imgStr come src dell'immagine dei client
 }
 
 
@@ -105,4 +143,4 @@ function start(){
     console.log(socket);
 }
 
-start();
+//start();

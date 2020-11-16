@@ -1664,3 +1664,1464 @@ Groups:
 nome: Amici, membri: [Giulia,Rupert,Patrick,], admins: [Patrick,], data creazione: 15/11/2020, ora creazione: 15:2, creator: Patrick
 ]]
 
+[2020-11-15T15:06:33.112+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605449193112] [levelValue: 800] [[
+  Disconnesso Patrick]]
+
+[2020-11-15T15:06:33.113+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605449193113] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Patrick","userState":false} dal Patrick]]
+
+[2020-11-15T15:06:33.113+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605449193113] [levelValue: 800] [[
+  --> inviato a Rupert]]
+
+[2020-11-15T15:06:33.113+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605449193113] [levelValue: 800] [[
+  --> aggiunta a buffer diGiulia]]
+
+[2020-11-15T15:06:33.120+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605449193120] [levelValue: 800] [[
+  Disconnesso Rupert]]
+
+[2020-11-15T15:06:33.120+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605449193120] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Rupert","userState":false} dal Rupert]]
+
+[2020-11-15T15:06:33.120+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605449193120] [levelValue: 800] [[
+  --> aggiunta a buffer diPatrick]]
+
+[2020-11-15T15:06:33.120+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605449193120] [levelValue: 800] [[
+  --> aggiunta a buffer diGiulia]]
+
+[2020-11-15T15:06:47.380+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449207380] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-15T15:06:47.427+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449207427] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-15T15:06:47.448+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449207448] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-15T15:06:47.659+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449207659] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] org.glassfish.sse.impl.ServerSentEventCdiExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-15T15:06:47.660+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449207660] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] private org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider.processAnnotatedType(@Observes ProcessAnnotatedType) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-15T15:06:47.664+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449207664] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jms.injection.JMSCDIExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-15T15:06:47.677+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449207677] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.hibernate.validator.cdi.ValidationExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-15T15:06:47.678+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449207678] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.WebAppExceptionHolder is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:06:47.679+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449207679] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.WebAppExceptionInterceptor is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:06:47.680+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449207680] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.TransactionalExceptionMapper is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:06:47.685+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449207685] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider$JaxRsParamProducer is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:06:47.686+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449207686] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.servlet.internal.CdiExternalRequestScope is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:06:47.688+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449207688] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class com.sun.faces.flow.FlowDiscoveryCDIHelper is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:06:47.689+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449207689] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorMandatory is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:06:47.690+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449207690] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorNever is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:06:47.690+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449207690] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorNotSupported is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:06:47.691+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449207691] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorRequired is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:06:47.692+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449207692] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorRequiresNew is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:06:47.692+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449207692] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorSupports is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:06:47.693+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449207693] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class com.ibm.jbatch.container.cdi.BatchProducerBean is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:06:47.902+0100] [glassfish 5.1] [INFO] [] [org.glassfish.tyrus.servlet.TyrusServletContainerInitializer] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449207902] [levelValue: 800] [[
+  Registering WebSocket filter for url pattern /*]]
+
+[2020-11-15T15:06:47.931+0100] [glassfish 5.1] [INFO] [] [org.glassfish.soteria.servlet.SamRegistrationInstaller] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449207931] [levelValue: 800] [[
+  Initializing Soteria 1.0.1 for context '/ChatWebSocket']]
+
+[2020-11-15T15:06:47.944+0100] [glassfish 5.1] [INFO] [jsf.config.listener.version] [javax.enterprise.resource.webcontainer.jsf.config] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449207944] [levelValue: 800] [[
+  Initializing Mojarra 2.3.9 for context '/ChatWebSocket']]
+
+[2020-11-15T15:06:48.280+0100] [glassfish 5.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449208280] [levelValue: 800] [[
+  Loading application [ChatWebSocket-1.0-SNAPSHOT] at [/ChatWebSocket]]]
+
+[2020-11-15T15:06:48.293+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449208293] [levelValue: 800] [[
+  ChatWebSocket-1.0-SNAPSHOT was successfully deployed in 947 milliseconds.]]
+
+[2020-11-15T15:06:51.494+0100] [glassfish 5.1] [INFO] [] [org.glassfish.tyrus.core.AnnotatedEndpoint] [tid: _ThreadID=149 _ThreadName=http-listener-1(4)] [timeMillis: 1605449211494] [levelValue: 800] [[
+  Unhandled exception in endpoint com.marconi.chatwebsocket.WebSocketServer.
+java.lang.RuntimeException: Thread's context class loader is null
+	at org.glassfish.weld.ACLSingletonProvider$ACLSingleton.getClassLoader(ACLSingletonProvider.java:123)
+	at org.glassfish.weld.ACLSingletonProvider$ACLSingleton.isSet(ACLSingletonProvider.java:165)
+	at org.jboss.weld.Container.isSet(Container.java:77)
+	at org.jboss.weld.bean.proxy.ContextBeanInstance.getInstance(ContextBeanInstance.java:84)
+	at org.jboss.weld.bean.proxy.ProxyMethodHandler.getInstance(ProxyMethodHandler.java:125)
+	at com.marconi.chatwebsocket.ConversationsHandler$Proxy$_$$_WeldClientProxy.userActiveOnAnotherSession(Unknown Source)
+	at com.marconi.chatwebsocket.WebSocketServer.onClose(WebSocketServer.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.callMethod(AnnotatedEndpoint.java:511)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.onClose(AnnotatedEndpoint.java:526)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.onClose(AnnotatedEndpoint.java:535)
+	at org.glassfish.tyrus.core.TyrusEndpointWrapper.onClose(TyrusEndpointWrapper.java:1235)
+	at org.glassfish.tyrus.core.TyrusWebSocket.onClose(TyrusWebSocket.java:106)
+	at org.glassfish.tyrus.core.frame.CloseFrame.respond(CloseFrame.java:111)
+	at org.glassfish.tyrus.core.ProtocolHandler.process(ProtocolHandler.java:783)
+	at org.glassfish.tyrus.core.TyrusWebSocketEngine$TyrusReadHandler.handle(TyrusWebSocketEngine.java:538)
+	at org.glassfish.tyrus.servlet.TyrusHttpUpgradeHandler.onDataAvailable(TyrusHttpUpgradeHandler.java:149)
+	at org.apache.catalina.connector.InputBuffer$ReadHandlerImpl.processDataAvailable(InputBuffer.java:422)
+	at org.apache.catalina.connector.InputBuffer$ReadHandlerImpl.onDataAvailable(InputBuffer.java:387)
+	at org.glassfish.grizzly.http.io.InputBuffer.invokeHandler(InputBuffer.java:1095)
+	at org.glassfish.grizzly.http.io.InputBuffer.invokeHandlerOnProperThread(InputBuffer.java:1086)
+	at org.glassfish.grizzly.http.io.InputBuffer.append(InputBuffer.java:969)
+	at org.glassfish.grizzly.http.server.HttpServerFilter.handleRead(HttpServerFilter.java:254)
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:95)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:260)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:177)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:109)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:88)
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:53)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:515)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:89)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.run0(WorkerThreadIOStrategy.java:94)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.access$100(WorkerThreadIOStrategy.java:33)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy$WorkerThreadRunnable.run(WorkerThreadIOStrategy.java:114)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:569)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:549)
+	at java.lang.Thread.run(Thread.java:748)
+]]
+
+[2020-11-15T15:07:04.812+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605449224812] [levelValue: 800] [[
+  Connesso Patrick]]
+
+[2020-11-15T15:07:04.814+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605449224814] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: true, Buffer: 
+]]
+
+[2020-11-15T15:07:04.814+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605449224814] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Patrick","userState":true} dal Patrick]]
+
+[2020-11-15T15:07:38.040+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605449258040] [levelValue: 800] [[
+  Disconnesso Patrick]]
+
+[2020-11-15T15:07:38.040+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605449258040] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Patrick","userState":false} dal Patrick]]
+
+[2020-11-15T15:07:49.903+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449269903] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-15T15:07:49.949+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449269949] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-15T15:07:49.969+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449269969] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-15T15:07:50.250+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449270250] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.hibernate.validator.cdi.ValidationExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-15T15:07:50.250+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449270250] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] private org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider.processAnnotatedType(@Observes ProcessAnnotatedType) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-15T15:07:50.250+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449270250] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jms.injection.JMSCDIExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-15T15:07:50.260+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449270260] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] org.glassfish.sse.impl.ServerSentEventCdiExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-15T15:07:50.260+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449270260] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class com.sun.faces.flow.FlowDiscoveryCDIHelper is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:07:50.260+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449270260] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.WebAppExceptionHolder is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:07:50.260+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449270260] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.WebAppExceptionInterceptor is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:07:50.260+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449270260] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.TransactionalExceptionMapper is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:07:50.270+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449270270] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider$JaxRsParamProducer is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:07:50.272+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449270272] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.servlet.internal.CdiExternalRequestScope is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:07:50.274+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449270274] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorMandatory is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:07:50.275+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449270275] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorNever is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:07:50.275+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449270275] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorNotSupported is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:07:50.276+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449270276] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorRequired is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:07:50.276+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449270276] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorRequiresNew is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:07:50.277+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449270277] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorSupports is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:07:50.278+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449270278] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class com.ibm.jbatch.container.cdi.BatchProducerBean is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:07:50.684+0100] [glassfish 5.1] [INFO] [] [org.glassfish.tyrus.servlet.TyrusServletContainerInitializer] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449270684] [levelValue: 800] [[
+  Registering WebSocket filter for url pattern /*]]
+
+[2020-11-15T15:07:50.709+0100] [glassfish 5.1] [INFO] [] [org.glassfish.soteria.servlet.SamRegistrationInstaller] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449270709] [levelValue: 800] [[
+  Initializing Soteria 1.0.1 for context '/ChatWebSocket']]
+
+[2020-11-15T15:07:50.730+0100] [glassfish 5.1] [INFO] [jsf.config.listener.version] [javax.enterprise.resource.webcontainer.jsf.config] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449270730] [levelValue: 800] [[
+  Initializing Mojarra 2.3.9 for context '/ChatWebSocket']]
+
+[2020-11-15T15:07:51.214+0100] [glassfish 5.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449271214] [levelValue: 800] [[
+  Loading application [ChatWebSocket-1.0-SNAPSHOT] at [/ChatWebSocket]]]
+
+[2020-11-15T15:07:51.224+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605449271224] [levelValue: 800] [[
+  ChatWebSocket-1.0-SNAPSHOT was successfully deployed in 1.351 milliseconds.]]
+
+[2020-11-15T15:08:55.750+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605449335750] [levelValue: 800] [[
+  Connesso Patrick]]
+
+[2020-11-15T15:08:55.751+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605449335751] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Patrick","userState":true} dal Patrick]]
+
+[2020-11-15T15:08:55.751+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605449335751] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: true, Buffer: 
+]]
+
+[2020-11-15T15:09:03.727+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605449343727] [levelValue: 800] [[
+  Connesso Rupert]]
+
+[2020-11-15T15:09:03.727+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605449343727] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Rupert","userState":true} dal Rupert]]
+
+[2020-11-15T15:09:03.727+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605449343727] [levelValue: 800] [[
+  --> inviato a Patrick]]
+
+[2020-11-15T15:09:03.728+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605449343728] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: true, Buffer: 
+Name: Rupert, Online: true, Buffer: 
+]]
+
+[2020-11-15T15:09:07.678+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605449347678] [levelValue: 800] [[
+  Connesso Giulia]]
+
+[2020-11-15T15:09:07.678+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605449347678] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Giulia","userState":true} dal Giulia]]
+
+[2020-11-15T15:09:07.678+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605449347678] [levelValue: 800] [[
+  --> inviato a Patrick]]
+
+[2020-11-15T15:09:07.678+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605449347678] [levelValue: 800] [[
+  --> inviato a Rupert]]
+
+[2020-11-15T15:09:07.679+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605449347679] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: true, Buffer: 
+Name: Rupert, Online: true, Buffer: 
+Name: Giulia, Online: true, Buffer: 
+]]
+
+[2020-11-15T15:09:08.932+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605449348932] [levelValue: 800] [[
+  Disconnesso Giulia]]
+
+[2020-11-15T15:09:08.932+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605449348932] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Giulia","userState":false} dal Giulia]]
+
+[2020-11-15T15:09:08.933+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605449348933] [levelValue: 800] [[
+  --> inviato a Patrick]]
+
+[2020-11-15T15:09:08.934+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605449348934] [levelValue: 800] [[
+  --> inviato a Rupert]]
+
+[2020-11-15T15:09:08.938+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605449348938] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: true, Buffer: 
+Name: Rupert, Online: true, Buffer: 
+Name: Giulia, Online: false, Buffer: 
+]]
+
+[2020-11-15T15:09:14.078+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605449354078] [levelValue: 800] [[
+  Disconnesso Rupert]]
+
+[2020-11-15T15:09:14.078+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605449354078] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Rupert","userState":false} dal Rupert]]
+
+[2020-11-15T15:09:14.078+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605449354078] [levelValue: 800] [[
+  --> inviato a Patrick]]
+
+[2020-11-15T15:09:14.078+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605449354078] [levelValue: 800] [[
+  --> aggiunta a buffer diGiulia]]
+
+[2020-11-15T15:09:14.079+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605449354079] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: true, Buffer: 
+Name: Rupert, Online: false, Buffer: 
+Name: Giulia, Online: false, Buffer: 0:{"type":"system","task":"userStateChange","userName":"Rupert","userState":false}, 
+]]
+
+[2020-11-15T15:09:21.014+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605449361014] [levelValue: 800] [[
+  Connesso Rupert]]
+
+[2020-11-15T15:09:21.014+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605449361014] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Rupert","userState":true} dal Rupert]]
+
+[2020-11-15T15:09:21.014+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605449361014] [levelValue: 800] [[
+  --> inviato a Patrick]]
+
+[2020-11-15T15:09:21.014+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605449361014] [levelValue: 800] [[
+  --> aggiunta a buffer diGiulia]]
+
+[2020-11-15T15:09:21.015+0100] [glassfish 5.1] [INFO] [] [org.glassfish.tyrus.core.AnnotatedEndpoint] [tid: _ThreadID=150 _ThreadName=http-listener-1(5)] [timeMillis: 1605449361015] [levelValue: 800] [[
+  Unhandled exception in endpoint com.marconi.chatwebsocket.WebSocketServer.
+java.lang.NullPointerException
+	at org.glassfish.json.JsonObjectBuilderImpl$JsonObjectImpl.getString(JsonObjectBuilderImpl.java:233)
+	at com.marconi.chatwebsocket.User.removeSystemMessageFromBuffer(User.java:55)
+	at com.marconi.chatwebsocket.User.addMessageToBuffer(User.java:48)
+	at com.marconi.chatwebsocket.ConversationsHandler.sendOrBufMessageToUser(ConversationsHandler.java:39)
+	at com.marconi.chatwebsocket.ConversationsHandler.sendMessageFrom(ConversationsHandler.java:47)
+	at com.marconi.chatwebsocket.ConversationsHandler$Proxy$_$$_WeldClientProxy.sendMessageFrom(Unknown Source)
+	at com.marconi.chatwebsocket.WebSocketServer.onUserConnection(WebSocketServer.java:97)
+	at com.marconi.chatwebsocket.WebSocketServer.onOpen(WebSocketServer.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.callMethod(AnnotatedEndpoint.java:511)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.onOpen(AnnotatedEndpoint.java:561)
+	at org.glassfish.tyrus.core.TyrusEndpointWrapper.onConnect(TyrusEndpointWrapper.java:750)
+	at org.glassfish.tyrus.core.TyrusWebSocket.onConnect(TyrusWebSocket.java:135)
+	at org.glassfish.tyrus.core.TyrusWebSocketEngine$TyrusConnection.<init>(TyrusWebSocketEngine.java:797)
+	at org.glassfish.tyrus.core.TyrusWebSocketEngine$SuccessfulUpgradeInfo.createConnection(TyrusWebSocketEngine.java:733)
+	at org.glassfish.tyrus.servlet.TyrusHttpUpgradeHandler.init(TyrusHttpUpgradeHandler.java:86)
+	at org.apache.catalina.core.StandardPipeline.doInvoke(StandardPipeline.java:654)
+	at org.apache.catalina.core.StandardPipeline.invoke(StandardPipeline.java:550)
+	at com.sun.enterprise.web.WebPipeline.invoke(WebPipeline.java:75)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:114)
+	at org.apache.catalina.connector.CoyoteAdapter.doService(CoyoteAdapter.java:332)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:199)
+	at com.sun.enterprise.v3.services.impl.ContainerMapper$HttpHandlerCallable.call(ContainerMapper.java:439)
+	at com.sun.enterprise.v3.services.impl.ContainerMapper.service(ContainerMapper.java:144)
+	at org.glassfish.grizzly.http.server.HttpHandler.runService(HttpHandler.java:182)
+	at org.glassfish.grizzly.http.server.HttpHandler.doHandle(HttpHandler.java:156)
+	at org.glassfish.grizzly.http.server.HttpServerFilter.handleRead(HttpServerFilter.java:218)
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:95)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:260)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:177)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:109)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:88)
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:53)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:515)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:89)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.run0(WorkerThreadIOStrategy.java:94)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.access$100(WorkerThreadIOStrategy.java:33)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy$WorkerThreadRunnable.run(WorkerThreadIOStrategy.java:114)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:569)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:549)
+	at java.lang.Thread.run(Thread.java:748)
+]]
+
+[2020-11-15T15:13:18.084+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605449598084] [levelValue: 800] [[
+  Disconnesso Rupert]]
+
+[2020-11-15T15:13:18.084+0100] [glassfish 5.1] [INFO] [] [org.glassfish.tyrus.core.AnnotatedEndpoint] [tid: _ThreadID=149 _ThreadName=http-listener-1(4)] [timeMillis: 1605449598084] [levelValue: 800] [[
+  Unhandled exception in endpoint com.marconi.chatwebsocket.WebSocketServer.
+java.lang.NullPointerException
+	at org.glassfish.json.JsonObjectBuilderImpl$JsonObjectImpl.getString(JsonObjectBuilderImpl.java:233)
+	at com.marconi.chatwebsocket.User.removeSystemMessageFromBuffer(User.java:55)
+	at com.marconi.chatwebsocket.User.addMessageToBuffer(User.java:48)
+	at com.marconi.chatwebsocket.ConversationsHandler.sendOrBufMessageToUser(ConversationsHandler.java:39)
+	at com.marconi.chatwebsocket.ConversationsHandler.sendMessageFrom(ConversationsHandler.java:47)
+	at com.marconi.chatwebsocket.ConversationsHandler$Proxy$_$$_WeldClientProxy.sendMessageFrom(Unknown Source)
+	at com.marconi.chatwebsocket.WebSocketServer.onUserDisconnection(WebSocketServer.java:113)
+	at com.marconi.chatwebsocket.WebSocketServer.onClose(WebSocketServer.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.callMethod(AnnotatedEndpoint.java:511)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.onClose(AnnotatedEndpoint.java:526)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.onClose(AnnotatedEndpoint.java:535)
+	at org.glassfish.tyrus.core.TyrusEndpointWrapper.onClose(TyrusEndpointWrapper.java:1235)
+	at org.glassfish.tyrus.core.TyrusWebSocket.onClose(TyrusWebSocket.java:106)
+	at org.glassfish.tyrus.core.frame.CloseFrame.respond(CloseFrame.java:111)
+	at org.glassfish.tyrus.core.ProtocolHandler.process(ProtocolHandler.java:783)
+	at org.glassfish.tyrus.core.TyrusWebSocketEngine$TyrusReadHandler.handle(TyrusWebSocketEngine.java:538)
+	at org.glassfish.tyrus.servlet.TyrusHttpUpgradeHandler.onDataAvailable(TyrusHttpUpgradeHandler.java:149)
+	at org.apache.catalina.connector.InputBuffer$ReadHandlerImpl.processDataAvailable(InputBuffer.java:422)
+	at org.apache.catalina.connector.InputBuffer$ReadHandlerImpl.onDataAvailable(InputBuffer.java:387)
+	at org.glassfish.grizzly.http.io.InputBuffer.invokeHandler(InputBuffer.java:1095)
+	at org.glassfish.grizzly.http.io.InputBuffer.invokeHandlerOnProperThread(InputBuffer.java:1086)
+	at org.glassfish.grizzly.http.io.InputBuffer.append(InputBuffer.java:969)
+	at org.glassfish.grizzly.http.server.HttpServerFilter.handleRead(HttpServerFilter.java:254)
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:95)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:260)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:177)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:109)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:88)
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:53)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:515)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:89)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.run0(WorkerThreadIOStrategy.java:94)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.access$100(WorkerThreadIOStrategy.java:33)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy$WorkerThreadRunnable.run(WorkerThreadIOStrategy.java:114)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:569)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:549)
+	at java.lang.Thread.run(Thread.java:748)
+]]
+
+[2020-11-15T15:13:18.084+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605449598084] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Rupert","userState":false} dal Rupert]]
+
+[2020-11-15T15:13:18.084+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605449598084] [levelValue: 800] [[
+  --> inviato a Patrick]]
+
+[2020-11-15T15:13:18.084+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605449598084] [levelValue: 800] [[
+  --> aggiunta a buffer diGiulia]]
+
+[2020-11-15T15:14:32.181+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1605449672181] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-15T15:14:32.218+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1605449672218] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-15T15:14:32.229+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1605449672229] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-15T15:14:32.408+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1605449672408] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jms.injection.JMSCDIExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-15T15:14:32.418+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1605449672418] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] org.glassfish.sse.impl.ServerSentEventCdiExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-15T15:14:32.421+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1605449672421] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] private org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider.processAnnotatedType(@Observes ProcessAnnotatedType) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-15T15:14:32.423+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1605449672423] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.hibernate.validator.cdi.ValidationExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-15T15:14:32.426+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1605449672426] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.WebAppExceptionHolder is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:14:32.427+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1605449672427] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.WebAppExceptionInterceptor is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:14:32.427+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1605449672427] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.TransactionalExceptionMapper is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:14:32.431+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1605449672431] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.servlet.internal.CdiExternalRequestScope is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:14:32.433+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1605449672433] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider$JaxRsParamProducer is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:14:32.434+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1605449672434] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class com.sun.faces.flow.FlowDiscoveryCDIHelper is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:14:32.435+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1605449672435] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorMandatory is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:14:32.436+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1605449672436] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorNever is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:14:32.436+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1605449672436] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorNotSupported is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:14:32.437+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1605449672437] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorRequired is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:14:32.438+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1605449672438] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorRequiresNew is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:14:32.438+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1605449672438] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorSupports is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:14:32.439+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1605449672439] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class com.ibm.jbatch.container.cdi.BatchProducerBean is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:14:32.614+0100] [glassfish 5.1] [INFO] [] [org.glassfish.tyrus.servlet.TyrusServletContainerInitializer] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1605449672614] [levelValue: 800] [[
+  Registering WebSocket filter for url pattern /*]]
+
+[2020-11-15T15:14:32.642+0100] [glassfish 5.1] [INFO] [] [org.glassfish.soteria.servlet.SamRegistrationInstaller] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1605449672642] [levelValue: 800] [[
+  Initializing Soteria 1.0.1 for context '/ChatWebSocket']]
+
+[2020-11-15T15:14:32.649+0100] [glassfish 5.1] [INFO] [jsf.config.listener.version] [javax.enterprise.resource.webcontainer.jsf.config] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1605449672649] [levelValue: 800] [[
+  Initializing Mojarra 2.3.9 for context '/ChatWebSocket']]
+
+[2020-11-15T15:14:33.151+0100] [glassfish 5.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1605449673151] [levelValue: 800] [[
+  Loading application [ChatWebSocket-1.0-SNAPSHOT] at [/ChatWebSocket]]]
+
+[2020-11-15T15:14:33.173+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=49 _ThreadName=admin-listener(3)] [timeMillis: 1605449673173] [levelValue: 800] [[
+  ChatWebSocket-1.0-SNAPSHOT was successfully deployed in 1.022 milliseconds.]]
+
+[2020-11-15T15:14:39.036+0100] [glassfish 5.1] [INFO] [] [org.glassfish.tyrus.core.AnnotatedEndpoint] [tid: _ThreadID=149 _ThreadName=http-listener-1(4)] [timeMillis: 1605449679036] [levelValue: 800] [[
+  Unhandled exception in endpoint com.marconi.chatwebsocket.WebSocketServer.
+java.lang.RuntimeException: Thread's context class loader is null
+	at org.glassfish.weld.ACLSingletonProvider$ACLSingleton.getClassLoader(ACLSingletonProvider.java:123)
+	at org.glassfish.weld.ACLSingletonProvider$ACLSingleton.isSet(ACLSingletonProvider.java:165)
+	at org.jboss.weld.Container.isSet(Container.java:77)
+	at org.jboss.weld.bean.proxy.ContextBeanInstance.getInstance(ContextBeanInstance.java:84)
+	at org.jboss.weld.bean.proxy.ProxyMethodHandler.getInstance(ProxyMethodHandler.java:125)
+	at com.marconi.chatwebsocket.ConversationsHandler$Proxy$_$$_WeldClientProxy.userActiveOnAnotherSession(Unknown Source)
+	at com.marconi.chatwebsocket.WebSocketServer.onClose(WebSocketServer.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.callMethod(AnnotatedEndpoint.java:511)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.onClose(AnnotatedEndpoint.java:526)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.onClose(AnnotatedEndpoint.java:535)
+	at org.glassfish.tyrus.core.TyrusEndpointWrapper.onClose(TyrusEndpointWrapper.java:1235)
+	at org.glassfish.tyrus.core.TyrusWebSocket.onClose(TyrusWebSocket.java:106)
+	at org.glassfish.tyrus.core.frame.CloseFrame.respond(CloseFrame.java:111)
+	at org.glassfish.tyrus.core.ProtocolHandler.process(ProtocolHandler.java:783)
+	at org.glassfish.tyrus.core.TyrusWebSocketEngine$TyrusReadHandler.handle(TyrusWebSocketEngine.java:538)
+	at org.glassfish.tyrus.servlet.TyrusHttpUpgradeHandler.onDataAvailable(TyrusHttpUpgradeHandler.java:149)
+	at org.apache.catalina.connector.InputBuffer$ReadHandlerImpl.processDataAvailable(InputBuffer.java:422)
+	at org.apache.catalina.connector.InputBuffer$ReadHandlerImpl.onDataAvailable(InputBuffer.java:387)
+	at org.glassfish.grizzly.http.io.InputBuffer.invokeHandler(InputBuffer.java:1095)
+	at org.glassfish.grizzly.http.io.InputBuffer.invokeHandlerOnProperThread(InputBuffer.java:1086)
+	at org.glassfish.grizzly.http.io.InputBuffer.append(InputBuffer.java:969)
+	at org.glassfish.grizzly.http.server.HttpServerFilter.handleRead(HttpServerFilter.java:254)
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:95)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:260)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:177)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:109)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:88)
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:53)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:515)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:89)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.run0(WorkerThreadIOStrategy.java:94)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.access$100(WorkerThreadIOStrategy.java:33)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy$WorkerThreadRunnable.run(WorkerThreadIOStrategy.java:114)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:569)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:549)
+	at java.lang.Thread.run(Thread.java:748)
+]]
+
+[2020-11-15T15:14:50.073+0100] [glassfish 5.1] [INFO] [] [org.glassfish.tyrus.core.AnnotatedEndpoint] [tid: _ThreadID=146 _ThreadName=http-listener-1(1)] [timeMillis: 1605449690073] [levelValue: 800] [[
+  Unhandled exception in endpoint com.marconi.chatwebsocket.WebSocketServer.
+java.lang.RuntimeException: Thread's context class loader is null
+	at org.glassfish.weld.ACLSingletonProvider$ACLSingleton.getClassLoader(ACLSingletonProvider.java:123)
+	at org.glassfish.weld.ACLSingletonProvider$ACLSingleton.isSet(ACLSingletonProvider.java:165)
+	at org.jboss.weld.Container.isSet(Container.java:77)
+	at org.jboss.weld.bean.proxy.ContextBeanInstance.getInstance(ContextBeanInstance.java:84)
+	at org.jboss.weld.bean.proxy.ProxyMethodHandler.getInstance(ProxyMethodHandler.java:125)
+	at com.marconi.chatwebsocket.ConversationsHandler$Proxy$_$$_WeldClientProxy.userActiveOnAnotherSession(Unknown Source)
+	at com.marconi.chatwebsocket.WebSocketServer.onClose(WebSocketServer.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.callMethod(AnnotatedEndpoint.java:511)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.onClose(AnnotatedEndpoint.java:526)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.onClose(AnnotatedEndpoint.java:535)
+	at org.glassfish.tyrus.core.TyrusEndpointWrapper.onClose(TyrusEndpointWrapper.java:1235)
+	at org.glassfish.tyrus.core.TyrusWebSocket.onClose(TyrusWebSocket.java:106)
+	at org.glassfish.tyrus.core.frame.CloseFrame.respond(CloseFrame.java:111)
+	at org.glassfish.tyrus.core.ProtocolHandler.process(ProtocolHandler.java:783)
+	at org.glassfish.tyrus.core.TyrusWebSocketEngine$TyrusReadHandler.handle(TyrusWebSocketEngine.java:538)
+	at org.glassfish.tyrus.servlet.TyrusHttpUpgradeHandler.onDataAvailable(TyrusHttpUpgradeHandler.java:149)
+	at org.apache.catalina.connector.InputBuffer$ReadHandlerImpl.processDataAvailable(InputBuffer.java:422)
+	at org.apache.catalina.connector.InputBuffer$ReadHandlerImpl.onDataAvailable(InputBuffer.java:387)
+	at org.glassfish.grizzly.http.io.InputBuffer.invokeHandler(InputBuffer.java:1095)
+	at org.glassfish.grizzly.http.io.InputBuffer.invokeHandlerOnProperThread(InputBuffer.java:1086)
+	at org.glassfish.grizzly.http.io.InputBuffer.append(InputBuffer.java:969)
+	at org.glassfish.grizzly.http.server.HttpServerFilter.handleRead(HttpServerFilter.java:254)
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:95)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:260)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:177)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:109)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:88)
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:53)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:515)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:89)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.run0(WorkerThreadIOStrategy.java:94)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.access$100(WorkerThreadIOStrategy.java:33)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy$WorkerThreadRunnable.run(WorkerThreadIOStrategy.java:114)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:569)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:549)
+	at java.lang.Thread.run(Thread.java:748)
+]]
+
+[2020-11-15T15:14:53.480+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605449693480] [levelValue: 800] [[
+  Connesso Patrick]]
+
+[2020-11-15T15:14:53.480+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605449693480] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Patrick","userState":true} dal Patrick]]
+
+[2020-11-15T15:14:53.481+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605449693481] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: true, Buffer: 
+]]
+
+[2020-11-15T15:14:57.540+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605449697540] [levelValue: 800] [[
+  Connesso Rupert]]
+
+[2020-11-15T15:14:57.540+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605449697540] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Rupert","userState":true} dal Rupert]]
+
+[2020-11-15T15:14:57.540+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605449697540] [levelValue: 800] [[
+  --> inviato a Patrick]]
+
+[2020-11-15T15:14:57.541+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605449697541] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: true, Buffer: 
+Name: Rupert, Online: true, Buffer: 
+]]
+
+[2020-11-15T15:15:06.768+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605449706768] [levelValue: 800] [[
+  Connesso Giulia]]
+
+[2020-11-15T15:15:06.768+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605449706768] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Giulia","userState":true} dal Giulia]]
+
+[2020-11-15T15:15:06.768+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605449706768] [levelValue: 800] [[
+  --> inviato a Patrick]]
+
+[2020-11-15T15:15:06.769+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605449706769] [levelValue: 800] [[
+  --> inviato a Rupert]]
+
+[2020-11-15T15:15:06.769+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605449706769] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: true, Buffer: 
+Name: Rupert, Online: true, Buffer: 
+Name: Giulia, Online: true, Buffer: 
+]]
+
+[2020-11-15T15:15:09.060+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605449709060] [levelValue: 800] [[
+  Disconnesso Giulia]]
+
+[2020-11-15T15:15:09.060+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605449709060] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Giulia","userState":false} dal Giulia]]
+
+[2020-11-15T15:15:09.061+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605449709061] [levelValue: 800] [[
+  --> inviato a Patrick]]
+
+[2020-11-15T15:15:09.061+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605449709061] [levelValue: 800] [[
+  --> inviato a Rupert]]
+
+[2020-11-15T15:15:09.062+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605449709062] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: true, Buffer: 
+Name: Rupert, Online: true, Buffer: 
+Name: Giulia, Online: false, Buffer: 
+]]
+
+[2020-11-15T15:15:13.412+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605449713412] [levelValue: 800] [[
+  Disconnesso Rupert]]
+
+[2020-11-15T15:15:13.412+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605449713412] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Rupert","userState":false} dal Rupert]]
+
+[2020-11-15T15:15:13.412+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605449713412] [levelValue: 800] [[
+  --> inviato a Patrick]]
+
+[2020-11-15T15:15:13.413+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605449713413] [levelValue: 800] [[
+  --> aggiunta a buffer diGiulia]]
+
+[2020-11-15T15:15:13.413+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605449713413] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: true, Buffer: 
+Name: Rupert, Online: false, Buffer: 
+Name: Giulia, Online: false, Buffer: 0:{"type":"system","task":"userStateChange","userName":"Rupert","userState":false}, 
+]]
+
+[2020-11-15T15:15:18.619+0100] [glassfish 5.1] [INFO] [] [org.glassfish.tyrus.core.AnnotatedEndpoint] [tid: _ThreadID=147 _ThreadName=http-listener-1(2)] [timeMillis: 1605449718619] [levelValue: 800] [[
+  Unhandled exception in endpoint com.marconi.chatwebsocket.WebSocketServer.
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:911)
+	at java.util.ArrayList$Itr.next(ArrayList.java:861)
+	at com.marconi.chatwebsocket.User.removeSystemMessageFromBuffer(User.java:54)
+	at com.marconi.chatwebsocket.User.addMessageToBuffer(User.java:48)
+	at com.marconi.chatwebsocket.ConversationsHandler.sendOrBufMessageToUser(ConversationsHandler.java:39)
+	at com.marconi.chatwebsocket.ConversationsHandler.sendMessageFrom(ConversationsHandler.java:47)
+	at com.marconi.chatwebsocket.ConversationsHandler$Proxy$_$$_WeldClientProxy.sendMessageFrom(Unknown Source)
+	at com.marconi.chatwebsocket.WebSocketServer.onUserConnection(WebSocketServer.java:97)
+	at com.marconi.chatwebsocket.WebSocketServer.onOpen(WebSocketServer.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.callMethod(AnnotatedEndpoint.java:511)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.onOpen(AnnotatedEndpoint.java:561)
+	at org.glassfish.tyrus.core.TyrusEndpointWrapper.onConnect(TyrusEndpointWrapper.java:750)
+	at org.glassfish.tyrus.core.TyrusWebSocket.onConnect(TyrusWebSocket.java:135)
+	at org.glassfish.tyrus.core.TyrusWebSocketEngine$TyrusConnection.<init>(TyrusWebSocketEngine.java:797)
+	at org.glassfish.tyrus.core.TyrusWebSocketEngine$SuccessfulUpgradeInfo.createConnection(TyrusWebSocketEngine.java:733)
+	at org.glassfish.tyrus.servlet.TyrusHttpUpgradeHandler.init(TyrusHttpUpgradeHandler.java:86)
+	at org.apache.catalina.core.StandardPipeline.doInvoke(StandardPipeline.java:654)
+	at org.apache.catalina.core.StandardPipeline.invoke(StandardPipeline.java:550)
+	at com.sun.enterprise.web.WebPipeline.invoke(WebPipeline.java:75)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:114)
+	at org.apache.catalina.connector.CoyoteAdapter.doService(CoyoteAdapter.java:332)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:199)
+	at com.sun.enterprise.v3.services.impl.ContainerMapper$HttpHandlerCallable.call(ContainerMapper.java:439)
+	at com.sun.enterprise.v3.services.impl.ContainerMapper.service(ContainerMapper.java:144)
+	at org.glassfish.grizzly.http.server.HttpHandler.runService(HttpHandler.java:182)
+	at org.glassfish.grizzly.http.server.HttpHandler.doHandle(HttpHandler.java:156)
+	at org.glassfish.grizzly.http.server.HttpServerFilter.handleRead(HttpServerFilter.java:218)
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:95)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:260)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:177)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:109)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:88)
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:53)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:515)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:89)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.run0(WorkerThreadIOStrategy.java:94)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.access$100(WorkerThreadIOStrategy.java:33)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy$WorkerThreadRunnable.run(WorkerThreadIOStrategy.java:114)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:569)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:549)
+	at java.lang.Thread.run(Thread.java:748)
+]]
+
+[2020-11-15T15:15:18.617+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605449718617] [levelValue: 800] [[
+  Connesso Rupert]]
+
+[2020-11-15T15:15:18.617+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605449718617] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Rupert","userState":true} dal Rupert]]
+
+[2020-11-15T15:15:18.617+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605449718617] [levelValue: 800] [[
+  --> inviato a Patrick]]
+
+[2020-11-15T15:15:18.618+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605449718618] [levelValue: 800] [[
+  --> aggiunta a buffer diGiulia]]
+
+[2020-11-15T15:16:15.153+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605449775153] [levelValue: 800] [[
+  Disconnesso Patrick]]
+
+[2020-11-15T15:16:15.154+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605449775154] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Patrick","userState":false} dal Patrick]]
+
+[2020-11-15T15:16:15.154+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605449775154] [levelValue: 800] [[
+  --> inviato a Rupert]]
+
+[2020-11-15T15:16:15.154+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605449775154] [levelValue: 800] [[
+  --> aggiunta a buffer diGiulia]]
+
+[2020-11-15T15:16:15.154+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605449775154] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: false, Buffer: 
+Name: Rupert, Online: true, Buffer: 
+Name: Giulia, Online: false, Buffer: 0:{"type":"system","task":"userStateChange","userName":"Patrick","userState":false}, 
+]]
+
+[2020-11-15T15:16:15.186+0100] [glassfish 5.1] [INFO] [] [org.glassfish.tyrus.core.AnnotatedEndpoint] [tid: _ThreadID=150 _ThreadName=http-listener-1(5)] [timeMillis: 1605449775186] [levelValue: 800] [[
+  Unhandled exception in endpoint com.marconi.chatwebsocket.WebSocketServer.
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:911)
+	at java.util.ArrayList$Itr.next(ArrayList.java:861)
+	at com.marconi.chatwebsocket.User.removeSystemMessageFromBuffer(User.java:54)
+	at com.marconi.chatwebsocket.User.addMessageToBuffer(User.java:48)
+	at com.marconi.chatwebsocket.ConversationsHandler.sendOrBufMessageToUser(ConversationsHandler.java:39)
+	at com.marconi.chatwebsocket.ConversationsHandler.sendMessageFrom(ConversationsHandler.java:47)
+	at com.marconi.chatwebsocket.ConversationsHandler$Proxy$_$$_WeldClientProxy.sendMessageFrom(Unknown Source)
+	at com.marconi.chatwebsocket.WebSocketServer.onUserDisconnection(WebSocketServer.java:113)
+	at com.marconi.chatwebsocket.WebSocketServer.onClose(WebSocketServer.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.callMethod(AnnotatedEndpoint.java:511)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.onClose(AnnotatedEndpoint.java:526)
+	at org.glassfish.tyrus.core.AnnotatedEndpoint.onClose(AnnotatedEndpoint.java:535)
+	at org.glassfish.tyrus.core.TyrusEndpointWrapper.onClose(TyrusEndpointWrapper.java:1235)
+	at org.glassfish.tyrus.core.TyrusWebSocket.onClose(TyrusWebSocket.java:106)
+	at org.glassfish.tyrus.core.frame.CloseFrame.respond(CloseFrame.java:111)
+	at org.glassfish.tyrus.core.ProtocolHandler.process(ProtocolHandler.java:783)
+	at org.glassfish.tyrus.core.TyrusWebSocketEngine$TyrusReadHandler.handle(TyrusWebSocketEngine.java:538)
+	at org.glassfish.tyrus.servlet.TyrusHttpUpgradeHandler.onDataAvailable(TyrusHttpUpgradeHandler.java:149)
+	at org.apache.catalina.connector.InputBuffer$ReadHandlerImpl.processDataAvailable(InputBuffer.java:422)
+	at org.apache.catalina.connector.InputBuffer$ReadHandlerImpl.onDataAvailable(InputBuffer.java:387)
+	at org.glassfish.grizzly.http.io.InputBuffer.invokeHandler(InputBuffer.java:1095)
+	at org.glassfish.grizzly.http.io.InputBuffer.invokeHandlerOnProperThread(InputBuffer.java:1086)
+	at org.glassfish.grizzly.http.io.InputBuffer.append(InputBuffer.java:969)
+	at org.glassfish.grizzly.http.server.HttpServerFilter.handleRead(HttpServerFilter.java:254)
+	at org.glassfish.grizzly.filterchain.ExecutorResolver$9.execute(ExecutorResolver.java:95)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeFilter(DefaultFilterChain.java:260)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.executeChainPart(DefaultFilterChain.java:177)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.execute(DefaultFilterChain.java:109)
+	at org.glassfish.grizzly.filterchain.DefaultFilterChain.process(DefaultFilterChain.java:88)
+	at org.glassfish.grizzly.ProcessorExecutor.execute(ProcessorExecutor.java:53)
+	at org.glassfish.grizzly.nio.transport.TCPNIOTransport.fireIOEvent(TCPNIOTransport.java:515)
+	at org.glassfish.grizzly.strategies.AbstractIOStrategy.fireIOEvent(AbstractIOStrategy.java:89)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.run0(WorkerThreadIOStrategy.java:94)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy.access$100(WorkerThreadIOStrategy.java:33)
+	at org.glassfish.grizzly.strategies.WorkerThreadIOStrategy$WorkerThreadRunnable.run(WorkerThreadIOStrategy.java:114)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:569)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:549)
+	at java.lang.Thread.run(Thread.java:748)
+]]
+
+[2020-11-15T15:16:15.186+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605449775186] [levelValue: 800] [[
+  Disconnesso Rupert]]
+
+[2020-11-15T15:16:15.186+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605449775186] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Rupert","userState":false} dal Rupert]]
+
+[2020-11-15T15:16:15.186+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605449775186] [levelValue: 800] [[
+  --> aggiunta a buffer diPatrick]]
+
+[2020-11-15T15:16:15.186+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605449775186] [levelValue: 800] [[
+  --> aggiunta a buffer diGiulia]]
+
+[2020-11-15T15:16:26.700+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=153 _ThreadName=admin-listener(6)] [timeMillis: 1605449786700] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-15T15:16:26.750+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=153 _ThreadName=admin-listener(6)] [timeMillis: 1605449786750] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-15T15:16:26.757+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=153 _ThreadName=admin-listener(6)] [timeMillis: 1605449786757] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-15T15:16:27.052+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=153 _ThreadName=admin-listener(6)] [timeMillis: 1605449787052] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.hibernate.validator.cdi.ValidationExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-15T15:16:27.054+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=153 _ThreadName=admin-listener(6)] [timeMillis: 1605449787054] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] private org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider.processAnnotatedType(@Observes ProcessAnnotatedType) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-15T15:16:27.058+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=153 _ThreadName=admin-listener(6)] [timeMillis: 1605449787058] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jms.injection.JMSCDIExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-15T15:16:27.060+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=153 _ThreadName=admin-listener(6)] [timeMillis: 1605449787060] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] org.glassfish.sse.impl.ServerSentEventCdiExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-15T15:16:27.070+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=153 _ThreadName=admin-listener(6)] [timeMillis: 1605449787070] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.WebAppExceptionHolder is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:16:27.073+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=153 _ThreadName=admin-listener(6)] [timeMillis: 1605449787073] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.WebAppExceptionInterceptor is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:16:27.074+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=153 _ThreadName=admin-listener(6)] [timeMillis: 1605449787074] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.TransactionalExceptionMapper is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:16:27.075+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=153 _ThreadName=admin-listener(6)] [timeMillis: 1605449787075] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class com.sun.faces.flow.FlowDiscoveryCDIHelper is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:16:27.079+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=153 _ThreadName=admin-listener(6)] [timeMillis: 1605449787079] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider$JaxRsParamProducer is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:16:27.082+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=153 _ThreadName=admin-listener(6)] [timeMillis: 1605449787082] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.servlet.internal.CdiExternalRequestScope is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:16:27.086+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=153 _ThreadName=admin-listener(6)] [timeMillis: 1605449787086] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class com.ibm.jbatch.container.cdi.BatchProducerBean is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:16:27.088+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=153 _ThreadName=admin-listener(6)] [timeMillis: 1605449787088] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorMandatory is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:16:27.089+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=153 _ThreadName=admin-listener(6)] [timeMillis: 1605449787089] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorNever is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:16:27.090+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=153 _ThreadName=admin-listener(6)] [timeMillis: 1605449787090] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorNotSupported is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:16:27.090+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=153 _ThreadName=admin-listener(6)] [timeMillis: 1605449787090] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorRequired is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:16:27.091+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=153 _ThreadName=admin-listener(6)] [timeMillis: 1605449787091] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorRequiresNew is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:16:27.092+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=153 _ThreadName=admin-listener(6)] [timeMillis: 1605449787092] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorSupports is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:16:27.292+0100] [glassfish 5.1] [INFO] [] [org.glassfish.tyrus.servlet.TyrusServletContainerInitializer] [tid: _ThreadID=153 _ThreadName=admin-listener(6)] [timeMillis: 1605449787292] [levelValue: 800] [[
+  Registering WebSocket filter for url pattern /*]]
+
+[2020-11-15T15:16:27.324+0100] [glassfish 5.1] [INFO] [] [org.glassfish.soteria.servlet.SamRegistrationInstaller] [tid: _ThreadID=153 _ThreadName=admin-listener(6)] [timeMillis: 1605449787324] [levelValue: 800] [[
+  Initializing Soteria 1.0.1 for context '/ChatWebSocket']]
+
+[2020-11-15T15:16:27.338+0100] [glassfish 5.1] [INFO] [jsf.config.listener.version] [javax.enterprise.resource.webcontainer.jsf.config] [tid: _ThreadID=153 _ThreadName=admin-listener(6)] [timeMillis: 1605449787338] [levelValue: 800] [[
+  Initializing Mojarra 2.3.9 for context '/ChatWebSocket']]
+
+[2020-11-15T15:16:27.893+0100] [glassfish 5.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=153 _ThreadName=admin-listener(6)] [timeMillis: 1605449787893] [levelValue: 800] [[
+  Loading application [ChatWebSocket-1.0-SNAPSHOT] at [/ChatWebSocket]]]
+
+[2020-11-15T15:16:27.912+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=153 _ThreadName=admin-listener(6)] [timeMillis: 1605449787912] [levelValue: 800] [[
+  ChatWebSocket-1.0-SNAPSHOT was successfully deployed in 1.243 milliseconds.]]
+
+[2020-11-15T15:16:40.364+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605449800364] [levelValue: 800] [[
+  Connesso Patrick]]
+
+[2020-11-15T15:16:40.364+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605449800364] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Patrick","userState":true} dal Patrick]]
+
+[2020-11-15T15:16:40.364+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605449800364] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: true, Buffer: 
+]]
+
+[2020-11-15T15:16:45.137+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605449805137] [levelValue: 800] [[
+  Connesso Rupert]]
+
+[2020-11-15T15:16:45.137+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605449805137] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Rupert","userState":true} dal Rupert]]
+
+[2020-11-15T15:16:45.137+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605449805137] [levelValue: 800] [[
+  --> inviato a Patrick]]
+
+[2020-11-15T15:16:45.138+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605449805138] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: true, Buffer: 
+Name: Rupert, Online: true, Buffer: 
+]]
+
+[2020-11-15T15:16:48.845+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605449808845] [levelValue: 800] [[
+  Connesso Giulia]]
+
+[2020-11-15T15:16:48.846+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605449808846] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Giulia","userState":true} dal Giulia]]
+
+[2020-11-15T15:16:48.846+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605449808846] [levelValue: 800] [[
+  --> inviato a Patrick]]
+
+[2020-11-15T15:16:48.847+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605449808847] [levelValue: 800] [[
+  --> inviato a Rupert]]
+
+[2020-11-15T15:16:48.848+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605449808848] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: true, Buffer: 
+Name: Rupert, Online: true, Buffer: 
+Name: Giulia, Online: true, Buffer: 
+]]
+
+[2020-11-15T15:17:08.973+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605449828973] [levelValue: 800] [[
+  Disconnesso Giulia]]
+
+[2020-11-15T15:17:08.973+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605449828973] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Giulia","userState":false} dal Giulia]]
+
+[2020-11-15T15:17:08.973+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605449828973] [levelValue: 800] [[
+  --> inviato a Patrick]]
+
+[2020-11-15T15:17:08.974+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605449828974] [levelValue: 800] [[
+  --> inviato a Rupert]]
+
+[2020-11-15T15:17:08.975+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605449828975] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: true, Buffer: 
+Name: Rupert, Online: true, Buffer: 
+Name: Giulia, Online: false, Buffer: 
+]]
+
+[2020-11-15T15:17:11.148+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605449831148] [levelValue: 800] [[
+  Disconnesso Rupert]]
+
+[2020-11-15T15:17:11.148+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605449831148] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Rupert","userState":false} dal Rupert]]
+
+[2020-11-15T15:17:11.148+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605449831148] [levelValue: 800] [[
+  --> inviato a Patrick]]
+
+[2020-11-15T15:17:11.149+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605449831149] [levelValue: 800] [[
+  --> aggiunta a buffer diGiulia]]
+
+[2020-11-15T15:17:11.149+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605449831149] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: true, Buffer: 
+Name: Rupert, Online: false, Buffer: 
+Name: Giulia, Online: false, Buffer: 0:{"type":"system","task":"userStateChange","userName":"Rupert","userState":false}, 
+]]
+
+[2020-11-15T15:17:18.558+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605449838558] [levelValue: 800] [[
+  Connesso Rupert]]
+
+[2020-11-15T15:17:18.558+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605449838558] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Rupert","userState":true} dal Rupert]]
+
+[2020-11-15T15:17:18.558+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605449838558] [levelValue: 800] [[
+  --> inviato a Patrick]]
+
+[2020-11-15T15:17:18.559+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605449838559] [levelValue: 800] [[
+  --> aggiunta a buffer diGiulia]]
+
+[2020-11-15T15:17:18.559+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605449838559] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: true, Buffer: 
+Name: Rupert, Online: true, Buffer: 
+Name: Giulia, Online: false, Buffer: 0:{"type":"system","task":"userStateChange","userName":"Rupert","userState":true}, 
+]]
+
+[2020-11-15T15:17:36.268+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605449856268] [levelValue: 800] [[
+  
+{"type":"message","destType":"user","destName":"Giulia","message":{"text":"ciao","date":"15/11/2020","time":"15:17","sender":"Rupert"}}]]
+
+[2020-11-15T15:17:36.268+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605449856268] [levelValue: 800] [[
+  --> aggiunta a buffer diGiulia]]
+
+[2020-11-15T15:17:58.911+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605449878911] [levelValue: 800] [[
+  
+{"type":"message","destType":"user","destName":"Giulia","message":{"text":"ciao","date":"15/11/2020","time":"15:17","sender":"Patrick"}}]]
+
+[2020-11-15T15:17:58.911+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605449878911] [levelValue: 800] [[
+  --> aggiunta a buffer diGiulia]]
+
+[2020-11-15T15:18:05.831+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605449885831] [levelValue: 800] [[
+  Disconnesso Rupert]]
+
+[2020-11-15T15:18:05.831+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605449885831] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Rupert","userState":false} dal Rupert]]
+
+[2020-11-15T15:18:05.831+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605449885831] [levelValue: 800] [[
+  --> inviato a Patrick]]
+
+[2020-11-15T15:18:05.831+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605449885831] [levelValue: 800] [[
+  --> aggiunta a buffer diGiulia]]
+
+[2020-11-15T15:18:05.831+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605449885831] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: true, Buffer: 
+Name: Rupert, Online: false, Buffer: 
+Name: Giulia, Online: false, Buffer: 0:{"type":"message","destType":"user","destName":"Giulia","message":{"text":"ciao","date":"15/11/2020","time":"15:17","sender":"Rupert"}}, 1:{"type":"message","destType":"user","destName":"Giulia","message":{"text":"ciao","date":"15/11/2020","time":"15:17","sender":"Patrick"}}, 2:{"type":"system","task":"userStateChange","userName":"Rupert","userState":false}, 
+]]
+
+[2020-11-15T15:20:07.936+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605450007936] [levelValue: 800] [[
+  Disconnesso Patrick]]
+
+[2020-11-15T15:20:07.936+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605450007936] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Patrick","userState":false} dal Patrick]]
+
+[2020-11-15T15:20:07.936+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605450007936] [levelValue: 800] [[
+  --> aggiunta a buffer diRupert]]
+
+[2020-11-15T15:20:07.936+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605450007936] [levelValue: 800] [[
+  --> aggiunta a buffer diGiulia]]
+
+[2020-11-15T15:20:07.937+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605450007937] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: false, Buffer: 
+Name: Rupert, Online: false, Buffer: 0:{"type":"system","task":"userStateChange","userName":"Patrick","userState":false}, 
+Name: Giulia, Online: false, Buffer: 0:{"type":"message","destType":"user","destName":"Giulia","message":{"text":"ciao","date":"15/11/2020","time":"15:17","sender":"Rupert"}}, 1:{"type":"message","destType":"user","destName":"Giulia","message":{"text":"ciao","date":"15/11/2020","time":"15:17","sender":"Patrick"}}, 2:{"type":"system","task":"userStateChange","userName":"Patrick","userState":false}, 
+]]
+
+[2020-11-15T15:22:43.762+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605450163762] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-15T15:22:43.890+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605450163890] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-15T15:22:43.908+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.tools.deployment.common] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605450163908] [levelValue: 800] [[
+  visiting unvisited references]]
+
+[2020-11-15T15:22:44.330+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605450164330] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] org.glassfish.sse.impl.ServerSentEventCdiExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-15T15:22:44.337+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605450164337] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jms.injection.JMSCDIExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-15T15:22:44.345+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605450164345] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] public org.hibernate.validator.cdi.ValidationExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-15T15:22:44.383+0100] [glassfish 5.1] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605450164383] [levelValue: 800] [[
+  WELD-000411: Observer method [BackedAnnotatedMethod] private org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider.processAnnotatedType(@Observes ProcessAnnotatedType) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.]]
+
+[2020-11-15T15:22:44.389+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605450164389] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.WebAppExceptionHolder is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:22:44.390+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605450164390] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.WebAppExceptionInterceptor is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:22:44.391+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605450164391] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.transaction.internal.TransactionalExceptionMapper is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:22:44.398+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605450164398] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider$JaxRsParamProducer is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:22:44.399+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605450164399] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.jersey.ext.cdi1x.servlet.internal.CdiExternalRequestScope is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:22:44.401+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605450164401] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class com.sun.faces.flow.FlowDiscoveryCDIHelper is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:22:44.402+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605450164402] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorMandatory is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:22:44.404+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605450164404] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorNever is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:22:44.405+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605450164405] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorNotSupported is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:22:44.405+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605450164405] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorRequired is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:22:44.409+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605450164409] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorRequiresNew is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:22:44.412+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605450164412] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class org.glassfish.cdi.transaction.TransactionalInterceptorSupports is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:22:44.413+0100] [glassfish 5.1] [WARN] [] [org.jboss.weld.Bootstrap] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605450164413] [levelValue: 900] [[
+  WELD-000146: BeforeBeanDiscovery.addAnnotatedType(AnnotatedType<?>) used for class com.ibm.jbatch.container.cdi.BatchProducerBean is deprecated from CDI 1.1!]]
+
+[2020-11-15T15:22:44.698+0100] [glassfish 5.1] [INFO] [] [org.glassfish.tyrus.servlet.TyrusServletContainerInitializer] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605450164698] [levelValue: 800] [[
+  Registering WebSocket filter for url pattern /*]]
+
+[2020-11-15T15:22:44.736+0100] [glassfish 5.1] [INFO] [] [org.glassfish.soteria.servlet.SamRegistrationInstaller] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605450164736] [levelValue: 800] [[
+  Initializing Soteria 1.0.1 for context '/ChatWebSocket']]
+
+[2020-11-15T15:22:44.761+0100] [glassfish 5.1] [INFO] [jsf.config.listener.version] [javax.enterprise.resource.webcontainer.jsf.config] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605450164761] [levelValue: 800] [[
+  Initializing Mojarra 2.3.9 for context '/ChatWebSocket']]
+
+[2020-11-15T15:22:45.897+0100] [glassfish 5.1] [INFO] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605450165897] [levelValue: 800] [[
+  Loading application [ChatWebSocket-1.0-SNAPSHOT] at [/ChatWebSocket]]]
+
+[2020-11-15T15:22:45.912+0100] [glassfish 5.1] [INFO] [] [javax.enterprise.system.core] [tid: _ThreadID=47 _ThreadName=admin-listener(1)] [timeMillis: 1605450165912] [levelValue: 800] [[
+  ChatWebSocket-1.0-SNAPSHOT was successfully deployed in 2.205 milliseconds.]]
+
+[2020-11-15T15:23:01.133+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605450181133] [levelValue: 800] [[
+  Connesso Patrick]]
+
+[2020-11-15T15:23:01.134+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605450181134] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Patrick","userState":true} dal Patrick]]
+
+[2020-11-15T15:23:01.134+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605450181134] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: true, Buffer: 
+]]
+
+[2020-11-15T15:23:07.151+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605450187151] [levelValue: 800] [[
+  Connesso Rupert]]
+
+[2020-11-15T15:23:07.151+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605450187151] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Rupert","userState":true} dal Rupert]]
+
+[2020-11-15T15:23:07.151+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605450187151] [levelValue: 800] [[
+  --> inviato a Patrick]]
+
+[2020-11-15T15:23:07.152+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605450187152] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: true, Buffer: 
+Name: Rupert, Online: true, Buffer: 
+]]
+
+[2020-11-15T15:23:10.652+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605450190652] [levelValue: 800] [[
+  Connesso Giulia]]
+
+[2020-11-15T15:23:10.653+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605450190653] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Giulia","userState":true} dal Giulia]]
+
+[2020-11-15T15:23:10.653+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605450190653] [levelValue: 800] [[
+  --> inviato a Patrick]]
+
+[2020-11-15T15:23:10.654+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605450190654] [levelValue: 800] [[
+  --> inviato a Rupert]]
+
+[2020-11-15T15:23:10.655+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605450190655] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: true, Buffer: 
+Name: Rupert, Online: true, Buffer: 
+Name: Giulia, Online: true, Buffer: 
+]]
+
+[2020-11-15T15:23:13.036+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605450193036] [levelValue: 800] [[
+  Disconnesso Giulia]]
+
+[2020-11-15T15:23:13.036+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605450193036] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Giulia","userState":false} dal Giulia]]
+
+[2020-11-15T15:23:13.036+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605450193036] [levelValue: 800] [[
+  --> inviato a Patrick]]
+
+[2020-11-15T15:23:13.037+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605450193037] [levelValue: 800] [[
+  --> inviato a Rupert]]
+
+[2020-11-15T15:23:13.038+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605450193038] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: true, Buffer: 
+Name: Rupert, Online: true, Buffer: 
+Name: Giulia, Online: false, Buffer: 
+]]
+
+[2020-11-15T15:23:15.995+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605450195995] [levelValue: 800] [[
+  Disconnesso Rupert]]
+
+[2020-11-15T15:23:15.996+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605450195996] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Rupert","userState":false} dal Rupert]]
+
+[2020-11-15T15:23:15.996+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605450195996] [levelValue: 800] [[
+  --> inviato a Patrick]]
+
+[2020-11-15T15:23:15.997+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605450195997] [levelValue: 800] [[
+  --> aggiunta a buffer diGiulia]]
+
+[2020-11-15T15:23:15.997+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605450195997] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: true, Buffer: 
+Name: Rupert, Online: false, Buffer: 
+Name: Giulia, Online: false, Buffer: 0:{"type":"system","task":"userStateChange","userName":"Rupert","userState":false}, 
+]]
+
+[2020-11-15T15:23:24.218+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605450204218] [levelValue: 800] [[
+  Connesso Rupert]]
+
+[2020-11-15T15:23:24.218+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605450204218] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Rupert","userState":true} dal Rupert]]
+
+[2020-11-15T15:23:24.218+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605450204218] [levelValue: 800] [[
+  --> inviato a Patrick]]
+
+[2020-11-15T15:23:24.219+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605450204219] [levelValue: 800] [[
+  --> aggiunta a buffer diGiulia]]
+
+[2020-11-15T15:23:24.219+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605450204219] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: true, Buffer: 
+Name: Rupert, Online: true, Buffer: 
+Name: Giulia, Online: false, Buffer: 0:{"type":"system","task":"userStateChange","userName":"Rupert","userState":true}, 
+]]
+
+[2020-11-15T15:23:32.673+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605450212673] [levelValue: 800] [[
+  Connesso Giulia]]
+
+[2020-11-15T15:23:32.673+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605450212673] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Giulia","userState":true} dal Giulia]]
+
+[2020-11-15T15:23:32.673+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605450212673] [levelValue: 800] [[
+  --> inviato a Patrick]]
+
+[2020-11-15T15:23:32.674+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605450212674] [levelValue: 800] [[
+  --> inviato a Rupert]]
+
+[2020-11-15T15:23:32.674+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605450212674] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: true, Buffer: 
+Name: Rupert, Online: true, Buffer: 
+Name: Giulia, Online: true, Buffer: 
+]]
+
+[2020-11-15T15:23:44.474+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605450224474] [levelValue: 800] [[
+  Disconnesso Giulia]]
+
+[2020-11-15T15:23:44.475+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605450224475] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Giulia","userState":false} dal Giulia]]
+
+[2020-11-15T15:23:44.475+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605450224475] [levelValue: 800] [[
+  --> inviato a Patrick]]
+
+[2020-11-15T15:23:44.475+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605450224475] [levelValue: 800] [[
+  --> inviato a Rupert]]
+
+[2020-11-15T15:23:44.476+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605450224476] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: true, Buffer: 
+Name: Rupert, Online: true, Buffer: 
+Name: Giulia, Online: false, Buffer: 
+]]
+
+[2020-11-15T15:23:59.194+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605450239194] [levelValue: 800] [[
+  
+{"type":"message","destType":"user","destName":"Giulia","message":{"text":"ciao","date":"15/11/2020","time":"15:23","sender":"Patrick"}}]]
+
+[2020-11-15T15:23:59.194+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605450239194] [levelValue: 800] [[
+  --> aggiunta a buffer diGiulia]]
+
+[2020-11-15T15:24:07.025+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605450247025] [levelValue: 800] [[
+  
+{"type":"message","destType":"user","destName":"Giulia","message":{"text":"ciao","date":"15/11/2020","time":"15:24","sender":"Rupert"}}]]
+
+[2020-11-15T15:24:07.025+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605450247025] [levelValue: 800] [[
+  --> aggiunta a buffer diGiulia]]
+
+[2020-11-15T15:24:28.170+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605450268170] [levelValue: 800] [[
+  
+{"type":"system","task":"groupCreation","group":{"name":"Amici","members":["Patrick","Giulia","Rupert"],"admins":["Giulia","Rupert"],"creationDate":"15/11/2020","creationTime":"15:24","creator":"Rupert"}}]]
+
+[2020-11-15T15:24:28.171+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605450268171] [levelValue: 800] [[
+  Tentativo di creazione del gruppo Amici]]
+
+[2020-11-15T15:24:28.171+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605450268171] [levelValue: 800] [[
+  --> inviato a Patrick]]
+
+[2020-11-15T15:24:28.172+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605450268172] [levelValue: 800] [[
+  --> aggiunta a buffer diGiulia]]
+
+[2020-11-15T15:24:28.172+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605450268172] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: true, Buffer: 
+Name: Rupert, Online: true, Buffer: 
+Name: Giulia, Online: false, Buffer: 0:{"type":"message","destType":"user","destName":"Giulia","message":{"text":"ciao","date":"15/11/2020","time":"15:23","sender":"Patrick"}}, 1:{"type":"message","destType":"user","destName":"Giulia","message":{"text":"ciao","date":"15/11/2020","time":"15:24","sender":"Rupert"}}, 2:{"type":"system","task":"groupCreation","group":{"name":"Amici","members":["Patrick","Giulia","Rupert"],"admins":["Giulia","Rupert"],"creationDate":"15/11/2020","creationTime":"15:24","creator":"Rupert"}}, 
+Groups:
+nome: Amici, membri: [Patrick,Giulia,Rupert,], admins: [Giulia,Rupert,], data creazione: 15/11/2020, ora creazione: 15:24, creator: Rupert
+]]
+
+[2020-11-15T15:24:44.138+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605450284138] [levelValue: 800] [[
+  
+{"type":"message","destType":"group","destName":"Amici","message":{"text":"ciao amici","date":"15/11/2020","time":"15:24","sender":"Rupert"}}]]
+
+[2020-11-15T15:24:44.138+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605450284138] [levelValue: 800] [[
+  --> inviato a Patrick]]
+
+[2020-11-15T15:24:44.138+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=146 _ThreadName=Thread-8] [timeMillis: 1605450284138] [levelValue: 800] [[
+  --> aggiunta a buffer diGiulia]]
+
+[2020-11-15T15:24:50.669+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605450290669] [levelValue: 800] [[
+  Connesso Giulia]]
+
+[2020-11-15T15:24:50.671+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605450290671] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Giulia","userState":true} dal Giulia]]
+
+[2020-11-15T15:24:50.671+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605450290671] [levelValue: 800] [[
+  --> inviato a Patrick]]
+
+[2020-11-15T15:24:50.671+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605450290671] [levelValue: 800] [[
+  --> inviato a Rupert]]
+
+[2020-11-15T15:24:50.672+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=147 _ThreadName=Thread-8] [timeMillis: 1605450290672] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: true, Buffer: 
+Name: Rupert, Online: true, Buffer: 
+Name: Giulia, Online: true, Buffer: 
+Groups:
+nome: Amici, membri: [Patrick,Giulia,Rupert,], admins: [Giulia,Rupert,], data creazione: 15/11/2020, ora creazione: 15:24, creator: Rupert
+]]
+
+[2020-11-15T15:26:08.262+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605450368262] [levelValue: 800] [[
+  Disconnesso Rupert]]
+
+[2020-11-15T15:26:08.263+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605450368263] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Rupert","userState":false} dal Rupert]]
+
+[2020-11-15T15:26:08.263+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605450368263] [levelValue: 800] [[
+  --> inviato a Patrick]]
+
+[2020-11-15T15:26:08.263+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605450368263] [levelValue: 800] [[
+  --> inviato a Giulia]]
+
+[2020-11-15T15:26:08.264+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=148 _ThreadName=Thread-8] [timeMillis: 1605450368264] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: true, Buffer: 
+Name: Rupert, Online: false, Buffer: 
+Name: Giulia, Online: true, Buffer: 
+Groups:
+nome: Amici, membri: [Patrick,Giulia,Rupert,], admins: [Giulia,Rupert,], data creazione: 15/11/2020, ora creazione: 15:24, creator: Rupert
+]]
+
+[2020-11-15T15:26:08.606+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605450368606] [levelValue: 800] [[
+  Disconnesso Giulia]]
+
+[2020-11-15T15:26:08.606+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605450368606] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Giulia","userState":false} dal Giulia]]
+
+[2020-11-15T15:26:08.606+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605450368606] [levelValue: 800] [[
+  --> inviato a Patrick]]
+
+[2020-11-15T15:26:08.606+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605450368606] [levelValue: 800] [[
+  --> aggiunta a buffer diRupert]]
+
+[2020-11-15T15:26:08.607+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=150 _ThreadName=Thread-8] [timeMillis: 1605450368607] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: true, Buffer: 
+Name: Rupert, Online: false, Buffer: 0:{"type":"system","task":"userStateChange","userName":"Giulia","userState":false}, 
+Name: Giulia, Online: false, Buffer: 
+Groups:
+nome: Amici, membri: [Patrick,Giulia,Rupert,], admins: [Giulia,Rupert,], data creazione: 15/11/2020, ora creazione: 15:24, creator: Rupert
+]]
+
+[2020-11-15T15:26:12.024+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605450372024] [levelValue: 800] [[
+  Disconnesso Patrick]]
+
+[2020-11-15T15:26:12.024+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605450372024] [levelValue: 800] [[
+  invio {"type":"system","task":"userStateChange","userName":"Patrick","userState":false} dal Patrick]]
+
+[2020-11-15T15:26:12.024+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605450372024] [levelValue: 800] [[
+  --> aggiunta a buffer diRupert]]
+
+[2020-11-15T15:26:12.024+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605450372024] [levelValue: 800] [[
+  --> aggiunta a buffer diGiulia]]
+
+[2020-11-15T15:26:12.024+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=149 _ThreadName=Thread-8] [timeMillis: 1605450372024] [levelValue: 800] [[
+  Users:
+Name: Patrick, Online: false, Buffer: 
+Name: Rupert, Online: false, Buffer: 0:{"type":"system","task":"userStateChange","userName":"Patrick","userState":false}, 
+Name: Giulia, Online: false, Buffer: 0:{"type":"system","task":"userStateChange","userName":"Patrick","userState":false}, 
+Groups:
+nome: Amici, membri: [Patrick,Giulia,Rupert,], admins: [Giulia,Rupert,], data creazione: 15/11/2020, ora creazione: 15:24, creator: Rupert
+]]
+
+[2020-11-15T16:52:58.177+0100] [glassfish 5.1] [INFO] [NCLS-CORE-00092] [javax.enterprise.system.core] [tid: _ThreadID=1483 _ThreadName=Thread-47] [timeMillis: 1605455578177] [levelValue: 800] [[
+  Server shutdown initiated]]
+
+[2020-11-15T16:52:58.177+0100] [glassfish 5.1] [INFO] [NCLS-CORE-00092] [javax.enterprise.system.core] [tid: _ThreadID=1484 _ThreadName=Thread-48] [timeMillis: 1605455578177] [levelValue: 800] [[
+  Server shutdown initiated]]
+
+[2020-11-15T16:52:58.179+0100] [glassfish 5.1] [WARNING] [NCLS-BOOTSTRAP-00029] [javax.enterprise.bootstrap] [tid: _ThreadID=1484 _ThreadName=Thread-48] [timeMillis: 1605455578179] [levelValue: 900] [[
+  Exception while unregistering: 
+java.lang.IllegalStateException: Service already unregistered.
+	at org.apache.felix.framework.ServiceRegistrationImpl.unregister(ServiceRegistrationImpl.java:140)
+	at com.sun.enterprise.glassfish.bootstrap.osgi.EmbeddedOSGiGlassFishImpl.unregisterService(EmbeddedOSGiGlassFishImpl.java:68)
+	at com.sun.enterprise.glassfish.bootstrap.osgi.EmbeddedOSGiGlassFishImpl.stop(EmbeddedOSGiGlassFishImpl.java:56)
+	at com.sun.enterprise.v3.admin.StopServer.doExecute(StopServer.java:55)
+	at com.sun.enterprise.v3.admin.StopDomainCommand.execute(StopDomainCommand.java:73)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:516)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:512)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:360)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2.execute(CommandRunnerImpl.java:511)
+	at org.glassfish.api.AsyncImpl$1$1.run(AsyncImpl.java:53)
+]]
+
+[2020-11-15T16:52:58.180+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=1484 _ThreadName=Thread-8] [timeMillis: 1605455578180] [levelValue: 800] [[
+  FileMonitoring shutdown]]
+
+[2020-11-15T16:52:58.201+0100] [glassfish 5.1] [INFO] [NCLS-BOOTSTRAP-00028] [javax.enterprise.bootstrap] [tid: _ThreadID=1483 _ThreadName=Thread-47] [timeMillis: 1605455578201] [levelValue: 800] [[
+  Unregistered com.sun.enterprise.glassfish.bootstrap.osgi.EmbeddedOSGiGlassFishImpl@37095ded from service registry.]]
+
+[2020-11-15T16:52:58.219+0100] [glassfish 5.1] [INFO] [NCLS-JMX-00002] [javax.enterprise.system.jmx] [tid: _ThreadID=1484 _ThreadName=Thread-48] [timeMillis: 1605455578219] [levelValue: 800] [[
+  JMXStartupService: Stopped JMXConnectorServer: null]]
+
+[2020-11-15T16:52:58.219+0100] [glassfish 5.1] [INFO] [NCLS-JMX-00001] [javax.enterprise.system.jmx] [tid: _ThreadID=1484 _ThreadName=Thread-48] [timeMillis: 1605455578219] [levelValue: 800] [[
+  JMXStartupService and JMXConnectors have been shut down.]]
+
+[2020-11-15T16:52:58.604+0100] [glassfish 5.1] [SEVERE] [] [javax.enterprise.web.util] [tid: _ThreadID=1488 _ThreadName=RunLevelControllerThread-1605455578338] [timeMillis: 1605455578604] [levelValue: 1000] [[
+  The web application [] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@389818ac]) and a value of type [org.glassfish.admingui.theme.AdminguiThemeContext] (value [org.glassfish.admingui.theme.AdminguiThemeContext@11281b3a]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2020-11-15T16:52:58.605+0100] [glassfish 5.1] [SEVERE] [] [javax.enterprise.web.util] [tid: _ThreadID=1488 _ThreadName=RunLevelControllerThread-1605455578338] [timeMillis: 1605455578605] [levelValue: 1000] [[
+  The web application [] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@389818ac]) and a value of type [org.glassfish.admingui.theme.AdminguiThemeContext] (value [org.glassfish.admingui.theme.AdminguiThemeContext@11281b3a]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2020-11-15T16:52:58.605+0100] [glassfish 5.1] [SEVERE] [] [javax.enterprise.web.util] [tid: _ThreadID=1488 _ThreadName=RunLevelControllerThread-1605455578338] [timeMillis: 1605455578605] [levelValue: 1000] [[
+  The web application [] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@389818ac]) and a value of type [org.glassfish.admingui.theme.AdminguiThemeContext] (value [org.glassfish.admingui.theme.AdminguiThemeContext@11281b3a]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2020-11-15T16:52:58.606+0100] [glassfish 5.1] [SEVERE] [] [javax.enterprise.web.util] [tid: _ThreadID=1488 _ThreadName=RunLevelControllerThread-1605455578338] [timeMillis: 1605455578606] [levelValue: 1000] [[
+  The web application [] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@389818ac]) and a value of type [org.glassfish.admingui.theme.AdminguiThemeContext] (value [org.glassfish.admingui.theme.AdminguiThemeContext@11281b3a]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2020-11-15T16:52:58.606+0100] [glassfish 5.1] [SEVERE] [] [javax.enterprise.web.util] [tid: _ThreadID=1488 _ThreadName=RunLevelControllerThread-1605455578338] [timeMillis: 1605455578606] [levelValue: 1000] [[
+  The web application [] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@389818ac]) and a value of type [org.glassfish.admingui.theme.AdminguiThemeContext] (value [org.glassfish.admingui.theme.AdminguiThemeContext@11281b3a]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2020-11-15T16:52:58.607+0100] [glassfish 5.1] [SEVERE] [] [javax.enterprise.web.util] [tid: _ThreadID=1488 _ThreadName=RunLevelControllerThread-1605455578338] [timeMillis: 1605455578607] [levelValue: 1000] [[
+  The web application [] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@389818ac]) and a value of type [org.glassfish.admingui.theme.AdminguiThemeContext] (value [org.glassfish.admingui.theme.AdminguiThemeContext@11281b3a]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2020-11-15T16:52:58.607+0100] [glassfish 5.1] [SEVERE] [] [javax.enterprise.web.util] [tid: _ThreadID=1488 _ThreadName=RunLevelControllerThread-1605455578338] [timeMillis: 1605455578607] [levelValue: 1000] [[
+  The web application [] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@389818ac]) and a value of type [org.glassfish.admingui.theme.AdminguiThemeContext] (value [org.glassfish.admingui.theme.AdminguiThemeContext@11281b3a]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2020-11-15T16:52:58.607+0100] [glassfish 5.1] [SEVERE] [] [javax.enterprise.web.util] [tid: _ThreadID=1488 _ThreadName=RunLevelControllerThread-1605455578338] [timeMillis: 1605455578607] [levelValue: 1000] [[
+  The web application [] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@389818ac]) and a value of type [org.glassfish.admingui.theme.AdminguiThemeContext] (value [org.glassfish.admingui.theme.AdminguiThemeContext@11281b3a]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.]]
+
+[2020-11-15T16:52:58.966+0100] [glassfish 5.1] [INFO] [] [] [tid: _ThreadID=1494 _ThreadName=Thread-8] [timeMillis: 1605455578966] [levelValue: 800] [[
+  JdbcRuntimeExtension,  getAllSystemRAResourcesAndPools = [GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool]]]
+

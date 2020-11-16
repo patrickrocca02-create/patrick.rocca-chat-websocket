@@ -1,120 +1,75 @@
-class Client{
-    static userName = "Patrick";
-    static users = [];
-    static groups = [];
-    constructor(userName){
-        Client.userName = userName;
-    }
+function onGroupCreation(group){
+    group = new Group(group.name, group.members, group.admins, group.creationDate, group.creationTime, group.creator);
+    Client.addGroup(group);
+}
+function onGroupModification(admin, newGroup){
+    let oldGroup = Client.getGroup(newGroup.name);
+    
+    let newMembers = getElementsOfList1NotInList2(newGroup.members, oldGroup.members);
+    let oldMembers = getElementsOfList1NotInList2(oldGroup.members, newGroup.members);
+    let newAdmins = getElementsOfList1NotInList2(newGroup.admins, oldGroup.admins);
+    let oldAdmins  = getElementsOfList1NotInList2(oldGroup.admins, newGroup.admins);
 
-    static getUserIndex(userName){
-        let index = -1;
-        for(let i=0; i < Client.users.length; i++){
-            if(Client.users[i].name == userName){
-                index = i;
-            }
-        }
-        return index;
-    }
-    static getGruopIndex(groupName){
-        let index = -1;
-        for(let i=0; i < Client.groups.length; i++){
-            if(Client.groups[i].name == groupName){
-                index = i;
-            }
-        }
-        return index;
-    }
+    let systemMessageMembers = new SystemMessage(admin, getSystemMessageOnGroupUsersModification(admin, newMembers, oldMembers, "members"));
+    let systemMessageAdmins = new SystemMessage(admin, getSystemMessageOnGroupUsersModification(admin, newAdmins, oldAdmins, "admins"));
 
-    static addGroupMessage(mex){
-        let groupIndex = Client.getGruopIndex(mex.group);
-        if(groupIndex != -1){
-            Client.groups[groupIndex].addMessage(mex);
-        }
-    }
-    static addUserMessage(mex){
-        let userIndex = Client.getUserIndex(mex.sender);
-        if(userIndex == -1){
-            Client.addUser(new User(mex.sender));
-        }
-    }
+    Client.addGroupMessage(newGroup.name, systemMessageMembers);
+    Client.addGroupMessage(newGroup.name, systemMessageAdmins);
 
-    static setOnline(userName, online){
-        let userIndex = Client.getUserIndex(userName);
-        if(userIndex != -1){
-            Client.users[userIndex].online = online;
-        }
-    }
-
-    static addUser(user){
-        Client.users.push(user);
-    }
-    static addGroup(group){
-        Client.groups.push(group)
-    }
+    Client.updateGroup(newGroup.name, newGroup.members, newGroup.admins);
 }
 
-class User{
-    constructor(name){
-        this.name = name;
-        this.messages = [];
-        this.online = false;
+function getSystemMessageOnGroupUsersModification(admin, newUsers, oldUsers, memberOrAdmin){
+    let systemMessageText = "L'admin " + admin + " ha ";
+    
+    if(memberOrAdmin == "members"){
+        memberOrAdmin = "utent";
+    }else if(memberOrAdmin == "admins"){
+        memberOrAdmin = "amministrator";
     }
 
-    addMessage(mex){
-        this.messages.push(mex);
+    if(newUsers.length == 1){
+        systemMessageText += "aggiunto l'" + memberOrAdmin + "e ";
+    }else if(newUsers.length > 1){
+        systemMessageText += "aggiunto gli " + memberOrAdmin + "i ";
+    }
+    for(let i = 0; i < newUsers.length; i++){   
+        systemMessageText += newUsers[i];
+        if(i == newUsers.length - 2){
+            systemMessageText += " e ";
+        }else if(i != newUsers.length - 1){
+            systemMessageText += ", ";
+        }
     }
 
-    lastMessage(){
-        return this.messages[this.messages.length-1];
+    if(newUsers.length > 0 && oldUsers.length > 0){
+        systemMessageText += ", e ha "
     }
+
+    if(oldUsers.length == 1){
+        systemMessageText += "rimosso l'" + memberOrAdmin + "e ";
+    }else if(oldUsers.length > 1){
+        systemMessageText += "rimosso gli " + memberOrAdmin + "i ";
+    }
+    for(let i = 0; i < oldUsers.length; i++){   
+        systemMessageText += oldUsers[i];
+        if(i == oldUsers.length - 2){
+            systemMessageText += " e ";
+        }else if(i != oldUsers.length - 1){
+            systemMessageText += ", ";
+        }
+    }
+    return systemMessageText;
+}
+function getElementsOfList1NotInList2(list1, list2){
+    return list1.filter(e => list2.indexOf(e) == -1);
 }
 
-class Message{
-    constructor(text){
-        this.text = text;
-        let date = new Date();
-        this.date = date.getDate() + "/" + (date.getMonth()+1) + "/" + date.getFullYear();
-        this.time = date.getHours() + ":" + date.getMinutes();
-        this.sender = Client.userName;
-    }
+Client.addGroup(new Group("A", ["Patrick","Rupert","Marco","Anna"], ["Patrick","Rupert","Anna","Marco"], "","",""));
+g2 = {
+    name : "A",
+    members : ["Patrick","Giulia","Linda"],
+    admins : ["Patrick"]
 }
-
-class Group{
-    constructor(name, members, admins){
-        this.name = name;
-        members.push(Client.userName);
-        this.members = members;
-        admins.push(Client.userName);
-        this.admins = admins
-        this.messages = []
-        let date = new Date();
-        this.creationDate = date.getDate() + "/" + (date.getMonth()+1) + "/" + date.getFullYear();
-        this.creationTime = date.getHours() + ":" + date.getMinutes();
-        this.creator = Client.userName;
-    }
-
-    addMessage(mex){
-        this.messages.push(mex);
-    }
-
-    lastMessage(){
-        return this.messages[this.messages.length-1];
-    }
-}
-/* TEST 
-m1 = new Message("Ciao da Rupert","user",null);
-m1.sender = "Rupert"
-m2 = new Message("Ciao da Lucia","user", null);
-m2.sender = "Lucia"
-g = new Group("Amici",["Rupert","Lucia","Paola"]);
-Client.addGroup(g);
-m3 = new Message("Ciao Gruppo","group","Amici");
-
-Client.addMessage(m1);
-Client.addMessage(m2);
-Client.addMessage(m3);
-
-console.log(Client.userName);
-console.log(Client.users);
+onGroupModification("Patrick", g2);
 console.log(Client.groups);
-*/

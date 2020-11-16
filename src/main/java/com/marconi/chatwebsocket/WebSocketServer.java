@@ -120,7 +120,7 @@ public class WebSocketServer {
         if(conversationsHandler.groupExists(group.getString("name"))){
             JsonObject jsonMessage = jsonProvider.createObjectBuilder()
                 .add("type","error")
-                .add("problem","notAvailableName")
+                .add("problem","nameNotAvailable")
                 .add("context", "groupCreation")
                 .build();
             conversationsHandler.sendOrBufMessageToUser(group.getString("creator"), jsonMessage);
@@ -137,7 +137,7 @@ public class WebSocketServer {
                 System.out.println("-->errore");
                 JsonObject jsonMessage = jsonProvider.createObjectBuilder()
                         .add("type","error")
-                        .add("problem","notExistingUsers")
+                        .add("problem","notExistingNames")
                         .add("context", "groupCreation")
                         .add("notExistingUsers", jsonProvider.createArrayBuilder(notExistingUsers))
                         .build();
