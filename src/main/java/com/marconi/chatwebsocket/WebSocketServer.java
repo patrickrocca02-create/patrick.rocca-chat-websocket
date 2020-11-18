@@ -53,6 +53,12 @@ public class WebSocketServer {
                     case "groupModification":
                         onGroupModification(jsonMessage.getString("groupName"), jsonMessage.getJsonObject("newGroupSettings"), conversationsHandler.getUserFromSession(session));
                         break;
+                    case "groupElimination":
+                        onGroupElimination(jsonMessage.getString("groupName"), conversationsHandler.getUserFromSession(session));
+                        break;
+                    case "groupQuit":
+                        onGroupQuit(jsonMessage.getString("groupName"), conversationsHandler.getUserFromSession(session));
+                        break;
                 }
                 break;
             case "message":
@@ -69,9 +75,9 @@ public class WebSocketServer {
     
     private void onUserConnection(String userName, Session session){
         if(!userName.equals("null") && userName != null){
-            System.out.println("Connesso " + userName);
             if(!conversationsHandler.userExists(userName)){
                 conversationsHandler.addUser(userName);
+                this.onNewUser(userName, session);
             }
             if(conversationsHandler.getUserOnline(userName)){
                 JsonObject jsonMessage = jsonProvider.createObjectBuilder()
@@ -86,6 +92,7 @@ public class WebSocketServer {
                     Logger.getLogger(WebSocketServer.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }else{
+                System.out.println("Connesso " + userName);
                 conversationsHandler.setUserSession(userName, session);
                 conversationsHandler.setUserOnline(userName, true);
                 conversationsHandler.sendBuffedMessagesTo(userName);
@@ -265,6 +272,22 @@ public class WebSocketServer {
         }
     }
     
+    private void onGroupElimination(String groupName, String sender){
+        if(!conversationsHandler.groupExists(groupName)){
+            //errore
+        }else{
+            JsonObject jsonMessage = jsonProvider.createObjectBuilder()
+                .add("type","system")
+                .add("task","groupElimination")
+                .add("admin", sender)
+                .add("groupName",groupName)
+                .build();
+            conversationsHandler.sendMessageToGroupFrom(groupName, sender, jsonMessage);
+            conversationsHandler.removeGroup(groupName);
+            System.out.println(conversationsHandler);
+        }
+    }
+    
     private void onUserMessage(JsonObject message, String destName){
         if(!conversationsHandler.userExists(destName)){
             ArrayList<String> name = new ArrayList<>();
@@ -305,6 +328,30 @@ public class WebSocketServer {
                 .add("message",message)
                 .build();
             conversationsHandler.sendMessageToGroupFrom(destName, message.getString("sender"), jsonMessage);
+        }
+    }
+    private void onNewUser(String userName, Session session){
+        JsonObject jsonMessage = jsonProvider.createObjectBuilder()
+            .add("type","system")
+            .add("task","serverUsersList")
+            .add("serverUsers",jsonProvider.createArrayBuilder(this.conversationsHandler.getServerUsersFor(userName)))
+            .build();
+        conversationsHandler.sendMessageToSession(session, jsonMessage);
+    }
+    private void onGroupQuit(String groupName, String userName){
+        ArrayList<String> user = new ArrayList<>();
+        user.add(userName);
+        conversationsHandler.removeMembersFromGroup(groupName, user);
+        if(conversationsHandler.getAdminsOfGroup(groupName).size() == 0){
+            this.onGroupElimination(groupName, userName);
+        }else{
+            JsonObject jsonMessage = jsonProvider.createObjectBuilder()
+                .add("type","system")
+                .add("task","userQuitGroup")
+                .add("userName",userName)
+                .add("groupName", groupName)
+                .build();
+            conversationsHandler.sendMessageToGroupFrom(groupName, userName, jsonMessage);
         }
     }
   

@@ -1,11 +1,13 @@
 package com.marconi.chatwebsocket;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.enterprise.context.ApplicationScoped;
 import javax.json.*;
+import javax.json.spi.JsonProvider;
 import javax.websocket.*;
 
 @ApplicationScoped
@@ -71,6 +73,16 @@ public class ConversationsHandler {
         this.getUser(userName).addMessageToBuffer(jsonMessage);
     }
     
+    public ArrayList<String> getServerUsersFor(String userName){
+        JsonProvider jsonProvider = JsonProvider.provider();
+        ArrayList<String> serverUsers = new ArrayList<>();
+        for(User u : this.users){
+            if(!u.getName().equals(userName)){
+                serverUsers.add(jsonProvider.createObjectBuilder().add("name", u.getName()).add("online",u.getOnline()).build().toString());
+            }
+        }
+        return serverUsers;
+    }
     private ArrayList<User> getOnlineUsers(){
         return getUsersOnState(true);
     }
@@ -92,6 +104,9 @@ public class ConversationsHandler {
             users.add(this.getUser(userName));
         }
         return users;
+    }
+    public ArrayList<String> getAdminsOfGroup(String groupName){
+        return this.getGroup(groupName).getAdmins();
     }
     
     public String getUserFromSession(Session session){
@@ -155,6 +170,9 @@ public class ConversationsHandler {
     }
     public JsonObject getJsonGroup(String groupName){
         return this.getGroup(groupName).getJsonObjectOnModification();
+    }
+    public void removeGroup(String groupName){
+        this.groups.remove(new Group(groupName));
     }
     
     public boolean userActiveOnAnotherSession(Session session, String userName){

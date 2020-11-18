@@ -63,6 +63,11 @@
     "groupName": "name"
 },
 {
+    "type":"system",
+    "task":"groupQuit",
+    "groupName":"name"
+},
+{
     "type":"message",
     "destType":"type",
     "destName":"name",

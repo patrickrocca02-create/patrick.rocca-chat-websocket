@@ -84,10 +84,13 @@ public class Group implements Serializable{
     public JsonObject getJsonObjectOnModification(){
         JsonProvider jsonProvider = JsonProvider.provider();
         JsonObject jsonGroup = jsonProvider.createObjectBuilder()
-                .add("name",this.name)
-                .add("members", jsonProvider.createArrayBuilder(this.members))
-                .add("admins", jsonProvider.createArrayBuilder(this.admins))
-                .build();
+            .add("name",this.name)
+            .add("members", jsonProvider.createArrayBuilder(this.members))
+            .add("admins", jsonProvider.createArrayBuilder(this.admins))
+            .add("creationDate", this.creationDate)
+            .add("creationTime", this.creationTime)
+            .add("creator", this.creatorName)
+            .build();
         return jsonGroup;
     }
     

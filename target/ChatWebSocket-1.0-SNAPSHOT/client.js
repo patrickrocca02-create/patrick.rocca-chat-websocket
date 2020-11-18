@@ -12,18 +12,24 @@ function onMessage(event) {
                 case "groupModification":
                     onGroupModification(msg.admin,msg.group);
                     break;
-                case "groupRemoval":
-                    onGroupRemoval(msg.admin, msg.groupName);
+                case "groupElimination":
+                    onGroupElimination(msg.admin, msg.groupName);
                     break;
                 case "userStateChange":
                     onUserStateChange(msg.userName, msg.userState);
+                    break;
+                case "serverUsersList":
+                    onServerUsers(msg.serverUsers);
+                    break;
+                case "userQuitGroup":
+                    onUserQuitGroup(msg.userName, msg.groupName);
                     break;
             }
             break;
         case "message":
             switch(msg.destType){
                 case "user":
-                    onUserMessage(msg.destName, msg.message);
+                    onUserMessage(msg.message);
                     break;
                 case "group":
                     onGroupMessage(msg.destName, msg.message);
@@ -37,45 +43,97 @@ function onMessage(event) {
     console.log("Resoconto:")
     console.log(Client.users);
     console.log(Client.groups);
+    console.log(Client.serverUsers);
     console.log(" ");
+    saveData();
 }
 
 //send messages of type user with destType user
-function sendUserMessage(message, destName){
+function sendUserMessage(destName, message){
+    onSendUserMessage(destName, message);
     serverMessage = {
         type : "message",
         destType : "user",
         destName : destName,
         message : message
     }
-    console.log(serverMessage);
     socket.send(JSON.stringify(serverMessage));  
+    
+    console.log("Resoconto:")
+    console.log(Client.users);
+    console.log(Client.groups);
+    console.log(Client.serverUsers);
+    console.log(" ");
+    saveData();
 }
 //send messages of type user with destType user
-function sendGroupMessage(message, destName){
+function sendGroupMessage(destName, message){
+    onSendGroupMessage(destName, message);
     serverMessage = {
         type : "message",
         destType : "group",
         destName : destName,
         message : message
     }
-    console.log(serverMessage);
     socket.send(JSON.stringify(serverMessage));  
+    
+    console.log("Resoconto:")
+    console.log(Client.users);
+    console.log(Client.groups);
+    console.log(Client.serverUsers);
+    console.log(" ");
+    saveData();
 }
 //send messages of type system with task grupCreation
 function sendNewGroup(group){
+    onSendGroupCreation(group);
+    let groupToSend = new Group(group.name, group.members, group.admins, group.creationDate, group.creationTime, group.creator);
     if(group.members.length > 0){
-        delete group["messages"];
+        delete groupToSend["messages"];
+        delete groupToSend["active"];
         groupMessage = {
             type : "system",
             task : "groupCreation",
-            group : group
+            group : groupToSend
         }
-        console.log(groupMessage);
         socket.send(JSON.stringify(groupMessage));
     }else{
-        //members error
+        //members error KUMARONE
     }
+    
+    console.log("Resoconto:")
+    console.log(Client.users);
+    console.log(Client.groups);
+    console.log(Client.serverUsers);
+    console.log(" ");
+    saveData();
+}
+function sendGroupElimination(groupName){
+    onSendGroupElimination(groupName);
+    let msg = {
+        type : "system",
+        task : "groupElimination",
+        groupName : groupName
+    }
+    socket.send(JSON.stringify(msg));
+
+    
+    console.log("Resoconto:")
+    console.log(Client.users);
+    console.log(Client.groups);
+    console.log(Client.serverUsers);
+    console.log(" ");
+    saveData();
+}
+function sendGroupQuit(groupName){
+    onSendGroupQuit(groupName);
+    let msg = {
+        type:"system",
+        task:"groupQuit",
+        groupName:groupName
+    }
+    socket.send(JSON.stringify(msg));
+    saveData();
 }
 //send messages of type system with task userConnection
 function onConnection(event){
@@ -86,6 +144,7 @@ function onConnection(event){
         userName : Client.userName
     }
     socket.send(JSON.stringify(msg));
+    saveData();
 }
 //send messages of type system with task userDisconnection
 function onDisconnection(event){
@@ -95,6 +154,16 @@ function onDisconnection(event){
         userName : Client.userName
     }
     socket.send(JSON.stringify(msg));
+    saveData();
+}
+
+function saveData(){
+    let userData = {
+        users : Client.users,
+        groups : Client.groups,
+        serverUsers : Client.serverUsers
+    }
+    window.localStorage.setItem(Client.userName, JSON.stringify(userData));
 }
 
 function sendGroupModification(groupName, addMembers, removeMembers,addAdmins,removeAdmins){
@@ -109,8 +178,17 @@ function sendGroupModification(groupName, addMembers, removeMembers,addAdmins,re
         addAdmins : addAdmins,
         removeAdmins : removeAdmins
     }
+    onSendGroupModification(groupName, newGroupSettings);
     msg.newGroupSettings = newGroupSettings;
     socket.send(JSON.stringify(msg));
+
+    
+    console.log("Resoconto:")
+    console.log(Client.users);
+    console.log(Client.groups);
+    console.log(Client.serverUsers);
+    console.log(" ");
+    saveData();
 }
 
 function sendImage(){
@@ -135,12 +213,16 @@ function sendImage(){
     //poi metto imgStr come src dell'immagine dei client
 }
 
-
 function start(){
     Client.userName = window.prompt("Inserire il proprio nome utente", "nome utente...");
-    socket = new WebSocket("ws://localhost:8080/ChatWebSocket/demows/" + Client.userName + "");
+    socket = new WebSocket("ws://localhost:8081/ChatWebSocket/demows/" + Client.userName + "");
     socket.onmessage = onMessage;
-    console.log(socket);
+    if(window.localStorage.getItem(Client.userName) != null){
+        let data = JSON.parse(window.localStorage.getItem(Client.userName));
+        Client.users = data.users;
+        Client.groups = data.groups;
+        Client.serverUsers = data.serverUsers;
+    }
 }
 
-//start();
+start();

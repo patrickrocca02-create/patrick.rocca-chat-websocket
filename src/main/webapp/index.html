@@ -6,6 +6,7 @@
     <title>Document</title>
     <script src="./dataStructures.js"></script>
     <script src="dataManager.js"></script>
+    <script src="./errorHandler.js"></script>
     <script src="client.js"></script>
 </head>
 <body>
@@ -19,7 +20,7 @@
         admins = document.getElementById('groupAdminsInput').value.split(',');
         if(admins == '')
             admins = [];
-        sendNewGroup(new Group(name, members, admins));
+        sendNewGroup(Group.newGroup(name, members, admins));
     }"/>
     <br>
     Invia a utente:
@@ -28,7 +29,7 @@
     <input type="button" value="invia" onclick="{
         text = document.getElementById('textInput1').value;
         destUser = document.getElementById('userNameInput').value;
-        sendUserMessage(new Message(text), destUser);
+        sendUserMessage(destUser, UserMessage.newMessage(text));
     }"/>
     <br>
     Invia a gruppo:
@@ -37,7 +38,7 @@
     <input type="button" value="invia" onclick="{
         text = document.getElementById('textInput2').value;
         dest = document.getElementById('groupNameInput2').value;
-        sendGroupMessage(new Message(text), dest);
+        sendGroupMessage(dest, UserMessage.newMessage(text));
     }"/>
     <br>
     Modifica gruppo:
@@ -67,5 +68,22 @@
         sendGroupModification(name, membersToAdd, membersToRemove, adminsToAdd, adminsToRemove);
     }"/>
     <br>
+    Elimina gruppo:
+    <input type="text" name="groupName" id="groupNameText"/>
+    <input type="button" value="invia" onclick="{
+        sendGroupElimination(document.getElementById('groupNameText').value);
+    }"/>
+    <br>
+    Lascia gruppo:
+    <input type="text" name="groupName" id="groupNameText12"/>
+    <input type="button" value="invia" onclick="{
+        sendGroupQuit(document.getElementById('groupNameText12').value);
+    }"/>
+    <br>
+    Salva:
+    <input type="button" onclick="saveData()"/>
+    <br>
+    Stampa:
+    <input type="button" onclick="console.log(JSON.parse(localStorage.getItem(Client.userName)));">
 </body>
 </html>

@@ -5,14 +5,6 @@ class User{
     
         this.messages = [];
     }
-
-    addMessage(mex){
-        this.messages.push(mex);
-    }
-
-    lastMessage(){
-        return this.messages[this.messages.length-1];
-    }
 }
 
 class UserMessage{
@@ -47,6 +39,7 @@ class Group{
         this.creator = creator;
 
         this.messages = [];
+        this.active = true;
     }
 
     static newGroup(name, members, admins){
@@ -58,25 +51,13 @@ class Group{
 
         return new Group(name, members, admins, creationDate, creationTime, creator);
     }
-
-    updateGroup(newMembers, newAdmins){
-        this.members = newMembers;
-        this.admins = newAdmins.filter(e => this.members.indexOf(e) != -1);
-    }
-
-    addMessage(mex){
-        this.messages.push(mex);
-    }
-
-    lastMessage(){
-        return this.messages[this.messages.length-1];
-    }
 }
 
 class Client{
     static userName = "Patrick";
     static users = [];
     static groups = [];
+    static serverUsers = [];
     
     static createDataReference(userName){
         Client.userName = userName;
@@ -91,7 +72,11 @@ class Client{
         }
         return index;
     }
-    static getGruopIndex(groupName){
+    static getUser(userName){
+        return Client.users[Client.getUserIndex(userName)];
+    }
+
+    static getGroupIndex(groupName){
         let index = -1;
         for(let i=0; i < Client.groups.length; i++){
             if(Client.groups[i].name == groupName){
@@ -101,23 +86,53 @@ class Client{
         return index;
     }
     static getGroup(groupName){
-        return Client.groups[Client.getGruopIndex(groupName)];
+        return Client.groups[Client.getGroupIndex(groupName)];
     }
     static updateGroup(groupName, newMembers, newAdmins){
-        Client.groups[Client.getGruopIndex(groupName)].updateGroup(newMembers, newAdmins);
+        let g = Client.getGroup(groupName);
+        g.members = newMembers;
+        g.admins = newAdmins.filter(e => g.members.indexOf(e) != -1);
+    }
+    static addMembersToGroup(groupName, newMembers){
+        let g = Client.getGroup(groupName);
+        for(let i = 0; i < newMembers.length; i++){
+            g.members.push(newMembers[i]);
+        }
+    }
+    static removeMembersFromGroup(groupName, membersToRemove){
+        let g = Client.getGroup(groupName);
+        g.members = g.members.filter(e => membersToRemove.indexOf(e) == -1);
+        g.admins = g.admins.filter(e => g.members.indexOf(e) != -1);
+    }
+    static addAdminsToGroup(groupName, newAdmins){
+        let g = Client.getGroup(groupName);
+        for(let i = 0; i < newAdmins.length; i++){
+            g.admins.push(newAdmins[i]);
+        }
+    }
+    static removeAdminsFromGroup(groupName, adminsToRemove){
+        let g = Client.getGroup(groupName);
+        g.admins = g.admins.filter(e => adminsToRemove.indexOf(e) == -1);
+    }
+    static addGroupMessage(groupName, mex){
+        let g = Client.getGroup(groupName);
+        g.messages.push(mex);
+    }
+    static lastMessageOfGroup(){
+        let g = Client.getGroup(groupName);
+        return g.messages[g.messages.length-1];
+    }
+    static setGroupActive(groupName, active){
+        Client.getGroup(groupName).active = active;
     }
 
-    static addGroupMessage(groupName, mex){
-        let groupIndex = Client.getGruopIndex(groupName);
-        if(groupIndex != -1){
-            Client.groups[groupIndex].addMessage(mex);
-        }
+    static addUserMessage(userName, mex){
+        let c = Client.getUser(userName);
+        c.messages.push(mex);
     }
-    static addUserMessage(mex){
-        let userIndex = Client.getUserIndex(mex.sender);
-        if(userIndex == -1){
-            Client.addUser(new User(mex.sender));
-        }
+    static getLastMessageWithUser(userName){
+        let c = Client.getUserIndex(userName);
+        return c.messages[messages.length-1];
     }
 
     static setOnline(userName, online){
@@ -127,11 +142,34 @@ class Client{
         }
     }
 
+    static removeUser(userName){
+        Client.users = Client.users.filter(u => u.name != userName);
+    }
+    static removeGroup(groupName){
+        Client.groups = Client.groups.filter(g => g.name != groupName);
+    }
+
     static addUser(user){
         Client.users.push(user);
     }
     static addGroup(group){
         Client.groups.push(group)
+    }
+
+    static addServerUser(user){
+        Client.serverUsers.push(user);
+    }
+    static getServerUserIndex(userName){
+        let index = -1;
+        for(let i=0; i < Client.serverUsers.length; i++){
+            if(Client.serverUsers[i].name == userName){
+                index = i;
+            }
+        }
+        return index;
+    }
+    static getServerUser(userName){
+        return Client.serverUsers[Client.getServerUserIndex(userName)];
     }
 }
 

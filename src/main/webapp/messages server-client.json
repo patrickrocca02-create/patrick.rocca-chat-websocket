@@ -42,7 +42,7 @@
 },
 {
     "type":"system",
-    "task":"groupRemoval",
+    "task":"groupElimination",
     "groupName":"name",
     "admin":"name"
 },
@@ -77,5 +77,16 @@
         "user 2",
         "user n"
     ]
+},
+{
+    "type":"system",
+    "task":"serverUsersList",
+    "serverUsers":[]
+},
+{
+    "type":"system",
+    "task":"userQuitGroup",
+    "userName":"name",
+    "groupName":"name"
 }
 ]
