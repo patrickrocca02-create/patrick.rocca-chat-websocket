@@ -1,0 +1,167 @@
+messaggio incoming:
+
+<div class="incoming_msg">
+  <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+  <div class="received_msg">
+    <div class="received_withd_msg">
+      <p>We work directly with our designers and suppliers,
+        and sell direct to you, which means quality, exclusive
+        products, at a price anyone can afford.</p>
+      <span class="time_date"> 11:01 AM    |    Today</span>
+    </div>
+  </div>
+</div>
+
+messaggio outgoing:
+
+<div class="outgoing_msg">
+  <div class="sent_msg">
+    <p>Apollo University, Delhi, India Test</p>
+    <span class="time_date"> 11:01 AM    |    Today</span> 
+  </div>
+</div>
+
+cassela chat attiva:
+
+<div class="chat_list active_chat">
+  <div class="chat_people">
+    <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+    <div class="chat_ib">
+      <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+      <p>Test, which is a new approach to have all solutions 
+        astrology under one roof.</p>
+    </div>
+  </div>
+</div>
+
+casella chat:
+
+<div class="chat_list">
+  <div class="chat_people">
+    <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+    <div class="chat_ib">
+      <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+      <p>Test, which is a new approach to have all solutions 
+        astrology under one roof.</p>
+    </div>
+  </div>
+</div>
+
+new menu: 
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'newChat')" id="defaultOpen">Nuova conversazione</button>
+  <button class="tablinks" onclick="openTab(event, 'newGroup')">Nuovo gruppo</button>
+</div>
+
+<div id="newChat" class="tabcontent">
+  <div>Messaggio:</div>
+  <textarea id="newUserMessage"></textarea>
+  <div>Destinatario:</div>
+  <form class="autocomplete" autocomplete="off">
+    <div class="autocomplete">
+      <input class="autocomplete" id="newUserName" type="text" name="myCountry" placeholder="Utente...">
+    </div>
+  </form>
+  <script>autocomplete(document.getElementById("newUserName"),Client.getServerUsersNames())</script>
+  <div>
+    <button onclick="messageToNewUser()">Invia messaggio</button>
+  </div>
+</div>
+
+<div id="newGroup" class="tabcontent">
+  <div class="groupNameCreationDiv">
+    <div class="groupNameCreation">Nome del gruppo:</div>
+    <input type="text" id="newGroupName">
+  </div>
+  <div class="newGroupMembersDiv">
+    <div class="newGroupMembers">Aggiungi membro:</div>
+    <form class="autocomplete" autocomplete="off">
+      <div class="autocomplete">
+        <input class="autocomplete" id="addMember" type="text" name="myCountry" placeholder="Utente...">
+      </div>
+      <input type="button" value="+" onclick="addMemberGroupCreation()" class="autocomplete-submit"> 
+    </form>
+  </div>
+  <div id="listOfNewMembers">
+    <script>initAutoComplete()</script>
+  </div>
+  <button class="createGroup" onclick="createGroup()">Crea gruppo</button>
+</div>
+
+chat utente:
+<div class="userDescription">
+  <div class="profile_image"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+  <span id="userName" class="userName">UserName</span>
+</div>
+<div class="mesgs">
+  <div class="msg_history">
+    
+  </div>
+  <div class="type_msg">
+    <div class="input_msg_write">
+      <textarea class="write_msg" placeholder="Type a message"></textarea>
+      <button class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+    </div>
+  </div>
+</div>
+
+chat gruppo:
+<div class="groupDescription" onclick="">
+  <div class="profile_image"> <img src="./images/user-profile.png" alt="sunil"> </div>
+  <span class="userName">GroupName</span>
+</div>
+<div class="mesgs">
+  <div class="msg_history">
+    <div class="outgoing_msg">
+      <div class="sent_msg">
+        <p>Apollo University, Delhi, India Test</p>
+        <span class="time_date"> 11:01 AM    |    Today</span> 
+      </div>
+    </div>
+    <div class="outgoing_msg">
+      <div class="sent_msg">
+        <p>Apollo University, Delhi, India Test</p>
+        <span class="time_date"> 11:01 AM    |    Today</span> 
+      </div>
+    </div>
+    <div class="incoming_msg">
+      <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+      <div class="received_msg">
+        <div class="received_withd_msg">
+          <h6>Patrick</h6>
+          <p>We work directly with our designers and suppliers,
+            and sell direct to you, which means quality, exclusive
+            products, at a price anyone can afford.</p>
+          <span class="time_date"> 11:01 AM    |    Today</span>
+        </div>
+      </div>
+    </div>
+    <div class="systemMessage">
+      L'amministratore as vfjshgdv fjhs gdvfjhsdgvfjhgsdv
+    </div>
+  </div>
+  <div class="type_msg">
+    <div class="input_msg_write">
+      <textarea class="write_msg" placeholder="Type a message"></textarea>
+      <button class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+    </div>
+  </div>
+</div>
+
+desc gruppo:
+<div class="descTitle">Descrizione del gruppo </div>
+<div class="membersTitle">Membri:</div>
+<div id="listOfMembers">
+  <div class="memberContainer">
+    <div class="imgMember"> <img src="./images/user-profile.png" alt="sunil"> </div>
+    <div class="memberName">Patrick</div>
+    <div class="memberButtons">
+      <button>Rendi Amministratore</button>
+      <button>Rimuovi</button>
+    </div>
+  </div>
+</div>
+<div class="infoGroupCreation">
+  Gruppo creato il 12/11/2020 alle ore 12:24 dall'utente Arturo
+</div>
+<input class="btnLeaveGroup" type="button" value="Lascia il gruppo">

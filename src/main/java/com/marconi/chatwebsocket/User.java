@@ -51,14 +51,14 @@ class User implements Serializable{
     
     public void addMessageToBuffer(JsonObject jsonMessage){
         if("system".equals(jsonMessage.getString("type")) && "userStateChange".equals(jsonMessage.getString("task"))){
-            removeSystemMessageFromBuffer("userStateChange");
+            removeStateChangeMessageOfUser(jsonMessage.getString("userName"));
         }
         buffer.add(jsonMessage);
     }
     
-    private void removeSystemMessageFromBuffer(String task){
+    private void removeStateChangeMessageOfUser(String userName){
         for(JsonObject jo : this.buffer){
-            if("system".equals(jo.getString("type")) && jo.getString("task").equals(task)){
+            if("system".equals(jo.getString("type")) && jo.getString("task").equals("userStateChange") && jo.getString("userName").equals(userName)){
                 this.buffer.remove(jo);
                 break;
             }

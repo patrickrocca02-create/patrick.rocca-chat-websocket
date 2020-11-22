@@ -24,6 +24,9 @@ function onMessage(event) {
                 case "userQuitGroup":
                     onUserQuitGroup(msg.userName, msg.groupName);
                     break;
+                case "groupRemoval":
+                    onGroupRemoval(msg.groupName, msg.admin);
+                    break;
             }
             break;
         case "message":

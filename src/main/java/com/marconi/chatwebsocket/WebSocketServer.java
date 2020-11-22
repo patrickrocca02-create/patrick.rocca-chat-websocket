@@ -74,7 +74,7 @@ public class WebSocketServer {
     }
     
     private void onUserConnection(String userName, Session session){
-        if(!userName.equals("null") && userName != null){
+        if(!userName.equals("undefined") && userName != null){
             if(!conversationsHandler.userExists(userName)){
                 conversationsHandler.addUser(userName);
                 this.onNewUser(userName, session);
@@ -82,8 +82,9 @@ public class WebSocketServer {
             if(conversationsHandler.getUserOnline(userName)){
                 JsonObject jsonMessage = jsonProvider.createObjectBuilder()
                     .add("type","error")
-                    .add("task","nameNotAvailable")
+                    .add("problem","nameNotAvailable")
                     .add("context","userConnection")
+                    .add("userName",userName)
                     .build();
                 conversationsHandler.sendMessageToSession(session, jsonMessage);
                 try {
@@ -232,7 +233,7 @@ public class WebSocketServer {
                             conversationsHandler.removeMembersFromGroup(groupName, removeMembers);
                             JsonObject jsonMessage = jsonProvider.createObjectBuilder()
                                     .add("type","system")
-                                    .add("problem","groupRemoval")
+                                    .add("task","groupRemoval")
                                     .add("groupName", groupName)
                                     .add("admin", sender)
                                     .build();

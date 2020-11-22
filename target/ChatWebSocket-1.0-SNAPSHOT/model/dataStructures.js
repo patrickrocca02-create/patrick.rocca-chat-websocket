@@ -76,6 +76,12 @@ class Client{
         return Client.users[Client.getUserIndex(userName)];
     }
 
+    static deleteGroup(groupName){
+        Client.groups = Client.groups.filter(e => e.name != groupName);
+    }
+    static deleteLastGroup(){
+        Client.groups.pop();
+    }
     static getGroupIndex(groupName){
         let index = -1;
         for(let i=0; i < Client.groups.length; i++){
@@ -141,6 +147,13 @@ class Client{
             Client.users[userIndex].online = online;
         }
     }
+    static getOnline(userName){
+        let userIndex = Client.getServerUserIndex(userName);
+        if(userIndex != -1){
+            return Client.serverUsers[userIndex].online;
+        }
+        return null;
+    }
 
     static removeUser(userName){
         Client.users = Client.users.filter(u => u.name != userName);
@@ -171,6 +184,70 @@ class Client{
     static getServerUser(userName){
         return Client.serverUsers[Client.getServerUserIndex(userName)];
     }
+    static getServerUsersNames(){
+        let names = [];
+        for(let i = 0; i < Client.serverUsers.length; i++){
+            names.push(Client.serverUsers[i].name);
+        }
+        return names;
+    }
+
+    static getOrderedUsersAndGroup(){
+        let list = Client.users;
+        for(let i = 0; i < Client.groups.length; i++){
+            list.push(Client.groups[i]);
+        }
+        function compare(a, b){
+            if(a.messages.length == 0){
+                if(b.messages.length == 0){
+                    return 0;
+                }else{
+                    return -1;
+                }
+            }else if(b.messages.length == 0){
+                return 1;
+            }
+            let lastMessageA = a.messages[a.messages.length-1];
+            let lastMessageB = b.messages[b.messages.length-1];
+            let date = lastMessageA.creationDate.slice("/");
+            let time = lastMessageA.creationTime.slice(":");
+            let dateA = new Date(date[2], date[1] - 1, date[0], time[0], time[1], 0, 0);
+            date = lastMessageB.creationDate.slice("/");
+            time = lastMessageB.creationTime.slice(":");
+            let dateB = new Date(date[2], date[1] - 1, date[0], time[0], time[1], time[2], 0);
+            if (dateA > dateB){
+              return 1;
+            }
+            if (dateB > dateA){
+              return -1;
+            }
+            return 0;
+        }
+        list.sort(compare);
+        return list;
+    }
+
+    static getGroupNames(){
+        let names = [];
+        for(let i = 0; i < Client.groups.length; i++){
+            names.push(Client.groups[i].name);
+        }
+        return names;
+    }
+
+    static getConv(name){
+        for(let i = 0; i < Client.users.length; i++){
+            if(Client.users[i].name == name){
+                return Client.users[i];
+            }
+        }
+        for(let i = 0; i < Client.groups.length; i++){
+            if(Client.groups[i].name == name){
+                return Client.groups[i];
+            }
+        }
+        return null;
+    }
 }
 
 const monthNames = ["January", "February", "March", "April", "May", "June",
@@ -183,7 +260,7 @@ function getActualDateString(){
 }
 function getActualTimeString(){
     let date = new Date();
-    return ("0" + date.getHours()).slice(-2) + ":" + ("0" + date.getMinutes()).slice(-2);
+    return ("0" + date.getHours()).slice(-2) + ":" + ("0" + date.getMinutes()).slice(-2) + ":" + ("0" + date.getSeconds()).slice(-2);
 }
 
 /* TEST 

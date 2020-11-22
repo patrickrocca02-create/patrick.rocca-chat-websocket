@@ -26,6 +26,11 @@ function onGroupModification(admin, newGroup){
         Client.updateGroup(newGroup.name, newGroup.members, newGroup.admins);
     }
 }
+function onGroupRemoval(groupName, admin){
+    Client.addGroupMessage(groupName, new SystemMessage(admin, "Sei stato rimosso dal gruppo dall'amministratore " + admin));
+    Client.removeMembersFromGroup(groupName, [Client.userName]);
+    Client.getGroup(groupName).active = false;
+}
 function onUserQuitGroup(userName, groupName){
     Client.addGroupMessage(groupName,new SystemMessage(userName, userName + " ha lasciato il gruppo"));
     Client.removeMembersFromGroup(groupName, [userName]);
@@ -59,6 +64,10 @@ function onServerUsers(serverUsers){
         serverUsers[i] = JSON.parse(serverUsers[i]);
     }
     Client.serverUsers = serverUsers;
+}
+
+function onGroupDeletion(groupName){
+    Client.deleteGroup(groupName);
 }
 
 function getSystemMessageOnGroupUsersModification(admin, newUsers, oldUsers, memberOrAdmin){

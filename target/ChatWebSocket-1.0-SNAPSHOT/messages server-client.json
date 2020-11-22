@@ -88,5 +88,11 @@
     "task":"userQuitGroup",
     "userName":"name",
     "groupName":"name"
+},
+{
+    "type":"system",
+    "task":"groupRemoval",
+    "groupName":"name",
+    "admin":"name"
 }
 ]

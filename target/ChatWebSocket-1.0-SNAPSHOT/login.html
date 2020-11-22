@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    
+    <script src="./model/dataStructures.js"></script>
+    <script src="./model/dataManager.js"></script>
+    <script src="./client-controller/client.js"></script>
+    <script src="./view/viewButtonsAndLogic.js"></script>
+    <script src="./view/templates.js"></script>
+    <script src="./view/navigation.js"></script>
+    <script src="./client-controller/errorHandler.js"></script>
+    <script src="./client-controller/login.js"></script>
+</head>
+<body>
+    <div class="login-page">
+        <div class="form">
+          <form class="login-form" onsubmit="return false">
+            <input id="loginNameLabel" type="text" placeholder="nome utente..."/>
+            <button onclick="onClickLogin()">login</button>
+          </form>
+        </div>
+    </div>
+</body>
+</html>

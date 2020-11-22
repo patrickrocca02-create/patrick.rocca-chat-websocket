@@ -24,6 +24,9 @@ function onMessage(event) {
                 case "userQuitGroup":
                     onUserQuitGroup(msg.userName, msg.groupName);
                     break;
+                case "groupRemoval":
+                    onGroupRemoval(msg.groupName, msg.admin);
+                    break;
             }
             break;
         case "message":
@@ -40,12 +43,9 @@ function onMessage(event) {
             onError(msg);
             break;
     }
-    console.log("Resoconto:")
-    console.log(Client.users);
-    console.log(Client.groups);
-    console.log(Client.serverUsers);
-    console.log(" ");
+    
     saveData();
+    updateAllView();
 }
 
 //send messages of type user with destType user
@@ -59,12 +59,8 @@ function sendUserMessage(destName, message){
     }
     socket.send(JSON.stringify(serverMessage));  
     
-    console.log("Resoconto:")
-    console.log(Client.users);
-    console.log(Client.groups);
-    console.log(Client.serverUsers);
-    console.log(" ");
     saveData();
+    updateAllView();
 }
 //send messages of type user with destType user
 function sendGroupMessage(destName, message){
@@ -77,12 +73,8 @@ function sendGroupMessage(destName, message){
     }
     socket.send(JSON.stringify(serverMessage));  
     
-    console.log("Resoconto:")
-    console.log(Client.users);
-    console.log(Client.groups);
-    console.log(Client.serverUsers);
-    console.log(" ");
     saveData();
+    updateAllView();
 }
 //send messages of type system with task grupCreation
 function sendNewGroup(group){
@@ -98,15 +90,11 @@ function sendNewGroup(group){
         }
         socket.send(JSON.stringify(groupMessage));
     }else{
-        //members error KUMARONE
+        //members error
     }
     
-    console.log("Resoconto:")
-    console.log(Client.users);
-    console.log(Client.groups);
-    console.log(Client.serverUsers);
-    console.log(" ");
     saveData();
+    updateAllView();
 }
 function sendGroupElimination(groupName){
     onSendGroupElimination(groupName);
@@ -117,13 +105,8 @@ function sendGroupElimination(groupName){
     }
     socket.send(JSON.stringify(msg));
 
-    
-    console.log("Resoconto:")
-    console.log(Client.users);
-    console.log(Client.groups);
-    console.log(Client.serverUsers);
-    console.log(" ");
     saveData();
+    updateAllView();
 }
 function sendGroupQuit(groupName){
     onSendGroupQuit(groupName);
@@ -134,6 +117,7 @@ function sendGroupQuit(groupName){
     }
     socket.send(JSON.stringify(msg));
     saveData();
+    updateAllView();
 }
 //send messages of type system with task userConnection
 function onConnection(event){
@@ -145,6 +129,7 @@ function onConnection(event){
     }
     socket.send(JSON.stringify(msg));
     saveData();
+    updateAllView();
 }
 //send messages of type system with task userDisconnection
 function onDisconnection(event){
@@ -182,13 +167,8 @@ function sendGroupModification(groupName, addMembers, removeMembers,addAdmins,re
     msg.newGroupSettings = newGroupSettings;
     socket.send(JSON.stringify(msg));
 
-    
-    console.log("Resoconto:")
-    console.log(Client.users);
-    console.log(Client.groups);
-    console.log(Client.serverUsers);
-    console.log(" ");
     saveData();
+    updateAllView();
 }
 
 function sendImage(){
@@ -213,8 +193,15 @@ function sendImage(){
     //poi metto imgStr come src dell'immagine dei client
 }
 
-function start(){
-    Client.userName = window.prompt("Inserire il proprio nome utente", "nome utente...");
+function deleteGroup(groupName){
+    onGroupDeletion(groupName);
+    selectedConv = "";
+    updateAllView();
+    saveData();
+}
+
+function start(userName){
+    Client.userName = userName;
     socket = new WebSocket("ws://localhost:8081/ChatWebSocket/demows/" + Client.userName + "");
     socket.onmessage = onMessage;
     if(window.localStorage.getItem(Client.userName) != null){
@@ -222,7 +209,8 @@ function start(){
         Client.users = data.users;
         Client.groups = data.groups;
         Client.serverUsers = data.serverUsers;
+        updateAllView();
     }
+    setUserNameLabel();
+    console.log("AAAAAAA" + userName)
 }
-
-start();

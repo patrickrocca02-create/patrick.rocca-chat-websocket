@@ -1,0 +1,98 @@
+[
+{
+    "type":"system",
+    "task":"groupCreation",
+    "group":{
+        "name":"name",
+        "members":[
+            "member 1",
+            "member 2",
+            "member n"
+        ],
+        "admins":[
+            "admin 1",
+            "admin 2",
+            "admin n"
+        ],
+        "creationDate": "date",
+        "creationTima": "time",
+        "creator": "name"
+    }
+},
+{
+    "type":"system",
+    "task":"groupModification",
+    "admin":"name",
+    "group":{
+        "name":"name",
+        "members":[
+            "member 1",
+            "member 2",
+            "member n"
+        ],
+        "admins":[
+            "admin 1",
+            "admin 2",
+            "admin n"
+        ],
+        "creationDate": "date",
+        "creationTima": "time",
+        "creator": "name"
+    }
+},
+{
+    "type":"system",
+    "task":"groupElimination",
+    "groupName":"name",
+    "admin":"name"
+},
+{
+    "type":"system",
+    "task":"userStateChange",
+    "userName":"name",
+    "userState":"state"
+},
+{
+    "type":"message",
+    "destType":"type",
+    "destName":"name",
+    "message":{
+        "text":"text",
+        "date":"date",
+        "time":"time",
+        "sender":"name"
+    }
+},
+{
+    "type":"error",
+    "problem":"nameNotAvailable",
+    "context":"gruopCreation/userConnetion"
+},
+{
+    "type":"error",
+    "problem":"notExistingNames",
+    "context":"groupCreation/groupModification/userMessage/groupMessage/groupMembersRemoval/groupAdminsRemoval/groupAdminsAddition",
+    "notExistingUsers":[
+        "user 1",
+        "user 2",
+        "user n"
+    ]
+},
+{
+    "type":"system",
+    "task":"serverUsersList",
+    "serverUsers":[]
+},
+{
+    "type":"system",
+    "task":"userQuitGroup",
+    "userName":"name",
+    "groupName":"name"
+},
+{
+    "type":"system",
+    "task":"groupRemoval",
+    "groupName":"name",
+    "admin":"name"
+}
+]

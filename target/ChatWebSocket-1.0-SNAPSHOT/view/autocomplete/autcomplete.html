@@ -1,0 +1,12 @@
+<!--Make sure the form has the autocomplete function switched off:-->
+<form autocomplete="off" onsubmit="return false">
+    <div class="autocomplete" style="width:300px;">
+      <input id="myInput" type="text" name="myCountry" placeholder="Country">
+    </div>
+    <input class="autocomplete-submit" type="button">
+  </form>
+  <link rel="stylesheet" href="./autocomplete.css">
+  <script src="./autocomplete.js"></script>
+<script>
+  autocomplete(document.getElementById("myInput"), countries);
+</script>

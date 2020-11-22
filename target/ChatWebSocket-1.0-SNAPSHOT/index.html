@@ -1,89 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="./dataStructures.js"></script>
-    <script src="dataManager.js"></script>
-    <script src="./errorHandler.js"></script>
-    <script src="client.js"></script>
+  <title>WebSocket chat by Rocca</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" rel="stylesheet">
+    <link href="./view/template-style.css" type="text/css" rel="stylesheet">
+    <script src="./view/tabMenu/tabMenu.js"></script>
+    <link href="./view/tabMenu/tabMenu.css" type="text/css" rel="stylesheet">
+    <script src="./view/autocomplete/autocomplete.js"></script>
+    <link href="./view/autocomplete/autocomplete.css" type="text/css" rel="stylesheet">
+
+    <script src="./model/dataStructures.js"></script>
+    <script src="./model/dataManager.js"></script>
+    <script src="./client-controller/client.js"></script>
+    <script src="./view/viewButtonsAndLogic.js"></script>
+    <script src="./view/templates.js"></script>
+    <script src="./view/navigation.js"></script>
+    <script src="./client-controller/errorHandler.js"></script>
+    <script src="./client-controller/login.js"></script>
+    <link href="./view/login.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    Crea gruppo:
-    <input type="text" name="groupName" id="groupNameInput"/>
-    <input type="text" name="groupMembers" id="groupMembersInput"/>
-    <input type="text" name="groupAdmins" id="groupAdminsInput"/>
-    <input type="button" value="invia" onclick="{
-        name = document.getElementById('groupNameInput').value;
-        members = document.getElementById('groupMembersInput').value.split(',');
-        admins = document.getElementById('groupAdminsInput').value.split(',');
-        if(admins == '')
-            admins = [];
-        sendNewGroup(Group.newGroup(name, members, admins));
-    }"/>
-    <br>
-    Invia a utente:
-    <input type="text" name="text1" id="textInput1"/>
-    <input type="text" name="userName" id="userNameInput"/>
-    <input type="button" value="invia" onclick="{
-        text = document.getElementById('textInput1').value;
-        destUser = document.getElementById('userNameInput').value;
-        sendUserMessage(destUser, UserMessage.newMessage(text));
-    }"/>
-    <br>
-    Invia a gruppo:
-    <input type="text" name="text2" id="textInput2"/>
-    <input type="text" name="groupName1" id="groupNameInput2"/>
-    <input type="button" value="invia" onclick="{
-        text = document.getElementById('textInput2').value;
-        dest = document.getElementById('groupNameInput2').value;
-        sendGroupMessage(dest, UserMessage.newMessage(text));
-    }"/>
-    <br>
-    Modifica gruppo:
-    <input type="text" name="groupNameMod" id="groupNameMod"/>
-    <input type="text" name="membersToAdd" id="membersToAdd"/>
-    <input type="text" name="membersToRemove" id="membersToRemove"/>
-    <input type="text" name="adminsToAdd" id="adminsToAdd"/>
-    <input type="text" name="adminsToRemove" id="adminsToRemove"/>
-    <input type="button" value="invia" onclick="{
-        name = document.getElementById('groupNameMod').value;
-        membersToAdd = document.getElementById('membersToAdd').value.split(',');
-        membersToRemove = document.getElementById('membersToRemove').value.split(',');
-        adminsToAdd = document.getElementById('adminsToAdd').value.split(',');
-        adminsToRemove = document.getElementById('adminsToRemove').value.split(',');
-        if(membersToAdd == ''){
-            membersToAdd = [];
-        }
-        if(membersToRemove == ''){
-            membersToRemove = [];
-        }
-        if(adminsToAdd == ''){
-            adminsToAdd = [];
-        }
-        if(adminsToRemove == ''){
-            adminsToRemove = [];
-        }
-        sendGroupModification(name, membersToAdd, membersToRemove, adminsToAdd, adminsToRemove);
-    }"/>
-    <br>
-    Elimina gruppo:
-    <input type="text" name="groupName" id="groupNameText"/>
-    <input type="button" value="invia" onclick="{
-        sendGroupElimination(document.getElementById('groupNameText').value);
-    }"/>
-    <br>
-    Lascia gruppo:
-    <input type="text" name="groupName" id="groupNameText12"/>
-    <input type="button" value="invia" onclick="{
-        sendGroupQuit(document.getElementById('groupNameText12').value);
-    }"/>
-    <br>
-    Salva:
-    <input type="button" onclick="saveData()"/>
-    <br>
-    Stampa:
-    <input type="button" onclick="console.log(JSON.parse(localStorage.getItem(Client.userName)));">
+  <div class="login">
+  <div class="login-page">
+    <div class="form-login-container">
+      <form class="login-form" onsubmit="return false">
+        <input id="loginNameLabel" type="text" placeholder="nome utente..."/>
+        <button onclick="onClickLogin()">login</button>
+      </form>
+    </div>
+  </div>
+  </div>
 </body>
 </html>
